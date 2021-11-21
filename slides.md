@@ -378,6 +378,65 @@ You can then write your queries in to the URQL operation store to create a subsc
 layout: cover
 ---
 
+## Svelte debug 👀
+
+<br>
+
+```js
+<pre>{JSON.stringify($posts, null, 2)}</pre>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+After the script tag in the body of the page
+
+I can add this to see what the data looks like from URQL
+-->
+---
+layout: cover
+---
+
+## URQL output
+
+<br>
+
+```json {all|3|all}
+{
+  "stale": false,
+  "fetching": false,
+  "data": {
+    "posts": [
+      {
+        // posts data
+      }
+    ]
+  }
+}
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+This is where this fetching property comes in handy
+-->
+
+---
+layout: cover
+---
+
 ```js {all|1,15|2|3|4|5|6,14|7-13|all}
 {#if $posts.fetching}
   <p>Loading...</p>
