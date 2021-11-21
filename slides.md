@@ -1,383 +1,308 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
-highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
-drawings:
-  persist: false
----
-
-# Welcome to Slidev
-
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
 theme: default
+class: text-left
+highlighter: prism
+title: SvelteKit and the Content Layer
+fonts:
+  sans: 'Inter'
+  serif: 'Inter'
+  mono: 'Fira Code'
 ---
-```
 
-```yaml
----
-theme: seriph
----
-```
+<div class='max-w-screen-sm'>
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
+# SvelteKit and the Content Layer
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
+## Scott Spence
+
+MMT Meetup Nov 2021
 
 </div>
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<!--
+Hi my name is Scott, I’m a developer advocate at GraphCMS
+
+GraphCMS is a headless API content management system
+
+We really pride ourselves on delivering structured content at scale
+
+We’re one of the first, if not the first headless GraphQL based CMS’
+
+Completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide
+
+This will be a brief history of content on the web, where we are now and where we’re going
+-->
 
 ---
-preload: false
+layout: cover
 ---
 
-# Animations
+# Histroy Lesson<span class='text-[#F5487FFF]'>.</span>
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+<!--
+So with a talk like this,
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
+I’m going to need to bring up the past
+-->
 
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
+---
+layout: cover
+---
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
+# The past<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+As with any kind of talk like this, we’ll need to bring up the past to justify the present/or future
+-->
+
+---
+layout: cover
+---
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+Traditional CMS<span class='text-[#F5487FFF]'>.</span>
+
+- Website based
+- “Theme” based
+- Server rendered
+- Tightly coupled
+- You pay for everything
+- Often slow
+
+
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
   }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
+  ul {
+    list-style: disc !important;
+    font-size: 2rem;
   }
-  frame "Foo" {
-    [Frame 4]
+  ::marker { 
+    color: #F5487FFF; 
   }
-}
+</style>
 
 
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
+<!-- 
+So let’s take a quick look at what a CMS was back in the day
 
-@enduml
-```
+Primarily website based, there wasn’t the need to have any content piped to a mobile device
 
-</div>
+These sites were heavily theme based, you could make your own and alter them to your liking
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+You’d pay for everything, you were hosting this yourself, there wasn’t really CDNs back then and server space was expensive
 
+A lot of the things which made it slow were those round trips to the page from the database
+-->
 
 ---
-layout: center
+layout: cover
+---
+
+# The present<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# Terminology<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# Buzzwords<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# Hype<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# Headless<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# Headless = Serverless<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
 class: text-center
 ---
 
-# Learn More
+# 🤷
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+# The Present<span class='text-[#F5487FFF]'>.</span>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+Headless CMS<span class='text-[#F5487FFF]'>.</span>
+
+- Frontend agnostic
+- Mostly CRUD
+- Decoupled
+- Developer flexibility
+- CI/CD with Git
+
+</div>
+
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  ul {
+    list-style: disc !important;
+    font-size: 2rem;
+  }
+  ::marker { 
+    color: #F5487FFF; 
+  }
+</style>
+
+
+<!-- 
+This brings us to headless...
+
+So what is a headless CMS
+
+Give developers a lot of flexibility to implement what why like
+-->
+
+---
+layout: cover
+---
+
+# The Future<span class='text-[#F5487FFF]'>.</span>
+
+---
+layout: cover
+---
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+GraphQL<span class='text-[#F5487FFF]'>.</span>
+
+- Simple to understand 
+- You get what you see
+- Client or Server Side
+
+</div>
+
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  ul {
+    list-style: disc !important;
+    font-size: 2rem;
+  }
+  ::marker { 
+    color: #F5487FFF; 
+  }
+</style>
+
+
+<!-- 
+
+-->
+
+---
+layout: cover
+---
+
+```graphql
+query {
+  products {
+    name
+    description {
+      richtext # from GraphCMS
+    }
+    inventory {
+      inStock # from 3rd party API
+    }
+    # rest of query
+  }
+}
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+---
+layout: cover
+---
+
+# Svelte<span class='text-[#F5487FFF]'>.</span>
+
+---
+layout: cover
+---
+
+# SvelteKit<span class='text-[#F5487FFF]'>.</span>
+
+---
+layout: cover
+---
+
+# URQL<span class='text-[#F5487FFF]'>.</span>
