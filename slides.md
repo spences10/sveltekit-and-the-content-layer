@@ -85,6 +85,68 @@ Let's take a look at how things used to be
 -->
 
 ---
+
+<div>
+<img class='how-it-started' src='/assets/how-it-started-graphic.png' alt='filezilla logo' />
+</div>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  .how-it-started {
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    width: 60%;
+  }
+</style>
+
+<!--
+How it started.
+
+Using FTP to upload files to live instances.
+
+There then became a requirement for authoring content without the need for a developer.
+-->
+---
+
+<div>
+<img class='filezilla' src='/assets/filezilla.png' alt='filezilla logo' />
+<img class='old-website' src='/assets/old-website.png' alt='filezilla logo' />
+</div>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  .filezilla {
+    position: absolute;
+    left: 220px;
+    top: 100px;
+    width: 35%;
+    z-index: 1;
+  }
+  .old-website {
+    position: absolute;
+    left: 450px;
+    top: 150px;
+    width: 35%;
+    z-index: -1;
+  }
+</style>
+
+<!--
+How it started.
+
+Using FTP to upload files to live instances.
+
+There then became a requirement for authoring content without the need for a developer.
+-->
+
+---
 layout: cover
 ---
 
