@@ -64,6 +64,8 @@ layout: cover
 So with a talk like this,
 
 I’m going to need to bring up the past
+
+So time for a bit of history
 -->
 
 ---
@@ -79,7 +81,7 @@ layout: cover
 </style>
 
 <!--
-As with any kind of talk like this, we’ll need to bring up the past to justify the present/or future
+Let's take a look at how things used to be
 -->
 
 ---
@@ -141,7 +143,7 @@ layout: cover
 </style>
 
 <!--
-
+Ok, so let’s talk about the present and where we are now
 -->
 
 ---
@@ -157,7 +159,9 @@ layout: cover
 </style>
 
 <!--
+But first
 
+Let’s talk terminology
 -->
 
 ---
@@ -173,7 +177,7 @@ layout: cover
 </style>
 
 <!--
-
+About buzzwords
 -->
 
 ---
@@ -189,7 +193,11 @@ layout: cover
 </style>
 
 <!--
+And hype
 
+Don’t worry I’m not going to be talking about web 3
+
+But while I’m talking about naming things
 -->
 
 ---
@@ -205,7 +213,11 @@ layout: cover
 </style>
 
 <!--
+Slight tangent here, I’m sure the majority of you have heard the term serverless...
 
+Serverless because you’re not making call to specific servers, you’re making calls to APIs 
+
+You’re making call to specific APIs that abstracts away the servers from you whisht guaranteeing uptime and reliability + scalability, etc
 -->
 
 ---
@@ -221,7 +233,7 @@ layout: cover
 </style>
 
 <!--
-
+So, in the terms of headless no server === serverless right?
 -->
 
 ---
@@ -232,7 +244,7 @@ class: text-center
 # 🤷
 
 <!--
-
+Anyway moving on
 -->
 
 ---
@@ -248,7 +260,11 @@ layout: cover
 </style>
 
 <!--
+So, let’s talk about JavaScript and how much it has really matured over the years
 
+It’s now like a runtime for the web in the browser
+
+And we, as developers can do a lot more in the browser
 -->
 
 ---
@@ -282,9 +298,8 @@ Headless CMS<span class='text-[#F5487FFF]'>.</span>
   }
 </style>
 
-
-<!-- 
-This brings us to headless...
+<!--
+So, headless...
 
 So what is a headless CMS
 
@@ -399,6 +414,10 @@ layout: cover
     font-weight: bold;
   }
 </style>
+
+<!--
+URQL can be initialised in a __layout.svelte component then be available throughout the project
+-->
 
 ---
 layout: cover
@@ -555,8 +574,8 @@ layout: cover
   }
 </style>
 
-<!-- 
-You can then write your queries in to the URQL operation store to create a subscription to the data
+<!--
+URQL has the fetching state built into it so you can check before rendering
 -->
 
 ---
