@@ -14,11 +14,25 @@ lineNumbers: true
 
 # SvelteKit and the Content Layer
 
-## Scott Spence
+## <span class='text-[#F5487FFF]'>Scott Spence</span>
 
-MMT Meetup Nov 2021
+MMT Meetup - <span class='text-[#F5487FFF]'>Nov 2021</span>
 
 </div>
+
+<style>
+  h1 {
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+  h2, p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  p {
+    margin-top: 0;
+  }
+</style>
 
 <!--
 Hi my name is Scott, I’m a developer advocate at GraphCMS
@@ -40,6 +54,12 @@ layout: cover
 
 # Histroy Lesson<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 <!--
 So with a talk like this,
 
@@ -51,6 +71,12 @@ layout: cover
 ---
 
 # The past<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 <!--
 As with any kind of talk like this, we’ll need to bring up the past to justify the present/or future
@@ -108,6 +134,12 @@ layout: cover
 
 # The present<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 <!--
 
 -->
@@ -117,6 +149,12 @@ layout: cover
 ---
 
 # Terminology<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 <!--
 
@@ -128,6 +166,12 @@ layout: cover
 
 # Buzzwords<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 <!--
 
 -->
@@ -137,6 +181,12 @@ layout: cover
 ---
 
 # Hype<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 <!--
 
@@ -148,6 +198,12 @@ layout: cover
 
 # Headless<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 <!--
 
 -->
@@ -157,6 +213,12 @@ layout: cover
 ---
 
 # Headless = Serverless<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 <!--
 
@@ -178,6 +240,12 @@ layout: cover
 ---
 
 # The Present<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 <!--
 
@@ -228,6 +296,12 @@ layout: cover
 ---
 
 # The Future<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 ---
 layout: cover
@@ -296,17 +370,35 @@ layout: cover
 
 # Svelte<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 ---
 layout: cover
 ---
 
 # SvelteKit<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 ---
 layout: cover
 ---
 
 # URQL<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
 
 ---
 layout: cover
@@ -473,8 +565,20 @@ layout: cover
 
 # Leaking Credentials<span class='text-[#F5487FFF]'>.</span>
 
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
 ---
 layout: cover
 ---
 
 # SvelteKit routes<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
