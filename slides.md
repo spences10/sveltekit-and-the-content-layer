@@ -7,6 +7,7 @@ fonts:
   sans: 'Inter'
   serif: 'Inter'
   mono: 'Fira Code'
+lineNumbers: true
 ---
 
 <div class='max-w-screen-sm'>
@@ -306,3 +307,115 @@ layout: cover
 ---
 
 # URQL<span class='text-[#F5487FFF]'>.</span>
+
+---
+layout: cover
+---
+
+## `__layout.svelte`
+
+<br>
+
+```js {all|1,6|2|3-5|8,10|9|all}
+<script>
+  import { initClient } from '@urql/svelte'
+  initClient({
+    url: import.meta.env.VITE_GRAPHQL_URL,
+  })
+</script>
+
+<main>
+  <slot />
+</main>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+URQL can be initialised in a __layout.svelte component then be available throughout the project
+-->
+
+---
+layout: cover
+---
+
+## `index.svelte`
+
+<br>
+
+```js {all|2|3-7|8|9|all}
+<script>
+  import { gql, operationStore, query } from '@urql/svelte'
+  const postsQuery = gql`
+    query Posts {
+      # posts query
+    }
+  `
+  const posts = operationStore(postsQuery)
+  query(posts)
+</script>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+You can then write your queries in to the URQL operation store to create a subscription to the data
+-->
+
+---
+layout: cover
+---
+
+```js {all|1,15|2|3|4|5|6,14|7-13|all}
+{#if $posts.fetching}
+  <p>Loading...</p>
+{:else if $posts.error}
+  <p>Error! {$posts.error.message}</p>
+{:else}
+  <ul>
+    {#each $posts.data.posts as post}
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          <Post {post} copy={false} />
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+You can then write your queries in to the URQL operation store to create a subscription to the data
+-->
+
+---
+layout: cover
+---
+
+# Leaking Credentials<span class='text-[#F5487FFF]'>.</span>
+
+---
+layout: cover
+---
+
+# SvelteKit routes<span class='text-[#F5487FFF]'>.</span>
