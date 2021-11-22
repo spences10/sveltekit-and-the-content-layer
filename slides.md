@@ -722,7 +722,7 @@ layout: cover
   }
 </style>
 
-<!-- 
+<!--
 The __layout.svelte file can be used for persisted components like a navbar and footer
 
 This is also where global styles can be added
@@ -992,7 +992,7 @@ We'll also pop a GraphQL client in a lib folder here
 layout: cover
 ---
 
-```text {all|6|all}
+```text {all|3-4|all}
 new-svelte-project/
 ├─ src/
 │ ├─ lib/
