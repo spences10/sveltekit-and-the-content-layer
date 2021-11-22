@@ -87,53 +87,23 @@ Let's take a look at how things used to be
 ---
 
 <div>
-<img class='how-it-started' src='/assets/how-it-started-graphic.png' alt='filezilla logo' />
-</div>
-
-<style>
-  div {
-    display: flex;
-    justify-content: center;
-  }
-  .how-it-started {
-    position: absolute;
-    left: 50px;
-    top: 110px;
-    width: 60%;
-  }
-</style>
-
-<!--
-How it started.
-
-Using FTP to upload files to live instances.
-
-There then became a requirement for authoring content without the need for a developer.
--->
----
-
-<div>
 <img class='filezilla' src='/assets/filezilla.png' alt='filezilla logo' />
-<img class='old-website' src='/assets/old-website.png' alt='filezilla logo' />
+<img class='old-website' src='/assets/old-website.png' alt='old website graphic' />
 </div>
 
 <style>
-  div {
-    display: flex;
-    justify-content: center;
-  }
   .filezilla {
     position: absolute;
     left: 220px;
     top: 100px;
-    width: 35%;
+    width: 30%;
     z-index: 1;
   }
   .old-website {
     position: absolute;
     left: 450px;
     top: 150px;
-    width: 35%;
+    width: 30%;
     z-index: -1;
   }
 </style>
@@ -144,6 +114,27 @@ How it started.
 Using FTP to upload files to live instances.
 
 There then became a requirement for authoring content without the need for a developer.
+-->
+
+---
+
+<div>
+<img class='how-it-started' src='/assets/how-it-started-graphic.png' alt='cms graphic' />
+</div>
+
+<style>
+  .how-it-started {
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    width: 60%;
+  }
+</style>
+
+<!--
+The Content Management System is born
+
+It all started with the need to edit content online in a managed way without the need for developer intervention.
 -->
 
 ---
@@ -190,6 +181,50 @@ These sites were heavily theme based, you could make your own and alter them to 
 You’d pay for everything, you were hosting this yourself, there wasn’t really CDNs back then and server space was expensive
 
 A lot of the things which made it slow were those round trips to the page from the database
+-->
+
+---
+
+<div>
+<img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
+<img class='wordpress' src='/assets/wordpress.png' alt='wordpress logo' />
+<img class='aem' src='/assets/adobe-experience-manager.png' alt='adobe experience manager logo' />
+</div>
+
+<style>
+  div {
+    background-color: #fff;
+  }
+  .drupal {
+    position: absolute;
+    left: 130px;
+    top: 100px;
+    width: 20%;
+  }
+  .wordpress {
+    position: absolute;
+    left: 540px;
+    top: 60px;
+    width: 20%;
+  }
+  .aem {
+    position: absolute;
+    left: 380px;
+    top: 300px;
+    width: 20%;
+  }
+</style>
+
+<!--
+Some of the tools from back then included the likes of Drupal, Wordpress and Adobe Experience manager
+
+These are now what’s referred to as the monolith
+
+As someone who is relatively new to web development these technologies were still present in my daily workflow at the agencies I worked at
+
+Let’s not dwell on those though!
+
+Although I do acknowledge these tools are still used across a lot of the web now!
 -->
 
 ---
@@ -330,6 +365,33 @@ And we, as developers can do a lot more in the browser
 -->
 
 ---
+
+<div>
+<img class='how-its-going' src='/assets/headless-cms-graphic.png' alt='headless cms graphic' />
+</div>
+
+<style>
+  .how-its-going {
+    position: absolute;
+    left: 40px;
+    top: 120px;
+    width: 70%;
+  }
+</style>
+
+<!--
+Headless is decoupled from the monolith, where all you need to worry about on the client is how to present it
+
+This is where content is outgrowing the internet
+
+Destinations for content are growing every day.
+
+Destinations like, Websites, Apps, In-store displays, cars, fridges, etc.
+
+The headless CMS solved the problem of omni-channel content distribution where a developer can request the data on the client
+-->
+
+---
 layout: cover
 ---
 
@@ -453,6 +515,10 @@ layout: cover
   }
 </style>
 
+<!--
+Ok, so let's talk about where Svelte and it's position here
+-->
+
 ---
 layout: cover
 ---
@@ -464,6 +530,58 @@ layout: cover
     font-weight: bold;
   }
 </style>
+
+<!--
+When I say Svelte what I'm actually referring to is SvelteKit
+
+SvelteKit will eventually be the way all new projects are made with Svelte
+
+Still in public beta
+-->
+
+---
+layout: cover
+---
+
+```bash
+npm init svelte@next new-svelte-project
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+Once SvelteKit goes v1 this will change to
+-->
+
+---
+layout: cover
+---
+
+```bash
+npm init svelte new-svelte-project
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!-- 
+This
+
+So, let's take a look at how we'd go about using GraphQL with a Svelte project
+
+We can start by taking a look at a client site GraphQL library like URQL
+-->
 
 ---
 layout: cover
@@ -479,6 +597,8 @@ layout: cover
 
 <!--
 URQL can be initialised in a __layout.svelte component then be available throughout the project
+
+Kind of like how you would do a content provider in React but with a lot less boilerplate
 -->
 
 ---
@@ -511,7 +631,13 @@ layout: cover
 </style>
 
 <!-- 
-URQL can be initialised in a __layout.svelte component then be available throughout the project
+The __layout.svelte file can be used for persisted components like a navbar and footer
+
+This is also where global styles can be added
+
+You can think of a slot much like you would wrap React children in a react component
+
+I'm not going to be making comparisons between React and Svelte
 -->
 
 ---
@@ -544,7 +670,7 @@ layout: cover
 </style>
 
 <!-- 
-You can then write your queries in to the URQL operation store to create a subscription to the data
+You can then write your queries into the URQL operation store to create a subscription to the data
 -->
 
 ---
@@ -568,9 +694,15 @@ layout: cover
 </style>
 
 <!-- 
+One of my favourite ways to visualise data coming into a svelte component
+
 After the script tag in the body of the page
 
 I can add this to see what the data looks like from URQL
+
+The $ on posts there is subscribing to any changes in the data from the URQL operation store
+
+That gives some output like this
 -->
 ---
 layout: cover
@@ -603,6 +735,8 @@ layout: cover
 </style>
 
 <!-- 
+Here we get some additional properties in the URQL data response 
+
 This is where this fetching property comes in handy
 -->
 
@@ -637,6 +771,8 @@ layout: cover
 </style>
 
 <!--
+Here we can use some of the Svelte expressions to work through the URQL response
+
 URQL has the fetching state built into it so you can check before rendering
 -->
 
@@ -652,6 +788,10 @@ layout: cover
   }
 </style>
 
+<!--
+So that's great n' all but what about sensitive information?
+-->
+
 ---
 layout: cover
 ---
@@ -661,5 +801,74 @@ layout: cover
 <style>
   h1 {
     font-weight: bold;
+  }
+</style>
+
+<!--
+SvelteKit uses a file-based routing system much like NextJS that can also be turned into endpoints
+
+Let's take a quick look at a project file structure using file-based routing
+-->
+
+---
+layout: cover
+---
+
+```text {all|7|6|4|5|all}
+new-svelte-project/
+├─ src/
+│ ├─ routes/
+│ │ └─ posts/
+│ │   └─ [slug].svelte
+│ ├─ __layout.svelte
+│ └─ index.svelte
+... rest of project files
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+</style>
+
+---
+layout: cover
+---
+
+# SvelteKit endpoints<span class='text-[#F5487FFF]'>.</span>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+```text {all|6|all}
+new-svelte-project/
+├─ src/
+│ ├─ routes/
+│ │ └─ posts/
+│ │   ├─ [slug].svelte
+│ │   └─ index.json.js
+│ ├─ __layout.svelte
+│ └─ index.svelte
+... rest of project files
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 2rem;
+    line-height: 1.5;
   }
 </style>
