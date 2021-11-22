@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/icon-park-outline': ^1.0.1
   '@slidev/cli': ^0.27.16
   '@slidev/theme-default': '*'
   '@slidev/theme-seriph': '*'
@@ -9,6 +10,9 @@ dependencies:
   '@slidev/cli': 0.27.16
   '@slidev/theme-default': 0.21.0
   '@slidev/theme-seriph': 0.21.0
+
+devDependencies:
+  '@iconify-json/icon-park-outline': 1.0.1
 
 packages:
 
@@ -47,6 +51,12 @@ packages:
       '@iconify/types': 1.0.12
     dev: false
 
+  /@iconify-json/icon-park-outline/1.0.1:
+    resolution: {integrity: sha512-4CjsNN1VJMBAqOPeRMVH8JM/eQ1LzTSgjtjs0u/TndPlrKrI/W55avR61QJhr5jqaWPTDuE6lyIv1lJ9Oaigeg==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
   /@iconify-json/ph/1.0.2:
     resolution: {integrity: sha512-Jfzg5CNtx/P/2fTQeISdq465rEzxj5SlyJE4tGULXSYSir0NPomfRY2zsytAOp2epvnsf1riTS44iMqPhuXXkA==}
     dependencies:
@@ -55,7 +65,6 @@ packages:
 
   /@iconify/types/1.0.12:
     resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
-    dev: false
 
   /@iconify/utils/1.0.19:
     resolution: {integrity: sha512-HEIo2FLLkzFcUcdTvNpJZugzbPIpmnhRLQk8PUYcJbjpzb8vsQHniDmTmEMAV8uN+dauMQg+Qrb8Bx054uG69w==}

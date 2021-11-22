@@ -10,5 +10,8 @@
     "@slidev/cli": "^0.27.16",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
+  },
+  "devDependencies": {
+    "@iconify-json/icon-park-outline": "^1.0.1"
   }
 }
