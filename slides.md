@@ -37,15 +37,64 @@ MMT Meetup - <span class='text-[#F5487FFF]'>Nov 2021</span>
 <!--
 Hi my name is Scott, I’m a developer advocate at GraphCMS
 
-GraphCMS is a headless API content management system
-
-We really pride ourselves on delivering structured content at scale
+GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
 
 We’re one of the first, if not the first headless GraphQL based CMS’
 
-Completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide
+We're completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide to access content
 
 This will be a brief history of content on the web, where we are now and where we’re going
+-->
+
+---
+layout: cover
+---
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+<div>
+
+# Scott Spence<span class='text-[#F5487FFF]'>.</span>
+
+- Developer Advocate <span class='text-[#F5487FFF]'>@</span>GraphCMS
+- Svelte LDN meetup organiser
+- Svelte Sirens
+- Jamstack Conf workshop "Building with Svelte"
+- Jamstack Explorers
+- Cat dad 😻
+
+</div>
+
+<img class='scott-profile-pic' src='/assets/scott-profile-pic.png' alt='Scott Profile Pic' />
+
+</div>
+
+<style>
+  .scott-profile-pic {
+    width: 50%;
+  }
+  ul {
+    list-style: disc !important;
+  }
+  ::marker { 
+    color: #F5487FFF; 
+  }
+</style>
+
+<!--
+My name is Scott, I'm a developer advocate for GraphCMS
+
+I'm a massive Jamstack enthusiast
+
+I'm helping out with organising the Svelte LDN meetup, next one is Dec 13th if you're interested
+
+Currently helping out with the Svelte Sirens project GraphCMS integration with Brittany Postma
+
+I've recently held a workshop at Jamstack Conf, "Building with Svelte and GraphQL"
+
+There's also a Jamstack explorers mission you can check out
+
+I'm a cat dad
 -->
 
 ---
@@ -63,9 +112,9 @@ layout: cover
 <!--
 So with a talk like this,
 
-I’m going to need to bring up the past
+I’m going to need to bring up the past, to justify the present, to the future
 
-So time for a bit of history
+First, a bit of history lesson
 -->
 
 ---
@@ -82,6 +131,8 @@ layout: cover
 
 <!--
 Let's take a look at how things used to be
+
+This is the not so distant past, and for some their current reality
 -->
 
 ---
@@ -109,7 +160,7 @@ Let's take a look at how things used to be
 </style>
 
 <!--
-How it started.
+Initially.
 
 Using FTP to upload files to live instances.
 
@@ -172,15 +223,15 @@ Traditional CMS<span class='text-[#F5487FFF]'>.</span>
 
 
 <!-- 
-So let’s take a quick look at what a CMS was back in the day
+Taking a quick look at what a CMS was back in the day
 
-Primarily website based, there wasn’t the need to have any content piped to a mobile device
+Primarily website based, there wasn’t much of a need to have any on a mobile device
 
 These sites were heavily theme based, you could make your own and alter them to your liking
 
 You’d pay for everything, you were hosting this yourself, there wasn’t really CDNs back then and server space was expensive
 
-A lot of the things which made it slow were those round trips to the page from the database
+A lot of the things which made it slow were those round trips to the database back to the page
 -->
 
 ---
@@ -240,7 +291,9 @@ layout: cover
 </style>
 
 <!--
-Ok, so let’s talk about the present and where we are now
+That bring us to the present
+
+So let’s talk about the present and where we are now
 -->
 
 ---
@@ -314,7 +367,9 @@ Slight tangent here, I’m sure the majority of you have heard the term serverle
 
 Serverless because you’re not making call to specific servers, you’re making calls to APIs 
 
-You’re making call to specific APIs that abstracts away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
+You’re making call to specific APIs 
+
+These abstract away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
 -->
 
 ---
@@ -357,7 +412,9 @@ layout: cover
 </style>
 
 <!--
-So, let’s talk about JavaScript and how much it has really matured over the years
+Back to the present!
+
+So, let’s talk about JavaScript and how much it has really matured over the recent years
 
 It’s now like a runtime for the web in the browser
 
@@ -380,7 +437,9 @@ And we, as developers can do a lot more in the browser
 </style>
 
 <!--
-Headless is decoupled from the monolith, where all you need to worry about on the client is how to present it
+Headless is decoupled from the monolith.
+
+This means as a developer all you need to worry about on the client is how to present the data
 
 This is where content is outgrowing the internet
 
@@ -388,7 +447,9 @@ Destinations for content are growing every day.
 
 Destinations like, Websites, Apps, In-store displays, cars, fridges, etc.
 
-The headless CMS solved the problem of omni-channel content distribution where a developer can request the data on the client
+The headless CMS solved the problem of omni-channel content distribution
+
+Where a developer can request the data on any client
 -->
 
 ---
@@ -427,7 +488,7 @@ So, headless...
 
 So what is a headless CMS
 
-Give developers a lot of flexibility to implement what why like
+Gives developers a lot of flexibility to implement what why like
 -->
 
 ---
@@ -441,6 +502,12 @@ layout: cover
     font-weight: bold;
   }
 </style>
+
+<!--
+Let's talk about where we're going
+
+Briefly 
+-->
 
 ---
 layout: cover
@@ -471,24 +538,29 @@ GraphQL<span class='text-[#F5487FFF]'>.</span>
   }
 </style>
 
+<!--
+GraphQL simple to understand
 
-<!-- 
+You get what you see and what you request
 
+Can be used on the client or server side
 -->
 
 ---
 layout: cover
 ---
 
-```graphql
+```graphql {all|2,11|3-7|8-11|all}
 query {
   products {
+    # from GraphCMS
     name
     description {
-      richtext # from GraphCMS
+      richtext 
     }
+    # from 3rd party API
     inventory {
-      inStock # from 3rd party API
+      inStock 
     }
     # rest of query
   }
@@ -524,7 +596,7 @@ layout: cover
 </style>
 
 <!--
-Ok, so let's talk about where Svelte and it's position here
+Ok, so let's talk about Svelte and it's position here
 -->
 
 ---
@@ -588,6 +660,8 @@ npm init svelte new-svelte-project
 <!-- 
 This
 
+The @next will go away
+
 This will be the way to start a new Svelte project
 
 So, let's take a look at how we'd go about using GraphQL with a Svelte project
@@ -612,7 +686,9 @@ URQL
 
 Or Universal React Query Library is a great GraphQL client with Svelte bindings
 
-URQL can be initialised in a __layout.svelte component then be available throughout the project
+An URQL client can be initialised anywhere in the Svelte project
+
+a __layout.svelte component is a good place to have the client as it will be available throughout the project
 
 Kind of like how you would do a content provider in React but with a lot less boilerplate
 -->
@@ -806,6 +882,12 @@ layout: cover
 
 <!--
 So that's great n' all but what about sensitive information?
+
+I'm talking about authentication tokens, etc
+
+Before I get into that, did I tell you that Svelte has file-based routing?
+
+Let's take a quick look at Svelte routing
 -->
 
 ---
@@ -821,7 +903,9 @@ layout: cover
 </style>
 
 <!--
-SvelteKit uses a file-based routing system much like NextJS that can also be turned into endpoints
+SvelteKit uses a file-based routing system much like NextJS 
+
+These routes can also be turned into endpoints
 
 Let's take a quick look at a project file structure using file-based routing
 -->
@@ -862,7 +946,7 @@ layout: cover
 </style>
 
 <!--
-
+Let's take a look at how SvelteKit can be used to create endpoints
 -->
 
 ---
@@ -890,14 +974,79 @@ new-svelte-project/
 </style>
 
 <!--
-Let's take a look at how we'd define an endpoint in SvelteKit
+This is how you can define an endpoint in SvelteKit
+
+The dot json dot js notation is a bit funky but let's just roll with it for now
+
+We'll also pop a GraphQL client in a lib folder here
 -->
 
 ---
 layout: cover
 ---
 
-```js {all|4|all}
+```text {all|6|all}
+new-svelte-project/
+├─ src/
+│ ├─ lib/
+│ │ └─ graphql-client.js
+│ ├─ routes/
+│ │ └─ posts/
+│ │   ├─ [slug].svelte
+│ │   └─ index.json.js
+│ ├─ __layout.svelte
+│ └─ index.svelte
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!--
+So, in here we have a lib folder where we're defining a GraphQL client
+
+Looks a little something like this
+-->
+
+---
+layout: cover
+---
+
+## `src/lib/graphql-client.js`
+
+<br>
+
+```js {all|1|3|all}
+import { GraphQLClient } from 'graphql-request';
+
+export const client = new GraphQLClient(import.meta.env.VITE_GRAPHQL_API);
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+</style>
+
+<!--
+
+-->
+
+---
+layout: cover
+---
+
+## `src/routes/posts/index.json.js`
+
+<br>
+
+```js {all|1-2|4,23|5,17,22|6-10|11|13-16|all}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
@@ -926,15 +1075,83 @@ export const get = async (req, res) => {
 <style>
   @import '/prism-night-owl.css';
   span {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.25;
+  }
+  h2 {
+    margin-top: -25px;
   }
 </style>
 
 <!--
-REST methods, get, put, del etc
+So with endpoints you can create REST methods
+
+get, put, del etc
 
 del because delete is a reserved word in JavaScript
+
+This endpoint can then be accessed from the client via a browser fetch call
+
+Let's take a look at how that works
+-->
+
+---
+layout: cover
+---
+
+## `src/index.svelte`
+
+<br>
+
+```js {all|1,11|2,10|3|4-9|all}
+<script context="module">
+  export const load = async ({ fetch }) => {
+    const res = await fetch('/posts.json')
+    if (res.ok) {
+      const posts = await res.json()
+      return {
+        props: posts,
+      }
+    }
+  }
+</script>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!--
+Context module means it runs before the page loads
+-->
+
+---
+layout: cover
+---
+## `src/index.svelte`
+
+<br>
+
+```js {all|2|all}
+<script>
+  export let posts
+</script>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!--
+The props from the load function are passed to the page with export let
 -->
 
 ---
@@ -979,3 +1196,25 @@ export const post = async req => {
 <!--
 This should all be in a try catch, but I want to get all the code on the screen
 -->
+
+---
+layout: cover
+---
+
+# <span class='text-[#253889FF]'>graphcms.com/blog</span>
+# <span class='text-[#253889FF]'>graphcms.com/docs</span>
+
+
+---
+layout: cover
+---
+
+# <span class='text-[#F5487FFF]'>@</span>spences10 <span class='text-[#253889FF]'><icon-park-outline-github /> <icon-park-outline-twitter /></span>
+
+# scottspence<span class='text-[#F5487FFF]'>.</span>com <span class='text-[#253889FF]'><ph-globe /></span>
+
+---
+layout: cover
+---
+
+# Thank you<span class='text-[#F5487FFF]'>.</span>
