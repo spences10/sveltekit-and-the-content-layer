@@ -1,7 +1,11 @@
 {
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
-  "cSpell.words": ["Fira"],
+  "cSpell.words": [
+    "Fira",
+    "URQL",
+    "VITE"
+  ],
   "editor.formatOnSave": false
   // "editor.formatOnSave": true
 }
