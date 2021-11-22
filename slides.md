@@ -697,7 +697,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 layout: cover
 ---
 
-## `__layout.svelte`
+## `src/routes/__layout.svelte`
 
 <br>
 
@@ -736,7 +736,7 @@ I'm not going to be making comparisons between React and Svelte
 layout: cover
 ---
 
-## `index.svelte`
+## `src/routes/index.svelte`
 
 <br>
 
@@ -836,6 +836,10 @@ This is where this fetching property comes in handy
 layout: cover
 ---
 
+## `src/routes/index.svelte`
+
+<br>
+
 ```js {all|1,15|2|3|4|5|6,14|7-13|all}
 {#if $posts.fetching}
   <p>Loading...</p>
@@ -859,6 +863,9 @@ layout: cover
   span {
     font-size: 1.25rem;
     line-height: 1.5;
+  }
+  h2 {
+    margin-top: -25px;
   }
 </style>
 
@@ -1003,6 +1010,9 @@ new-svelte-project/
   span {
     font-size: 2rem;
     line-height: 1.5;
+  }
+  div {
+    margin-top: -10px;
   }
 </style>
 
