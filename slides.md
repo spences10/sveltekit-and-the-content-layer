@@ -314,7 +314,7 @@ Slight tangent here, I’m sure the majority of you have heard the term serverle
 
 Serverless because you’re not making call to specific servers, you’re making calls to APIs 
 
-You’re making call to specific APIs that abstracts away the servers from you whisht guaranteeing uptime and reliability + scalability, etc
+You’re making call to specific APIs that abstracts away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
 -->
 
 ---
@@ -503,6 +503,14 @@ query {
   }
 </style>
 
+<!--
+Here's a GraphQL query, and an example of how content federation will work in GraphCMS 
+
+content federation is a fancy term for bringing together data from various sources
+
+anyway I'm here to talk about Svelte and how that fits in here
+-->
+
 ---
 layout: cover
 ---
@@ -537,6 +545,8 @@ When I say Svelte what I'm actually referring to is SvelteKit
 SvelteKit will eventually be the way all new projects are made with Svelte
 
 Still in public beta
+
+here's how to get started with Svelte
 -->
 
 ---
@@ -578,6 +588,8 @@ npm init svelte new-svelte-project
 <!-- 
 This
 
+This will be the way to start a new Svelte project
+
 So, let's take a look at how we'd go about using GraphQL with a Svelte project
 
 We can start by taking a look at a client site GraphQL library like URQL
@@ -596,6 +608,10 @@ layout: cover
 </style>
 
 <!--
+URQL
+
+Or Universal React Query Library is a great GraphQL client with Svelte bindings
+
 URQL can be initialised in a __layout.svelte component then be available throughout the project
 
 Kind of like how you would do a content provider in React but with a lot less boilerplate
@@ -653,7 +669,7 @@ layout: cover
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
     query Posts {
-      # posts query
+      # posts GraphQL query here
     }
   `
   const posts = operationStore(postsQuery)
@@ -872,3 +888,94 @@ new-svelte-project/
     line-height: 1.5;
   }
 </style>
+
+<!--
+Let's take a look at how we'd define an endpoint in SvelteKit
+-->
+
+---
+layout: cover
+---
+
+```js {all|4|all}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const get = async (req, res) => {
+  try {
+    const query = gql`
+      query Posts {
+        # posts GraphQL query here 
+      }
+    `
+    const { posts } = await client.request(query)
+    
+    return {
+      status: 200,
+      body: { posts },
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+</style>
+
+<!--
+REST methods, get, put, del etc
+
+del because delete is a reserved word in JavaScript
+-->
+
+---
+layout: cover
+---
+
+```js {all|1|4|5|6-13|14-16|18|22|all}
+import { postClient } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const post = async req => {
+  const { title, content, etc } = req.body
+  const query = gql`
+    mutation AddPost(
+      # posts GraphQL mutation here
+      ) {
+        id
+      }
+    }
+  `
+  const variables = {
+    // variables
+  }
+
+  const id = await postClient.request(query, variables)
+
+  return {
+    status: 200,
+    body: id,
+  }
+}
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+</style>
+
+<!--
+This should all be in a try catch, but I want to get all the code on the screen
+-->
