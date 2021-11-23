@@ -154,7 +154,7 @@ This is the not so distant past, and for some their current reality
   .filezilla {
     position: absolute;
     left: 220px;
-    top: 100px;
+    top: 107px;
     width: 30%;
     z-index: 1;
   }
@@ -256,11 +256,11 @@ A lot of the things which made it slow were those round trips to the database ba
 
 <dots color="#dee2ed" bgColor="#ffffff" />
 
-<div>
-<img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
-<img class='wordpress' src='/assets/wordpress.png' alt='wordpress logo' />
-<img class='aem' src='/assets/adobe-experience-manager.png' alt='adobe experience manager logo' />
-</div>
+<v-clicks>
+  <img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
+  <img class='wordpress' src='/assets/wordpress.png' alt='wordpress logo' />
+  <img class='aem' src='/assets/adobe-experience-manager.png' alt='adobe experience manager logo' />
+</v-clicks>
 
 <style>
   div {
@@ -283,6 +283,9 @@ A lot of the things which made it slow were those round trips to the database ba
     left: 380px;
     top: 300px;
     width: 20%;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
   }
 </style>
 
