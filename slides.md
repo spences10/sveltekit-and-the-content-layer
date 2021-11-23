@@ -10,13 +10,15 @@ fonts:
 lineNumbers: true
 ---
 
+<dots />
+
 <div class='max-w-screen-sm'>
 
 # SvelteKit and the Content Layer
 
-## <span class='text-[#F5487FFF]'>Scott Spence</span>
+## <span class='text-[#f5487fff]'>Scott Spence</span>
 
-MMT Meetup - <span class='text-[#F5487FFF]'>Nov 2021</span>
+MMT Meetup - <span class='text-[#f5487fff]'>Nov 2021</span>
 
 </div>
 
@@ -54,9 +56,9 @@ layout: cover
 
 <div>
 
-# Scott Spence<span class='text-[#F5487FFF]'>.</span>
+# Scott Spence<span class='text-[#f5487fff]'>.</span>
 
-- Developer Advocate <span class='text-[#F5487FFF]'>@</span>GraphCMS
+- Developer Advocate <span class='text-[#f5487fff]'>@</span>GraphCMS
 - Svelte LDN meetup organiser
 - Svelte Sirens
 - Jamstack Conf workshop "Building with Svelte"
@@ -77,7 +79,7 @@ layout: cover
     list-style: disc !important;
   }
   ::marker { 
-    color: #F5487FFF; 
+    color: #f5487fff; 
   }
 </style>
 
@@ -101,7 +103,9 @@ I'm a cat dad
 layout: cover
 ---
 
-# Histroy Lesson<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Histroy Lesson<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -121,7 +125,9 @@ First, a bit of history lesson
 layout: cover
 ---
 
-# The past<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# The past<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -136,6 +142,8 @@ This is the not so distant past, and for some their current reality
 -->
 
 ---
+
+<dots />
 
 <div>
 <img class='filezilla' src='/assets/filezilla.png' alt='filezilla logo' />
@@ -169,6 +177,8 @@ There then became a requirement for authoring content without the need for a dev
 
 ---
 
+<dots />
+
 <div>
 <img class='how-it-started' src='/assets/how-it-started-graphic.png' alt='cms graphic' />
 </div>
@@ -194,7 +204,7 @@ layout: cover
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Traditional CMS<span class='text-[#F5487FFF]'>.</span>
+Traditional CMS<span class='text-[#f5487fff]'>.</span>
 
 - Website based
 - “Theme” based
@@ -217,7 +227,7 @@ Traditional CMS<span class='text-[#F5487FFF]'>.</span>
     font-size: 2rem;
   }
   ::marker { 
-    color: #F5487FFF; 
+    color: #f5487fff; 
   }
 </style>
 
@@ -235,6 +245,8 @@ A lot of the things which made it slow were those round trips to the database ba
 -->
 
 ---
+
+<dots color="#dee2ed" bgColor="#ffffff" />
 
 <div>
 <img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
@@ -282,7 +294,9 @@ Although I do acknowledge these tools are still used across a lot of the web now
 layout: cover
 ---
 
-# The present<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# The present<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -300,7 +314,9 @@ So let’s talk about the present and where we are now
 layout: cover
 ---
 
-# Terminology<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Terminology<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -318,7 +334,9 @@ Let’s talk terminology
 layout: cover
 ---
 
-# Buzzwords<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Buzzwords<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -334,7 +352,9 @@ About buzzwords
 layout: cover
 ---
 
-# Hype<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Hype<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -354,7 +374,9 @@ But while I’m talking about naming things
 layout: cover
 ---
 
-# Headless<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Headless<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -376,7 +398,9 @@ These abstract away the servers from you whilst guaranteeing uptime and reliabil
 layout: cover
 ---
 
-# Headless = Serverless<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Headless = Serverless<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -403,7 +427,9 @@ Anyway moving on
 layout: cover
 ---
 
-# The Present<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# The Present<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -458,7 +484,7 @@ layout: cover
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Headless CMS<span class='text-[#F5487FFF]'>.</span>
+Headless CMS<span class='text-[#f5487fff]'>.</span>
 
 - Frontend agnostic
 - Mostly CRUD
@@ -479,7 +505,7 @@ Headless CMS<span class='text-[#F5487FFF]'>.</span>
     font-size: 2rem;
   }
   ::marker { 
-    color: #F5487FFF; 
+    color: #f5487fff; 
   }
 </style>
 
@@ -495,7 +521,9 @@ Gives developers a lot of flexibility to implement what why like
 layout: cover
 ---
 
-# The Future<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# The Future<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -515,7 +543,7 @@ layout: cover
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-GraphQL<span class='text-[#F5487FFF]'>.</span>
+GraphQL<span class='text-[#f5487fff]'>.</span>
 
 - Simple to understand 
 - You get what you see
@@ -534,7 +562,7 @@ GraphQL<span class='text-[#F5487FFF]'>.</span>
     font-size: 2rem;
   }
   ::marker { 
-    color: #F5487FFF; 
+    color: #f5487fff; 
   }
 </style>
 
@@ -587,7 +615,9 @@ anyway I'm here to talk about Svelte and how that fits in here
 layout: cover
 ---
 
-# Svelte<span class='text-[#F5487FFF]'>.</span>
+<dots color="#f5487fff" />
+
+# Svelte<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -603,7 +633,9 @@ Ok, so let's talk about Svelte and it's position here
 layout: cover
 ---
 
-# SvelteKit<span class='text-[#F5487FFF]'>.</span>
+<dots color="#f5487fff" />
+
+# SvelteKit<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -673,7 +705,9 @@ We can start by taking a look at a client site GraphQL library like URQL
 layout: cover
 ---
 
-# URQL<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# URQL<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -879,7 +913,9 @@ URQL has the fetching state built into it so you can check before rendering
 layout: cover
 ---
 
-# Leaking Credentials<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# Leaking Credentials<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -901,7 +937,9 @@ Let's take a quick look at Svelte routing
 layout: cover
 ---
 
-# SvelteKit routes<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# SvelteKit routes<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -944,7 +982,9 @@ new-svelte-project/
 layout: cover
 ---
 
-# SvelteKit endpoints<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# SvelteKit endpoints<span class='text-[#f5487fff]'>.</span>
 
 <style>
   h1 {
@@ -1211,20 +1251,25 @@ This should all be in a try catch, but I want to get all the code on the screen
 layout: cover
 ---
 
-# <span class='text-[#253889FF]'>graphcms.com/blog</span>
-# <span class='text-[#253889FF]'>graphcms.com/docs</span>
+<dots />
 
-
----
-layout: cover
----
-
-# <span class='text-[#F5487FFF]'>@</span>spences10 <span class='text-[#253889FF]'><icon-park-outline-github /> <icon-park-outline-twitter /></span>
-
-# scottspence<span class='text-[#F5487FFF]'>.</span>com <span class='text-[#253889FF]'><ph-globe /></span>
+# <span class='text-[#253889ff]'>graphcms.com/blog</span>
+# <span class='text-[#253889ff]'>graphcms.com/docs</span>
 
 ---
 layout: cover
 ---
 
-# Thank you<span class='text-[#F5487FFF]'>.</span>
+<dots />
+
+# <span class='text-[#f5487fff]'>@</span>spences10 <span class='text-[#253889ff]'><icon-park-outline-github /> <icon-park-outline-twitter /></span>
+
+# scottspence<span class='text-[#f5487fff]'>.</span>com <span class='text-[#253889ff]'><ph-globe /></span>
+
+---
+layout: cover
+---
+
+<dots />
+
+# Thank you<span class='text-[#f5487fff]'>.</span>
