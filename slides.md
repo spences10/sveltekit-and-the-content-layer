@@ -14,11 +14,11 @@ lineNumbers: true
 
 <div class='max-w-screen-sm'>
 
-# SvelteKit and the Content Layer
+# SvelteKit and the Content Layer<highlight>.</highlight>
 
-## <span class='text-[#f5487fff]'>Scott Spence</span>
+## <highlight>Scott Spence</highlight>
 
-MMT Meetup - <span class='text-[#f5487fff]'>Nov 2021</span>
+MMT Meetup <highlight>-</highlight> Nov 2021
 
 </div>
 
@@ -56,12 +56,12 @@ layout: cover
 
 <div>
 
-# Scott Spence<span class='text-[#f5487fff]'>.</span>
+# Scott Spence<highlight>.</highlight>
 
-- Developer Advocate <span class='text-[#f5487fff]'>@</span>GraphCMS
+- Developer Advocate <highlight>@</highlight>GraphCMS
 - Svelte LDN meetup organiser
 - Svelte Sirens
-- Jamstack Conf workshop "Building with Svelte"
+- Jamstack Conf workshop <highlight>"</highlight>Building with Svelte<highlight>"</highlight>
 - Jamstack Explorers
 - Cat dad 😻
 
@@ -105,7 +105,7 @@ layout: cover
 
 <dots />
 
-# Histroy Lesson<span class='text-[#f5487fff]'>.</span>
+# Histroy Lesson<highlight>.</highlight>
 
 <style>
   h1 {
@@ -127,7 +127,7 @@ layout: cover
 
 <dots />
 
-# The past<span class='text-[#f5487fff]'>.</span>
+# The past<highlight>.</highlight>
 
 <style>
   h1 {
@@ -202,9 +202,13 @@ It all started with the need to edit content online in a managed way without the
 layout: cover
 ---
 
+<div v-click-hide><dots /></div>
+
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Traditional CMS<span class='text-[#f5487fff]'>.</span>
+Traditional CMS<highlight>.</highlight>
+
+<v-clicks>
 
 - Website based
 - “Theme” based
@@ -213,6 +217,7 @@ Traditional CMS<span class='text-[#f5487fff]'>.</span>
 - You pay for everything
 - Often slow
 
+</v-clicks>
 
 </div>
 
@@ -228,6 +233,9 @@ Traditional CMS<span class='text-[#f5487fff]'>.</span>
   }
   ::marker { 
     color: #f5487fff; 
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
   }
 </style>
 
@@ -296,7 +304,7 @@ layout: cover
 
 <dots />
 
-# The present<span class='text-[#f5487fff]'>.</span>
+# The present<highlight>.</highlight>
 
 <style>
   h1 {
@@ -316,7 +324,7 @@ layout: cover
 
 <dots />
 
-# Terminology<span class='text-[#f5487fff]'>.</span>
+# Terminology<highlight>.</highlight>
 
 <style>
   h1 {
@@ -336,7 +344,7 @@ layout: cover
 
 <dots />
 
-# Buzzwords<span class='text-[#f5487fff]'>.</span>
+# Buzzwords<highlight>.</highlight>
 
 <style>
   h1 {
@@ -354,7 +362,7 @@ layout: cover
 
 <dots />
 
-# Hype<span class='text-[#f5487fff]'>.</span>
+# Hype<highlight>.</highlight>
 
 <style>
   h1 {
@@ -376,7 +384,7 @@ layout: cover
 
 <dots />
 
-# Headless<span class='text-[#f5487fff]'>.</span>
+# Headless<highlight>.</highlight>
 
 <style>
   h1 {
@@ -400,7 +408,7 @@ layout: cover
 
 <dots />
 
-# Headless = Serverless<span class='text-[#f5487fff]'>.</span>
+# Headless = Serverless<highlight>.</highlight>
 
 <style>
   h1 {
@@ -429,7 +437,7 @@ layout: cover
 
 <dots />
 
-# The Present<span class='text-[#f5487fff]'>.</span>
+# The Present<highlight>.</highlight>
 
 <style>
   h1 {
@@ -482,15 +490,21 @@ Where a developer can request the data on any client
 layout: cover
 ---
 
+<div v-click-hide><dots /></div>
+
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Headless CMS<span class='text-[#f5487fff]'>.</span>
+Headless CMS<highlight>.</highlight>
+
+<v-clicks>
 
 - Frontend agnostic
 - Mostly CRUD
 - Decoupled
 - Developer flexibility
 - CI/CD with Git
+
+</v-clicks>
 
 </div>
 
@@ -506,6 +520,9 @@ Headless CMS<span class='text-[#f5487fff]'>.</span>
   }
   ::marker { 
     color: #f5487fff; 
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
   }
 </style>
 
@@ -523,7 +540,7 @@ layout: cover
 
 <dots />
 
-# The Future<span class='text-[#f5487fff]'>.</span>
+# The Future<highlight>.</highlight>
 
 <style>
   h1 {
@@ -541,13 +558,19 @@ Briefly
 layout: cover
 ---
 
+<div v-click-hide><dots /></div>
+
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-GraphQL<span class='text-[#f5487fff]'>.</span>
+GraphQL<highlight>.</highlight>
+
+<v-clicks>
 
 - Simple to understand 
 - You get what you see
 - Client or Server Side
+
+</v-clicks>
 
 </div>
 
@@ -563,6 +586,9 @@ GraphQL<span class='text-[#f5487fff]'>.</span>
   }
   ::marker { 
     color: #f5487fff; 
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
   }
 </style>
 
@@ -617,7 +643,7 @@ layout: cover
 
 <dots color="#f5487fff" />
 
-# Svelte<span class='text-[#f5487fff]'>.</span>
+# Svelte<highlight>.</highlight>
 
 <style>
   h1 {
@@ -635,7 +661,7 @@ layout: cover
 
 <dots color="#f5487fff" />
 
-# SvelteKit<span class='text-[#f5487fff]'>.</span>
+# SvelteKit<highlight>.</highlight>
 
 <style>
   h1 {
@@ -707,7 +733,7 @@ layout: cover
 
 <dots />
 
-# URQL<span class='text-[#f5487fff]'>.</span>
+# URQL<highlight>.</highlight>
 
 <style>
   h1 {
@@ -915,7 +941,7 @@ layout: cover
 
 <dots />
 
-# Leaking Credentials<span class='text-[#f5487fff]'>.</span>
+# Leaking Credentials<highlight>.</highlight>
 
 <style>
   h1 {
@@ -939,7 +965,7 @@ layout: cover
 
 <dots />
 
-# SvelteKit routes<span class='text-[#f5487fff]'>.</span>
+# SvelteKit routes<highlight>.</highlight>
 
 <style>
   h1 {
@@ -984,7 +1010,7 @@ layout: cover
 
 <dots />
 
-# SvelteKit endpoints<span class='text-[#f5487fff]'>.</span>
+# SvelteKit endpoints<highlight>.</highlight>
 
 <style>
   h1 {
@@ -1253,8 +1279,8 @@ layout: cover
 
 <dots />
 
-# <span class='text-[#253889ff]'>graphcms.com/blog</span>
-# <span class='text-[#253889ff]'>graphcms.com/docs</span>
+# <highlight color="#253889ff">graphcms.com/blog</highlight>
+# <highlight color="#253889ff">graphcms.com/docs</highlight>
 
 ---
 layout: cover
@@ -1262,9 +1288,9 @@ layout: cover
 
 <dots />
 
-# <span class='text-[#f5487fff]'>@</span>spences10 <span class='text-[#253889ff]'><icon-park-outline-github /> <icon-park-outline-twitter /></span>
+# <highlight>@</highlight>spences10 <highlight color="#253889ff"><icon-park-outline-github /> <icon-park-outline-twitter /></highlight>
 
-# scottspence<span class='text-[#f5487fff]'>.</span>com <span class='text-[#253889ff]'><ph-globe /></span>
+# scottspence<highlight>.</highlight>com <highlight color="#253889ff"><ph-globe /></highlight>
 
 ---
 layout: cover
@@ -1272,4 +1298,4 @@ layout: cover
 
 <dots />
 
-# Thank you<span class='text-[#f5487fff]'>.</span>
+# Thank you<highlight>.</highlight>
