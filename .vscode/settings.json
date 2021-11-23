@@ -3,7 +3,11 @@
   "git.postCommitCommand": "sync",
   "cSpell.words": [
     "Fira",
+    "Postma",
+    "slidev",
+    "spences",
     "URQL",
+    "vclick",
     "VITE"
   ],
   "editor.formatOnSave": false
