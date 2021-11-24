@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/icon-park-outline': ^1.0.1
+  '@iconify-json/mdi': ^1.0.10
   '@slidev/cli': ^0.27.16
   '@slidev/theme-default': '*'
   '@slidev/theme-seriph': '*'
@@ -12,7 +12,7 @@ dependencies:
   '@slidev/theme-seriph': 0.21.0
 
 devDependencies:
-  '@iconify-json/icon-park-outline': 1.0.1
+  '@iconify-json/mdi': 1.0.10
 
 packages:
 
@@ -51,8 +51,8 @@ packages:
       '@iconify/types': 1.0.12
     dev: false
 
-  /@iconify-json/icon-park-outline/1.0.1:
-    resolution: {integrity: sha512-4CjsNN1VJMBAqOPeRMVH8JM/eQ1LzTSgjtjs0u/TndPlrKrI/W55avR61QJhr5jqaWPTDuE6lyIv1lJ9Oaigeg==}
+  /@iconify-json/mdi/1.0.10:
+    resolution: {integrity: sha512-qX2IZAh4nrDlJ/3J5m/OWUf0Y6QQq7fJriFHG0JWf1ZyfQCArCOT9s+HBmdZKxhXYPYn58Jf+Pg/KbKK6M7tiQ==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: true
