@@ -1,16 +1,12 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/mdi': ^1.0.10
-  '@slidev/cli': ^0.27.16
+  '@slidev/cli': ^0.27.17
   '@slidev/theme-default': '*'
-  '@slidev/theme-seriph': '*'
 
 dependencies:
-  '@iconify-json/mdi': 1.0.10
-  '@slidev/cli': 0.27.16
+  '@slidev/cli': 0.27.17
   '@slidev/theme-default': 0.21.0
-  '@slidev/theme-seriph': 0.21.0
 
 packages:
 
@@ -45,12 +41,6 @@ packages:
 
   /@iconify-json/carbon/1.0.11:
     resolution: {integrity: sha512-vwjG7/uzD7ToQwt+dBHjLJ6Fd2AsnxrFOYjypiuuleqRX/zEQTMC58GsdqO77IuVz4E/HcO+DJ83w+QItCRDRg==}
-    dependencies:
-      '@iconify/types': 1.0.12
-    dev: false
-
-  /@iconify-json/mdi/1.0.10:
-    resolution: {integrity: sha512-qX2IZAh4nrDlJ/3J5m/OWUf0Y6QQq7fJriFHG0JWf1ZyfQCArCOT9s+HBmdZKxhXYPYn58Jf+Pg/KbKK6M7tiQ==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: false
@@ -112,8 +102,8 @@ packages:
       picomatch: 2.3.0
     dev: false
 
-  /@slidev/cli/0.27.16:
-    resolution: {integrity: sha512-OmHMF4X180888d35WsoaRbyr7LOJXEDkipaXqOK+RlKga1NATUlkirlLWepZ9KqaW6pgnAtd/1TNGRXbAq38Yg==}
+  /@slidev/cli/0.27.17:
+    resolution: {integrity: sha512-F+vzrsWc/t/eDW/Cr+dmR0rO0oH0odvRKINFrL9wehjaQijOJVsZ9zJrDwMFdhnMBEQ8+E4YepETw2ym3jr1Kg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
@@ -125,9 +115,9 @@ packages:
       '@antfu/utils': 0.3.0
       '@iconify-json/carbon': 1.0.11
       '@iconify-json/ph': 1.0.2
-      '@slidev/client': 0.27.16_vite@2.6.14
-      '@slidev/parser': 0.27.16
-      '@slidev/types': 0.27.16
+      '@slidev/client': 0.27.17_vite@2.6.14
+      '@slidev/parser': 0.27.17
+      '@slidev/types': 0.27.17
       '@vitejs/plugin-vue': 1.9.4_vite@2.6.14
       '@vue/compiler-sfc': 3.2.22
       cli-progress: 3.9.1
@@ -180,13 +170,13 @@ packages:
       - webpack
     dev: false
 
-  /@slidev/client/0.27.16_vite@2.6.14:
-    resolution: {integrity: sha512-8nz02eOz+EJzZ+3bvbwfhFLyTUL/sxMO+Em94O1tKeJll57/0DSrv+6TGB0BSflER9qr46NPItdrMHHJfoSpVA==}
+  /@slidev/client/0.27.17_vite@2.6.14:
+    resolution: {integrity: sha512-wMd5Zw2kCxktbR4+tc0QpfmRD9lh4gElZVbSqBrFzILuHOZELOq0fvsHPVr1UzEEeYAPhWQstvKjLOLoJjf0cQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@antfu/utils': 0.3.0
-      '@slidev/parser': 0.27.16
-      '@slidev/types': 0.27.16
+      '@slidev/parser': 0.27.17
+      '@slidev/types': 0.27.17
       '@vueuse/core': 6.9.2_vue@3.2.22
       '@vueuse/head': 0.6.0_vue@3.2.22
       '@vueuse/motion': 2.0.0-beta.4_vue@3.2.22
@@ -212,11 +202,11 @@ packages:
       - vite
     dev: false
 
-  /@slidev/parser/0.27.16:
-    resolution: {integrity: sha512-QWst/+ZnFs4pDMb+FpY979azfN2p8N2BvLc6YjbwT+lSudm0N8jqY/yaXZRM3ua2h2iMVN06E3Nf5BxSqqgQgg==}
+  /@slidev/parser/0.27.17:
+    resolution: {integrity: sha512-XxpNZTz9UK6QBveeZjdDMBG7sAbcMqJARHKDhE5mq/fmcU6L2Hs2o9CKV+p3vkre6YLe61kUoGQw8THlmPnZeg==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@slidev/types': 0.27.16
+      '@slidev/types': 0.27.17
       js-yaml: 4.1.0
     dev: false
 
@@ -230,23 +220,13 @@ packages:
       theme-vitesse: 0.1.13
     dev: false
 
-  /@slidev/theme-seriph/0.21.0:
-    resolution: {integrity: sha512-Z0I+vXMc3RVVz6vmmTUKXrSBG2uro1sAmmlLq5CTJURQaN8HoYpv8tucvJBY/NPT95Lc5jmS8a9RZr4kmxnmJQ==}
-    engines: {node: '>=14.0.0', slidev: '>=0.19.3'}
-    dependencies:
-      '@slidev/types': 0.22.7
-      codemirror-theme-vars: 0.1.1
-      prism-theme-vars: 0.2.2
-      theme-vitesse: 0.1.13
-    dev: false
-
   /@slidev/types/0.22.7:
     resolution: {integrity: sha512-mCVKQbcGTv6d6n9aHpYNp5U04HF+FMbpY083vqpJ6Folc805BB1Am02eubaW0J6nM+dSOu2dDgPY+kIjs75sAQ==}
     engines: {node: '>=14.0.0'}
     dev: false
 
-  /@slidev/types/0.27.16:
-    resolution: {integrity: sha512-1Nfqk8m4JBGJQOMMPBycx8yxKruBaQ/HLtsmUepkM8Yy2VDG0rahggYkCxJcMaS5jYEjqVBtdHMdLE3ZxGVtUw==}
+  /@slidev/types/0.27.17:
+    resolution: {integrity: sha512-VJayzIu+JiZqqYE8cWcNAuxjP2sbouqqr4mEQ3SvtPzhwP2APrSaEya2WCvx22GWPPXpobB8QQQRANHB/ARNJQ==}
     engines: {node: '>=14.0.0'}
     dev: false
 

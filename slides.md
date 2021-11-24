@@ -1377,9 +1377,9 @@ layout: cover
 
 <dots />
 
-# <highlight>@</highlight>spences10 <highlight color="#253889ff"><mdi-github /> <mdi-twitter-circle /></highlight>
+# <highlight>@</highlight>spences10
 
-# scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
+# scottspence<highlight>.</highlight>com 
 
 ---
 layout: cover
