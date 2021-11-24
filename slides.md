@@ -1379,7 +1379,7 @@ layout: cover
 
 # <highlight>@</highlight>spences10 <highlight color="#253889ff"><mdi-github /> <mdi-twitter-circle /></highlight>
 
-# scottspence<highlight>.</highlight>com <highlight color="#253889ff"></highlight>
+# scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
 
 ---
 layout: cover
