@@ -9,5 +9,8 @@
   "dependencies": {
     "@slidev/cli": "^0.27.17",
     "@slidev/theme-default": "*"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.0.10"
   }
 }

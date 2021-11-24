@@ -1,12 +1,16 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/mdi': ^1.0.10
   '@slidev/cli': ^0.27.17
   '@slidev/theme-default': '*'
 
 dependencies:
   '@slidev/cli': 0.27.17
   '@slidev/theme-default': 0.21.0
+
+devDependencies:
+  '@iconify-json/mdi': 1.0.10
 
 packages:
 
@@ -45,6 +49,12 @@ packages:
       '@iconify/types': 1.0.12
     dev: false
 
+  /@iconify-json/mdi/1.0.10:
+    resolution: {integrity: sha512-qX2IZAh4nrDlJ/3J5m/OWUf0Y6QQq7fJriFHG0JWf1ZyfQCArCOT9s+HBmdZKxhXYPYn58Jf+Pg/KbKK6M7tiQ==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
   /@iconify-json/ph/1.0.2:
     resolution: {integrity: sha512-Jfzg5CNtx/P/2fTQeISdq465rEzxj5SlyJE4tGULXSYSir0NPomfRY2zsytAOp2epvnsf1riTS44iMqPhuXXkA==}
     dependencies:
@@ -53,7 +63,6 @@ packages:
 
   /@iconify/types/1.0.12:
     resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
-    dev: false
 
   /@iconify/utils/1.0.19:
     resolution: {integrity: sha512-HEIo2FLLkzFcUcdTvNpJZugzbPIpmnhRLQk8PUYcJbjpzb8vsQHniDmTmEMAV8uN+dauMQg+Qrb8Bx054uG69w==}
