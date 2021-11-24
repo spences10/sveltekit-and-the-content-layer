@@ -60,7 +60,7 @@ layout: cover
 
 - Developer Advocate <highlight>@</highlight>GraphCMS
 - Svelte LDN meetup organiser
-- Svelte Sirens
+- <span>Svelte Sirens <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
 - Jamstack Conf workshop <highlight>"</highlight>Building with Svelte<highlight>"</highlight>
 - Jamstack Explorers
 - Cat dad 😻
@@ -72,8 +72,16 @@ layout: cover
 </div>
 
 <style>
+  h1 {
+    font-weight: bold;
+  }
   .scott-profile-pic {
-    width: 50%;
+    width: 60%;
+  }
+  .sirens-logo {
+    margin-left: 0.2rem;
+    display: inline-block;
+    width: 6%;
   }
   ul {
     list-style: disc !important;
