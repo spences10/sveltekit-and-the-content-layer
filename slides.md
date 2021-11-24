@@ -254,7 +254,7 @@ A lot of the things which made it slow were those round trips to the database ba
 
 ---
 
-<dots color="#dee2ed" bgColor="#ffffff" />
+<dots rgColor="#dee2ed" rgBgColor="#ffffff" />
 
 <v-clicks>
   <img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
@@ -644,7 +644,7 @@ anyway I'm here to talk about Svelte and how that fits in here
 layout: cover
 ---
 
-<dots color="#f5487fff" />
+<dots rgColor="#f5487fff" />
 
 # Svelte<highlight>.</highlight>
 
@@ -662,7 +662,7 @@ Ok, so let's talk about Svelte and it's position here
 layout: cover
 ---
 
-<dots color="#f5487fff" />
+<dots rgColor="#f5487fff" />
 
 # SvelteKit<highlight>.</highlight>
 
