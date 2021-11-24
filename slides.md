@@ -1099,10 +1099,11 @@ layout: cover
 
 <br>
 
-```js {all|1|3|all}
-import { GraphQLClient } from 'graphql-request';
+```js {all|1|2|4|all}
+import { GraphQLClient } from 'graphql-request'
+const GRAPHQL_ENDPOINT = import.meta.env.VITE_GRAPHQL_API
 
-export const client = new GraphQLClient(import.meta.env.VITE_GRAPHQL_API);
+export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
 ```
 
 <style>
@@ -1231,7 +1232,84 @@ layout: cover
 
 <!--
 The props from the load function are passed to the page with export let
+
+Then you can work with it much the same as with the URQL example
 -->
+
+---
+layout: cover
+---
+## `src/index.svelte`
+
+<br>
+
+```js {all|2,11|4-9|7|all}
+<ul>
+  {#each posts as post}
+    <li>
+      <h2>{post.title}</h2>
+      <p>{post.excerpt}</p>
+      <a
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}>Read the Post</a
+      >
+    </li>
+  {/each}
+</ul>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  h2 {
+    margin-top: -25px;
+  }
+</style>
+
+<!--
+Take note of the prefetch here, this will call the load function of the route
+-->
+
+---
+layout: cover
+---
+
+# Bearer token<highlight>.</highlight>
+
+<!--
+What about the credentials?
+-->
+
+---
+layout: cover
+---
+
+## `src/lib/graphql-client.js`
+
+<br>
+
+```js {all|2-3,5|7-9|all}
+import { GraphQLClient } from 'graphql-request'
+const GRAPHQL_ENDPOINT = import.meta.env.VITE_GRAPHQL_API
+const POST_TOKEN = import.meta.env.VITE_POST_TOKEN
+
+export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
+
+export const postClient = new GraphQLClient(GRAPHQL_ENDPOINT, {
+  headers: { Authorization: `Bearer ${POST_TOKEN}` },
+})
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+</style>
 
 ---
 layout: cover
