@@ -60,8 +60,10 @@ layout: cover
 
 - Developer Advocate <highlight>@</highlight>GraphCMS
 - Svelte LDN meetup organiser
-- <span>Svelte Sirens <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Jamstack Conf workshop <highlight>"</highlight>Building with Svelte<highlight>"</highlight>
+- <span>Svelte Sirens
+  <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
+- Jamstack Conf workshop <highlight>"</highlight>Building with
+  Svelte<highlight>"</highlight>
 - Jamstack Explorers
 - Cat dad 😻
 
@@ -247,8 +249,7 @@ Traditional CMS<highlight>.</highlight>
   }
 </style>
 
-
-<!-- 
+<!--
 Taking a quick look at what a CMS was back in the day
 
 Primarily website based, there wasn’t much of a need to have any on a mobile device
@@ -406,9 +407,9 @@ layout: cover
 <!--
 Slight tangent here, I’m sure the majority of you have heard the term serverless...
 
-Serverless because you’re not making call to specific servers, you’re making calls to APIs 
+Serverless because you’re not making call to specific servers, you’re making calls to APIs
 
-You’re making call to specific APIs 
+You’re making call to specific APIs
 
 These abstract away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
 -->
@@ -562,7 +563,7 @@ layout: cover
 <!--
 Let's talk about where we're going
 
-Briefly 
+Briefly
 -->
 
 ---
@@ -577,7 +578,7 @@ GraphQL<highlight>.</highlight>
 
 <v-clicks>
 
-- Simple to understand 
+- Simple to understand
 - You get what you see
 - Client or Server Side
 
@@ -621,11 +622,11 @@ query {
     # from GraphCMS
     name
     description {
-      richtext 
+      richtext
     }
     # from 3rd party API
     inventory {
-      inStock 
+      inStock
     }
     # rest of query
   }
@@ -641,7 +642,7 @@ query {
 </style>
 
 <!--
-Here's a GraphQL query, and an example of how content federation will work in GraphCMS 
+Here's a GraphQL query, and an example of how content federation will work in GraphCMS
 
 content federation is a fancy term for bringing together data from various sources
 
@@ -706,7 +707,7 @@ npm init svelte@next new-svelte-project
   }
 </style>
 
-<!-- 
+<!--
 Once SvelteKit goes v1 this will change to
 -->
 
@@ -726,7 +727,7 @@ npm init svelte new-svelte-project
   }
 </style>
 
-<!-- 
+<!--
 This
 
 The @next will go away
@@ -832,7 +833,7 @@ layout: cover
   }
 </style>
 
-<!-- 
+<!--
 You can then write your queries into the URQL operation store to create a subscription to the data
 -->
 
@@ -856,7 +857,7 @@ layout: cover
   }
 </style>
 
-<!-- 
+<!--
 One of my favourite ways to visualise data coming into a svelte component
 
 After the script tag in the body of the page
@@ -867,6 +868,7 @@ The $ on posts there is subscribing to any changes in the data from the URQL ope
 
 That gives some output like this
 -->
+
 ---
 layout: cover
 ---
@@ -897,8 +899,8 @@ layout: cover
   }
 </style>
 
-<!-- 
-Here we get some additional properties in the URQL data response 
+<!--
+Here we get some additional properties in the URQL data response
 
 This is where this fetching property comes in handy
 -->
@@ -985,7 +987,7 @@ layout: cover
 </style>
 
 <!--
-SvelteKit uses a file-based routing system much like NextJS 
+SvelteKit uses a file-based routing system much like NextJS
 
 These routes can also be turned into endpoints
 
@@ -1146,7 +1148,7 @@ export const get = async (req, res) => {
       }
     `
     const { posts } = await client.request(query)
-    
+
     return {
       status: 200,
       body: { posts },
@@ -1220,6 +1222,7 @@ Context module means it runs before the page loads
 ---
 layout: cover
 ---
+
 ## `src/index.svelte`
 
 <br>
@@ -1247,6 +1250,7 @@ Then you can work with it much the same as with the URQL example
 ---
 layout: cover
 ---
+
 ## `src/index.svelte`
 
 <br>
@@ -1369,6 +1373,7 @@ layout: cover
 <dots />
 
 # <highlight color="#253889ff">graphcms.com/blog</highlight>
+
 # <highlight color="#253889ff">graphcms.com/docs</highlight>
 
 ---
@@ -1377,9 +1382,9 @@ layout: cover
 
 <dots />
 
-# <highlight>@</highlight>spences10
+# <highlight>@</highlight>spences10 <highlight color="#253889ff"><mdi-github /> <mdi-twitter-circle /></highlight>
 
-# scottspence<highlight>.</highlight>com 
+# scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
 
 ---
 layout: cover
