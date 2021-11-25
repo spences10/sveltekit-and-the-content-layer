@@ -7,10 +7,10 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.27.17",
+    "@slidev/cli": "0.27.17",
     "@slidev/theme-default": "*"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.0.10"
+    "@iconify-json/mdi": "1.0.11"
   }
 }
