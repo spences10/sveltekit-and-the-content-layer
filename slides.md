@@ -4,9 +4,9 @@ class: text-left
 highlighter: prism
 title: SvelteKit and the Content Layer
 fonts:
-  sans: 'Inter'
-  serif: 'Inter'
-  mono: 'Fira Code'
+  sans: Inter
+  serif: Inter
+  mono: Fira Code
 lineNumbers: true
 ---
 
@@ -46,6 +46,8 @@ We’re one of the first, if not the first headless GraphQL based CMS’
 We're completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide to access content
 
 This will be a brief history of content on the web, where we are now and where we’re going
+
+But it's mainly about Svelte and SvelteKit
 -->
 
 ---
@@ -734,10 +736,80 @@ The @next will go away
 
 This will be the way to start a new Svelte project
 
-So, let's take a look at how we'd go about using GraphQL with a Svelte project
-
-We can start by taking a look at a client site GraphQL library like URQL
+If you're unfamiliar with Svelte, here's the layout of a typical Svelte file
 -->
+
+---
+layout: cover
+---
+
+## `src/routes/index.svelte`
+
+<br>
+
+```js {all|1,3|2|5|7-11|all}
+<script>
+  let name = 'world';
+</script>
+
+<h1>Hello {name}!</h1>
+
+<style>
+  h1 {
+    font-size: 3rem;
+  }
+</style>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  h2 {
+    margin-top: -25px;
+  }
+</style>
+
+<!--
+Superset of html
+-->
+
+---
+layout: cover
+---
+
+## `src/routes/index.svelte`
+
+<br>
+
+```js 
+<script context="module">
+  export const load = async ({ fetch }) => {
+    return {
+      props: incomingProps,
+    }
+  }
+</script>
+
+<script>
+  export let incomingProps
+</script>
+
+<h1>{incomingProps.title}</h1>
+```
+
+<style>
+  @import '/prism-night-owl.css';
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  h2 {
+    margin-top: -25px;
+  }
+</style>
 
 ---
 layout: cover
@@ -754,6 +826,10 @@ layout: cover
 </style>
 
 <!--
+So, let's take a look at how we'd go about using GraphQL with a Svelte project
+
+We can start by taking a look at a client site GraphQL library like URQL
+
 URQL
 
 Or Universal React Query Library is a great GraphQL client with Svelte bindings
@@ -923,7 +999,7 @@ layout: cover
     {#each $posts.data.posts as post}
       <li>
         <a href={`/posts/${post.slug}`}>
-          <Post {post} copy={false} />
+          {post.title}
         </a>
       </li>
     {/each}
@@ -1327,6 +1403,11 @@ export const postClient = new GraphQLClient(GRAPHQL_ENDPOINT, {
 layout: cover
 ---
 
+## `src/routes/posts/add-post.js`
+
+<br>
+
+
 ```js {all|1|4|5|6-13|14-16|18|22|all}
 import { postClient } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
@@ -1360,10 +1441,15 @@ export const post = async req => {
     font-size: 0.8rem;
     line-height: 1.25;
   }
+  h2 {
+    margin-top: -25px;
+  }
 </style>
 
 <!--
 This should all be in a try catch, but I want to get all the code on the screen
+
+That's it.
 -->
 
 ---
@@ -1385,6 +1471,14 @@ layout: cover
 # <highlight>@</highlight>spences10 <highlight color="#253889ff"><mdi-github /> <mdi-twitter-circle /></highlight>
 
 # scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
+
+---
+layout: cover
+---
+
+<dots />
+
+# <highlight color="#253889ff">sveltekit-and-the-content-layer.vercel.app</highlight>
 
 ---
 layout: cover
