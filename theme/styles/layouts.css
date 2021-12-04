@@ -6,6 +6,7 @@
 
   ul {
     list-style: disc;
+    font-size: 2rem;
   }
 
   ::marker { 
