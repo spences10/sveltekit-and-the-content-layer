@@ -1,6 +1,7 @@
 {
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
+  "css.lint.unknownAtRules": "ignore",
   "cSpell.words": [
     "Fira",
     "Postma",

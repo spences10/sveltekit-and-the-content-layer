@@ -1,5 +1,5 @@
 ---
-theme: default
+theme: ./theme
 class: text-left
 highlighter: prism
 title: SvelteKit and the Content Layer
@@ -18,7 +18,7 @@ lineNumbers: true
 
 ## <highlight>Scott Spence</highlight>
 
-MMT Meetup <highlight>-</highlight> Nov 2021
+Svelte London Meetup <highlight>-</highlight> Dec 2021
 
 </div>
 
@@ -51,8 +51,6 @@ But it's mainly about Svelte and SvelteKit
 -->
 
 ---
-layout: cover
----
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
@@ -76,9 +74,6 @@ layout: cover
 </div>
 
 <style>
-  h1 {
-    font-weight: bold;
-  }
   .scott-profile-pic {
     width: 60%;
   }
@@ -86,12 +81,6 @@ layout: cover
     margin-left: 0.2rem;
     display: inline-block;
     width: 6%;
-  }
-  ul {
-    list-style: disc !important;
-  }
-  ::marker { 
-    color: #f5487fff; 
   }
 </style>
 
@@ -112,18 +101,12 @@ I'm a cat dad
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Histroy Lesson<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 So with a talk like this,
@@ -134,18 +117,12 @@ First, a bit of history lesson
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # The past<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Let's take a look at how things used to be
@@ -211,8 +188,6 @@ It all started with the need to edit content online in a managed way without the
 -->
 
 ---
-layout: cover
----
 
 <div v-click-hide><dots /></div>
 
@@ -240,7 +215,7 @@ Traditional CMS<highlight>.</highlight>
     text-align: left;
   }
   ul {
-    list-style: disc !important;
+    
     font-size: 2rem;
   }
   ::marker { 
@@ -313,18 +288,12 @@ Although I do acknowledge these tools are still used across a lot of the web now
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # The present<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 That bring us to the present
@@ -333,18 +302,12 @@ So let’s talk about the present and where we are now
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Terminology<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 But first
@@ -353,36 +316,24 @@ Let’s talk terminology
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Buzzwords<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 About buzzwords
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Hype<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 And hype
@@ -393,18 +344,12 @@ But while I’m talking about naming things
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Headless<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Slight tangent here, I’m sure the majority of you have heard the term serverless...
@@ -417,18 +362,12 @@ These abstract away the servers from you whilst guaranteeing uptime and reliabil
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Headless = Serverless<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 So, in the terms of headless no server === serverless right?
@@ -439,25 +378,25 @@ layout: cover
 class: text-center
 ---
 
-# 🤷
+🤷 
+
+<style>
+  p {
+    font-size: 6rem;
+  }
+</style>
 
 <!--
 Anyway moving on
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # The Present<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Back to the present!
@@ -501,8 +440,6 @@ Where a developer can request the data on any client
 -->
 
 ---
-layout: cover
----
 
 <div v-click-hide><dots /></div>
 
@@ -529,7 +466,7 @@ Headless CMS<highlight>.</highlight>
     text-align: left;
   }
   ul {
-    list-style: disc !important;
+    
     font-size: 2rem;
   }
   ::marker { 
@@ -549,18 +486,12 @@ Gives developers a lot of flexibility to implement what why like
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # The Future<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Let's talk about where we're going
@@ -568,8 +499,6 @@ Let's talk about where we're going
 Briefly
 -->
 
----
-layout: cover
 ---
 
 <div v-click-hide><dots /></div>
@@ -595,7 +524,7 @@ GraphQL<highlight>.</highlight>
     text-align: left;
   }
   ul {
-    list-style: disc !important;
+    
     font-size: 2rem;
   }
   ::marker { 
@@ -615,8 +544,6 @@ Can be used on the client or server side
 -->
 
 ---
-layout: cover
----
 
 ```graphql {all|2,11|3-7|8-11|all}
 query {
@@ -635,14 +562,6 @@ query {
 }
 ```
 
-<style>
-  @import '/prism-night-owl.css';
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-</style>
-
 <!--
 Here's a GraphQL query, and an example of how content federation will work in GraphCMS
 
@@ -652,36 +571,24 @@ anyway I'm here to talk about Svelte and how that fits in here
 -->
 
 ---
-layout: cover
----
 
 <dots rgColor="#f5487fff" />
 
 # Svelte<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Ok, so let's talk about Svelte and it's position here
 -->
 
 ---
-layout: cover
----
 
 <dots rgColor="#f5487fff" />
 
 # SvelteKit<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 When I say Svelte what I'm actually referring to is SvelteKit
@@ -694,15 +601,12 @@ here's how to get started with Svelte
 -->
 
 ---
-layout: cover
----
 
 ```bash
 npm init svelte@next new-svelte-project
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 2rem;
     line-height: 1.5;
@@ -714,15 +618,12 @@ Once SvelteKit goes v1 this will change to
 -->
 
 ---
-layout: cover
----
 
 ```bash
 npm init svelte new-svelte-project
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 2rem;
     line-height: 1.5;
@@ -739,8 +640,6 @@ This will be the way to start a new Svelte project
 If you're unfamiliar with Svelte, here's the layout of a typical Svelte file
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/index.svelte`
@@ -762,7 +661,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -776,8 +674,6 @@ layout: cover
 Superset of html
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/index.svelte`
@@ -801,7 +697,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -816,18 +711,12 @@ This is a a way to get data from an API endpoint to return to the page
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # URQL<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 So, let's take a look at how we'd go about using GraphQL with a Svelte project
@@ -845,8 +734,6 @@ a __layout.svelte component is a good place to have the client as it will be ava
 Kind of like how you would do a content provider in React but with a lot less boilerplate
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/__layout.svelte`
@@ -867,7 +754,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -884,8 +770,6 @@ You can think of a slot much like you would wrap React children in a react compo
 I'm not going to be making comparisons between React and Svelte
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/index.svelte`
@@ -906,7 +790,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -918,8 +801,6 @@ You can then write your queries into the URQL operation store to create a subscr
 -->
 
 ---
-layout: cover
----
 
 ## Svelte debug 👀
 
@@ -930,7 +811,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -949,8 +829,6 @@ The $ on posts there is subscribing to any changes in the data from the URQL ope
 That gives some output like this
 -->
 
----
-layout: cover
 ---
 
 ## URQL output
@@ -972,7 +850,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -985,8 +862,6 @@ Here we get some additional properties in the URQL data response
 This is where this fetching property comes in handy
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/index.svelte`
@@ -1012,7 +887,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -1029,18 +903,12 @@ URQL has the fetching state built into it so you can check before rendering
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # Leaking Credentials<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 So that's great n' all but what about sensitive information?
@@ -1053,18 +921,12 @@ Let's take a quick look at Svelte routing
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
 # SvelteKit routes<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 SvelteKit uses a file-based routing system much like NextJS
@@ -1074,8 +936,6 @@ These routes can also be turned into endpoints
 Let's take a quick look at a project file structure using file-based routing
 -->
 
----
-layout: cover
 ---
 
 ```text {all|7|6|4|5|all}
@@ -1090,7 +950,6 @@ new-svelte-project/
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 2rem;
     line-height: 1.5;
@@ -1098,25 +957,17 @@ new-svelte-project/
 </style>
 
 ---
-layout: cover
----
 
 <dots />
 
 # SvelteKit endpoints<highlight>.</highlight>
 
-<style>
-  h1 {
-    font-weight: bold;
-  }
-</style>
+
 
 <!--
 Let's take a look at how SvelteKit can be used to create endpoints
 -->
 
----
-layout: cover
 ---
 
 ```text {all|6|all}
@@ -1132,7 +983,6 @@ new-svelte-project/
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 2rem;
     line-height: 1.5;
@@ -1147,8 +997,6 @@ The dot json dot js notation is a bit funky but let's just roll with it for now
 We'll also pop a GraphQL client in a lib folder here
 -->
 
----
-layout: cover
 ---
 
 ```text {all|3-4|all}
@@ -1165,7 +1013,6 @@ new-svelte-project/
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 2rem;
     line-height: 1.5;
@@ -1182,8 +1029,6 @@ Looks a little something like this
 -->
 
 ---
-layout: cover
----
 
 ## `src/lib/graphql-client.js`
 
@@ -1197,7 +1042,6 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1rem;
     line-height: 1.25;
@@ -1208,8 +1052,6 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
 
 -->
 
----
-layout: cover
 ---
 
 ## `src/routes/posts/index.json.js`
@@ -1243,7 +1085,6 @@ export const get = async (req, res) => {
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 0.95rem;
     line-height: 1.25;
@@ -1266,8 +1107,6 @@ Let's take a look at how that works
 -->
 
 ---
-layout: cover
----
 
 ## `src/index.svelte`
 
@@ -1288,7 +1127,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -1299,8 +1137,6 @@ layout: cover
 Context module means it runs before the page loads
 -->
 
----
-layout: cover
 ---
 
 ## `src/index.svelte`
@@ -1314,7 +1150,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -1327,8 +1162,6 @@ The props from the load function are passed to the page with export let
 Then you can work with it much the same as with the URQL example
 -->
 
----
-layout: cover
 ---
 
 ## `src/index.svelte`
@@ -1351,7 +1184,6 @@ layout: cover
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -1366,8 +1198,6 @@ Take note of the prefetch here, this will call the load function of the route
 -->
 
 ---
-layout: cover
----
 
 # Bearer token<highlight>.</highlight>
 
@@ -1375,8 +1205,6 @@ layout: cover
 What about the credentials?
 -->
 
----
-layout: cover
 ---
 
 ## `src/lib/graphql-client.js`
@@ -1396,15 +1224,12 @@ export const postClient = new GraphQLClient(GRAPHQL_ENDPOINT, {
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 0.8rem;
     line-height: 1.25;
   }
 </style>
 
----
-layout: cover
 ---
 
 ## `src/routes/posts/add-post.js`
@@ -1440,7 +1265,6 @@ export const post = async req => {
 ```
 
 <style>
-  @import '/prism-night-owl.css';
   span {
     font-size: 0.8rem;
     line-height: 1.25;
@@ -1457,8 +1281,6 @@ That's it.
 -->
 
 ---
-layout: cover
----
 
 <dots />
 
@@ -1466,8 +1288,6 @@ layout: cover
 
 # <highlight color="#253889ff">graphcms.com/docs</highlight>
 
----
-layout: cover
 ---
 
 <dots />
@@ -1477,15 +1297,11 @@ layout: cover
 # scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
 
 ---
-layout: cover
----
 
 <dots />
 
 # <highlight color="#253889ff">sveltekit-and-the-content-layer.vercel.app</highlight>
 
----
-layout: cover
 ---
 
 <dots />
