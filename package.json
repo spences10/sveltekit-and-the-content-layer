@@ -4,7 +4,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev",
-    "export": "slidev export"
+    "export": "slidev export",
+    "eject": "slidev theme eject"
   },
   "dependencies": {
     "@slidev/cli": "0.27.18",
@@ -12,5 +13,24 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "1.0.11"
+  },
+  "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
+  "slidev": {
+    "colorSchema": "dark",
+    "highlighter": "all",
+    "defaults": {
+      "fonts": {
+        "sans": "Inter",
+        "mono": [
+          "Victor Mono",
+          "Consolas",
+          "Monaco",
+          "Andale Mono",
+          "Ubuntu Mono",
+          "monospace"
+        ]
+      },
+      "hightlighter": "prism"
+    }
   }
 }

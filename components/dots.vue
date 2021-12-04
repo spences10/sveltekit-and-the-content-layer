@@ -15,7 +15,7 @@
       },
       rgBgColor: {
         type: String,
-        default: "#121212"
+        default: "#090E24"
       },
       rgColorSize: {
         type: String,
