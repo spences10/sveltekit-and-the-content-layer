@@ -67,6 +67,9 @@ But it's mainly about Svelte and SvelteKit
 </div>
 
 <style>
+  ul {
+    font-size: 1rem !important;
+  }
   .scott-profile-pic {
     width: 60%;
   }
