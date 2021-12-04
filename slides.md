@@ -23,16 +23,9 @@ Svelte London Meetup <highlight>-</highlight> Dec 2021
 </div>
 
 <style>
-  h1 {
-    font-weight: bold;
-    margin-bottom: 4rem;
-  }
   h2, p {
     font-weight: bold;
     font-size: 1rem;
-  }
-  p {
-    margin-top: 0;
   }
 </style>
 
@@ -106,8 +99,6 @@ I'm a cat dad
 
 # Histroy Lesson<highlight>.</highlight>
 
-
-
 <!--
 So with a talk like this,
 
@@ -122,8 +113,6 @@ First, a bit of history lesson
 
 # The past<highlight>.</highlight>
 
-
-
 <!--
 Let's take a look at how things used to be
 
@@ -134,27 +123,7 @@ This is the not so distant past, and for some their current reality
 
 <dots />
 
-<div>
-<img class='filezilla' src='/assets/filezilla.png' alt='filezilla logo' />
-<img class='old-website' src='/assets/old-website.png' alt='old website graphic' />
-</div>
-
-<style>
-  .filezilla {
-    position: absolute;
-    left: 220px;
-    top: 107px;
-    width: 30%;
-    z-index: 1;
-  }
-  .old-website {
-    position: absolute;
-    left: 450px;
-    top: 150px;
-    width: 30%;
-    z-index: -1;
-  }
-</style>
+<in-the-beginning />
 
 <!--
 Initially.
@@ -168,18 +137,7 @@ There then became a requirement for authoring content without the need for a dev
 
 <dots />
 
-<div>
-<img class='how-it-started' src='/assets/how-it-started-graphic.png' alt='cms graphic' />
-</div>
-
-<style>
-  .how-it-started {
-    position: absolute;
-    left: 50px;
-    top: 110px;
-    width: 60%;
-  }
-</style>
+<how-it-started />
 
 <!--
 The Content Management System is born
@@ -214,13 +172,6 @@ Traditional CMS<highlight>.</highlight>
     font-weight: bold;
     text-align: left;
   }
-  ul {
-    
-    font-size: 2rem;
-  }
-  ::marker { 
-    color: #f5487fff; 
-  }
   .slidev-vclick-target {
     transition: opacity 400ms ease;
   }
@@ -242,36 +193,11 @@ A lot of the things which made it slow were those round trips to the database ba
 
 <dots rgColor="#dee2ed" rgBgColor="#ffffff" />
 
-<v-clicks>
-  <img class='drupal' src='/assets/drupal.png' alt='drupal logo' />
-  <img class='wordpress' src='/assets/wordpress.png' alt='wordpress logo' />
-  <img class='aem' src='/assets/adobe-experience-manager.png' alt='adobe experience manager logo' />
-</v-clicks>
+<og-cms-solutions />
 
 <style>
   div {
     background-color: #fff;
-  }
-  .drupal {
-    position: absolute;
-    left: 130px;
-    top: 100px;
-    width: 20%;
-  }
-  .wordpress {
-    position: absolute;
-    left: 540px;
-    top: 60px;
-    width: 20%;
-  }
-  .aem {
-    position: absolute;
-    left: 380px;
-    top: 300px;
-    width: 20%;
-  }
-  .slidev-vclick-target {
-    transition: opacity 400ms ease;
   }
 </style>
 
@@ -293,8 +219,6 @@ Although I do acknowledge these tools are still used across a lot of the web now
 
 # The present<highlight>.</highlight>
 
-
-
 <!--
 That bring us to the present
 
@@ -306,8 +230,6 @@ So let’s talk about the present and where we are now
 <dots />
 
 # Terminology<highlight>.</highlight>
-
-
 
 <!--
 But first
@@ -321,8 +243,6 @@ Let’s talk terminology
 
 # Buzzwords<highlight>.</highlight>
 
-
-
 <!--
 About buzzwords
 -->
@@ -332,8 +252,6 @@ About buzzwords
 <dots />
 
 # Hype<highlight>.</highlight>
-
-
 
 <!--
 And hype
@@ -349,8 +267,6 @@ But while I’m talking about naming things
 
 # Headless<highlight>.</highlight>
 
-
-
 <!--
 Slight tangent here, I’m sure the majority of you have heard the term serverless...
 
@@ -365,20 +281,17 @@ These abstract away the servers from you whilst guaranteeing uptime and reliabil
 
 <dots />
 
-# Headless = Serverless<highlight>.</highlight>
-
-
+# Headless <highlight> = </highlight> Serverless<highlight>.</highlight>
 
 <!--
 So, in the terms of headless no server === serverless right?
 -->
 
 ---
-layout: cover
 class: text-center
 ---
 
-🤷 
+🤷
 
 <style>
   p {
@@ -396,8 +309,6 @@ Anyway moving on
 
 # The Present<highlight>.</highlight>
 
-
-
 <!--
 Back to the present!
 
@@ -410,18 +321,7 @@ And we, as developers can do a lot more in the browser
 
 ---
 
-<div>
-<img class='how-its-going' src='/assets/headless-cms-graphic.png' alt='headless cms graphic' />
-</div>
-
-<style>
-  .how-its-going {
-    position: absolute;
-    left: 40px;
-    top: 120px;
-    width: 70%;
-  }
-</style>
+<how-its-going />
 
 <!--
 Headless is decoupled from the monolith.
@@ -465,13 +365,6 @@ Headless CMS<highlight>.</highlight>
     font-weight: bold;
     text-align: left;
   }
-  ul {
-    
-    font-size: 2rem;
-  }
-  ::marker { 
-    color: #f5487fff; 
-  }
   .slidev-vclick-target {
     transition: opacity 400ms ease;
   }
@@ -491,8 +384,6 @@ Gives developers a lot of flexibility to implement what why like
 
 # The Future<highlight>.</highlight>
 
-
-
 <!--
 Let's talk about where we're going
 
@@ -505,7 +396,7 @@ Briefly
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-GraphQL<highlight>.</highlight>
+# GraphQL<highlight>.</highlight>
 
 <v-clicks>
 
@@ -522,13 +413,6 @@ GraphQL<highlight>.</highlight>
     font-size: 3.25rem;
     font-weight: bold;
     text-align: left;
-  }
-  ul {
-    
-    font-size: 2rem;
-  }
-  ::marker { 
-    color: #f5487fff; 
   }
   .slidev-vclick-target {
     transition: opacity 400ms ease;
@@ -562,6 +446,16 @@ query {
 }
 ```
 
+<style>
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  h2 {
+    margin-top: -25px;
+  }
+</style>
+
 <!--
 Here's a GraphQL query, and an example of how content federation will work in GraphCMS
 
@@ -576,8 +470,6 @@ anyway I'm here to talk about Svelte and how that fits in here
 
 # Svelte<highlight>.</highlight>
 
-
-
 <!--
 Ok, so let's talk about Svelte and it's position here
 -->
@@ -587,8 +479,6 @@ Ok, so let's talk about Svelte and it's position here
 <dots rgColor="#f5487fff" />
 
 # SvelteKit<highlight>.</highlight>
-
-
 
 <!--
 When I say Svelte what I'm actually referring to is SvelteKit
@@ -680,7 +570,7 @@ Superset of html
 
 <br>
 
-```js 
+```js
 <script context="module">
   export const load = async ({ fetch }) => {
     return {
@@ -715,8 +605,6 @@ This is a a way to get data from an API endpoint to return to the page
 <dots />
 
 # URQL<highlight>.</highlight>
-
-
 
 <!--
 So, let's take a look at how we'd go about using GraphQL with a Svelte project
@@ -908,8 +796,6 @@ URQL has the fetching state built into it so you can check before rendering
 
 # Leaking Credentials<highlight>.</highlight>
 
-
-
 <!--
 So that's great n' all but what about sensitive information?
 
@@ -925,8 +811,6 @@ Let's take a quick look at Svelte routing
 <dots />
 
 # SvelteKit routes<highlight>.</highlight>
-
-
 
 <!--
 SvelteKit uses a file-based routing system much like NextJS
@@ -961,8 +845,6 @@ new-svelte-project/
 <dots />
 
 # SvelteKit endpoints<highlight>.</highlight>
-
-
 
 <!--
 Let's take a look at how SvelteKit can be used to create endpoints
@@ -1236,7 +1118,6 @@ export const postClient = new GraphQLClient(GRAPHQL_ENDPOINT, {
 
 <br>
 
-
 ```js {all|1|4|5|6-13|14-16|18|22|all}
 import { postClient } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
@@ -1279,6 +1160,26 @@ This should all be in a try catch, but I want to get all the code on the screen
 
 That's it.
 -->
+
+---
+
+# Closing Comments<highlight>.</highlight>
+
+---
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+# SvelteKit<highlight>.</highlight>
+
+🏆
+
+</div>
+
+<style>
+  p {
+    font-size: 6rem;
+  }
+</style>
 
 ---
 
