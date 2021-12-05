@@ -1,5 +1,5 @@
 <template>
-  <span :style="btnStyles"><slot></slot></span>
+  <span :style="spanStyles"><slot></slot></span>
 </template>
 
 <script>
@@ -7,15 +7,15 @@ export default {
   props: {
     color: {
       type: String,
-      default: "#f5487fff"
+      default: '#f5487fff',
     },
   },
   computed: {
-    btnStyles() {
+    spanStyles() {
       return {
         color: this.color,
-      };
-    }
-  }
-};
+      }
+    },
+  },
+}
 </script>
