@@ -282,6 +282,36 @@ These abstract away the servers from you whilst guaranteeing uptime and reliabil
 
 ---
 
+<div v-click-hide><dots /></div>
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+# Serverless<highlight>.</highlight>
+
+<v-clicks>
+
+- No calls to servers
+- Calling an API
+- Abstracts away the server
+- Guaranteeing uptime and reliability
+
+</v-clicks>
+
+</div>
+
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
+  }
+</style>
+
+---
+
 <dots />
 
 # Headless <highlight> = </highlight> Serverless<highlight>.</highlight>
@@ -530,7 +560,7 @@ The @next will go away
 
 This will be the way to start a new Svelte project
 
-If you're unfamiliar with Svelte, here's the layout of a typical Svelte file
+I'm sure everyone is familiar with Svelte here, here's the layout of a typical Svelte file
 -->
 
 ---
@@ -607,6 +637,30 @@ This is a a way to get data from an API endpoint to return to the page
 
 <dots />
 
+# SvelteKit and GraphQL<highlight>.</highlight>
+
+---
+
+<dots />
+
+# Client Side<highlight>.</highlight>
+
+---
+
+<dots rgColor="#dee2ed" rgBgColor="#ffffff" />
+
+<graphql-clients />
+
+<style>
+  div {
+    background-color: #fff;
+  }
+</style>
+
+---
+
+<dots />
+
 # URQL<highlight>.</highlight>
 
 <!--
@@ -663,36 +717,6 @@ I'm not going to be making comparisons between React and Svelte
 
 ---
 
-## `src/routes/index.svelte`
-
-<br>
-
-```js {all|2|3-7|8|9|all}
-<script>
-  import { gql, operationStore, query } from '@urql/svelte'
-  const postsQuery = gql`
-    query Posts {
-      # posts GraphQL query here
-    }
-  `
-  const posts = operationStore(postsQuery)
-  query(posts)
-</script>
-```
-
-<style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-</style>
-
-<!--
-You can then write your queries into the URQL operation store to create a subscription to the data
--->
-
----
-
 ## Svelte debug 👀
 
 <br>
@@ -718,6 +742,38 @@ I can add this to see what the data looks like from URQL
 The $ on posts there is subscribing to any changes in the data from the URQL operation store
 
 That gives some output like this
+-->
+
+---
+
+## `src/routes/index.svelte`
+
+<br>
+
+```js {all|12|all}
+<script>
+  import { gql, operationStore, query } from '@urql/svelte'
+  const postsQuery = gql`
+    query Posts {
+      # posts GraphQL query here
+    }
+  `
+  const posts = operationStore(postsQuery)
+  query(posts)
+</script>
+
+<pre>{JSON.stringify($posts, null, 2)}</pre>
+```
+
+<style>
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+<!--
+You can then write your queries into the URQL operation store to create a subscription to the data
 -->
 
 ---
@@ -755,47 +811,21 @@ This is where this fetching property comes in handy
 
 ---
 
-## `src/routes/index.svelte`
+<!-- # `src/routes/index.svelte` -->
 
-<br>
-
-```js {all|1,15|2|3|4|5|6,14|7-13|all}
-{#if $posts.fetching}
-  <p>Loading...</p>
-{:else if $posts.error}
-  <p>Error! {$posts.error.message}</p>
-{:else}
-  <ul>
-    {#each $posts.data.posts as post}
-      <li>
-        <a href={`/posts/${post.slug}`}>
-          {post.title}
-        </a>
-      </li>
-    {/each}
-  </ul>
-{/if}
-```
+# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
 
 <style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  h2 {
-    margin-top: -25px;
-  }
+  h1 {
+    /* display: inline-block; */
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+    /* font-weight: 300; */
+}
 </style>
-
-<!--
-Here we can use some of the Svelte expressions to work through the URQL response
-
-URQL has the fetching state built into it so you can check before rendering
--->
-
----
-
-# `src/routes/index.svelte`
 
 ---
 layout: two-cols-code
@@ -832,6 +862,8 @@ layout: two-cols-code
 
 ::right::
 
+<v-clicks>
+
 <div class="right">
 
 ```js {1-10}
@@ -848,6 +880,8 @@ layout: two-cols-code
 ```
 
 </div>
+
+</v-clicks>
 
 <style>
   .right pre * span {
@@ -937,8 +971,16 @@ layout: two-cols-code
 </style>
 
 <!--
+Here we can use some of the Svelte expressions to work through the URQL response
 
+URQL has the fetching state built into it so you can check before rendering
 -->
+
+---
+
+<dots />
+
+# But<highlight>.</highlight>
 
 ---
 
