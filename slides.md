@@ -795,6 +795,153 @@ URQL has the fetching state built into it so you can check before rendering
 
 ---
 
+# `src/routes/index.svelte`
+
+---
+layout: two-cols-code
+---
+
+```js {1-10}
+<script>
+  import { gql, operationStore, query } from '@urql/svelte'
+  const postsQuery = gql`
+    query Posts {
+      # posts GraphQL query here
+    }
+  `
+  const posts = operationStore(postsQuery)
+  query(posts)
+</script>
+
+{#if $posts.fetching}
+  <p>Loading...</p>
+{:else if $posts.error}
+  <p>Error! {$posts.error.message}</p>
+{:else}
+  <ul>
+    {#each $posts.data.posts as post}
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          {post.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
+```
+
+::right::
+
+<div class="right">
+
+```js {1-10}
+<script>
+  import { gql, operationStore, query } from '@urql/svelte'
+  const postsQuery = gql`
+    query Posts {
+      # posts GraphQL query here
+    }
+  `
+  const posts = operationStore(postsQuery)
+  query(posts)
+</script>
+```
+
+</div>
+
+<style>
+  .right pre * span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  span {
+    font-size: 0.5rem;
+    line-height: normal;
+  }
+</style>
+
+<!--
+You can then write your queries into the URQL operation store to create a subscription to the data
+
+Here we can use some of the Svelte expressions to work through the URQL response
+
+URQL has the fetching state built into it so you can check before rendering
+-->
+
+---
+layout: two-cols-code
+---
+
+```js {12-26}
+<script>
+  import { gql, operationStore, query } from '@urql/svelte'
+  const postsQuery = gql`
+    query Posts {
+      # posts GraphQL query here
+    }
+  `
+  const posts = operationStore(postsQuery)
+  query(posts)
+</script>
+
+{#if $posts.fetching}
+  <p>Loading...</p>
+{:else if $posts.error}
+  <p>Error! {$posts.error.message}</p>
+{:else}
+  <ul>
+    {#each $posts.data.posts as post}
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          {post.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
+```
+
+::right::
+
+<div class="right">
+
+```js {1-15}
+{#if $posts.fetching}
+  <p>Loading...</p>
+{:else if $posts.error}
+  <p>Error! {$posts.error.message}</p>
+{:else}
+  <ul>
+    {#each $posts.data.posts as post}
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          {post.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
+```
+
+</div>
+
+<style>
+  .right pre * span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  span {
+    font-size: 0.5rem;
+    line-height: normal;
+  }
+</style>
+
+<!--
+
+-->
+
+---
+
 <dots />
 
 # Leaking Credentials<highlight>.</highlight>
