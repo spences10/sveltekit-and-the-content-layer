@@ -778,7 +778,7 @@ You can then write your queries into the URQL operation store to create a subscr
 
 ---
 
-## URQL output
+## URQL output on `localhost:3000/`
 
 <br>
 
@@ -939,7 +939,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-15}
+```js {all|1,15|2|3-4|5|6-14|all}
 {#if $posts.fetching}
   <p>Loading...</p>
 {:else if $posts.error}
