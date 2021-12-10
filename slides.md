@@ -769,7 +769,7 @@ That gives some output like this
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
-    query Posts {
+    query AllPosts {
       # posts GraphQL query here
     }
   `
@@ -850,7 +850,7 @@ layout: two-cols-code
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
-    query Posts {
+    query AllPosts {
       # posts GraphQL query here
     }
   `
@@ -881,12 +881,15 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-10}
+```js {1-13}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
-    query Posts {
-      # posts GraphQL query here
+    query AllPosts {
+      posts {
+        title
+        slug
+      }
     }
   `
   const posts = operationStore(postsQuery)
@@ -925,7 +928,7 @@ layout: two-cols-code
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
-    query Posts {
+    query AllPosts {
       # posts GraphQL query here
     }
   `
@@ -1007,6 +1010,232 @@ URQL has the fetching state built into it so you can check before rendering
   width: 36.2%;
 }
 </style>
+
+---
+layout: two-cols-code
+---
+
+`bash`
+
+```bash
+npx houdini generate
+```
+
+::right::
+
+`src/environment.js`
+
+<div class="right">
+
+```js {all|8|20|all}
+import { Environment } from '$houdini'
+const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
+
+export default new Environment(async function ({
+  text,
+  variables = {},
+}) {
+  const result = await this.fetch(GRAPHQL_API, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      query: text,
+      variables,
+    }),
+  })
+
+  // parse the result as json
+  return await result.json()
+})
+```
+
+</div>
+
+<style>
+  .right pre * span {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+  span {
+    font-size: 1rem;
+    line-height: normal;
+  }
+</style>
+
+---
+
+## `src/routes/__layout.svelte`
+
+<br>
+
+```js {all|2-3|5|8-10|all}
+<script context="module">
+  import { setEnvironment } from '$houdini'
+  import env from '../environment'
+
+  setEnvironment(env)
+</script>
+
+<main>
+  <slot />
+</main>
+```
+
+<style>
+  span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+
+---
+
+<!-- # `src/routes/index.svelte` -->
+
+# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
+
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
+
+---
+layout: two-cols-code
+---
+
+```js {1-12}
+<script>
+  import { graphql, query } from '$houdini'
+  const { data } = query(graphql`
+    query AllPosts {
+      posts {
+        title
+        slug
+      }
+    }
+  `)
+  const { posts } = $data
+</script>
+
+<ul>
+  {#each posts as post}
+    <li>
+      <a href={`/posts/${post.slug}`}>
+        {post.title}
+      </a>
+    </li>
+  {/each}
+</ul>
+```
+
+::right::
+
+<v-clicks>
+
+<div class="right">
+
+```js {1-12}
+<script>
+  import { graphql, query } from '$houdini'
+  const { data } = query(graphql`
+    query AllPosts {
+      posts {
+        title
+        slug
+      }
+    }
+  `)
+  const { posts } = $data
+</script>
+```
+
+</div>
+
+</v-clicks>
+
+<style>
+  .right pre * span {
+    font-size: 0.8rem;
+    line-height: normal;
+  }
+  span {
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+</style>
+
+<!--
+
+-->
+
+---
+layout: two-cols-code
+---
+
+```js {14-22}
+<script>
+  import { graphql, query } from '$houdini'
+  const { data } = query(graphql`
+    query AllPosts {
+      posts {
+        title
+        slug
+      }
+    }
+  `)
+  const { posts } = $data
+</script>
+
+<ul>
+  {#each posts as post}
+    <li>
+      <a href={`/posts/${post.slug}`}>
+        {post.title}
+      </a>
+    </li>
+  {/each}
+</ul>
+```
+
+::right::
+
+<div class="right">
+
+```js {1-9}
+<ul>
+  {#each posts as post}
+    <li>
+      <a href={`/posts/${post.slug}`}>
+        {post.title}
+      </a>
+    </li>
+  {/each}
+</ul>
+```
+
+</div>
+
+<style>
+  .right pre * span {
+    font-size: 0.8rem;
+    line-height: normal;
+  }
+  span {
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+</style>
+
+<!--
+
+-->
 
 ---
 
@@ -1189,7 +1418,7 @@ import { gql } from 'graphql-request'
 export const get = async (req, res) => {
   try {
     const query = gql`
-      query Posts {
+      query AllPosts {
         # posts GraphQL query here 
       }
     `
