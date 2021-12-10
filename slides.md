@@ -663,6 +663,21 @@ This is a a way to get data from an API endpoint to return to the page
 
 # URQL<highlight>.</highlight>
 
+<img
+  class="urql"
+  src="/assets/urql-logo.svg"
+  alt="urql logo"
+/>
+
+<style>
+.urql {
+  position: absolute;
+  left: 510px;
+  top: 170px;
+  width: 20%;
+}
+</style>
+
 <!--
 So, let's take a look at how we'd go about using GraphQL with a Svelte project
 
@@ -975,6 +990,23 @@ Here we can use some of the Svelte expressions to work through the URQL response
 
 URQL has the fetching state built into it so you can check before rendering
 -->
+
+---
+
+<dots />
+
+# Houdini<highlight>.</highlight>
+
+<img class="houdini" src="/assets/houdini.png" alt="houdini logo" />
+
+<style>
+.houdini {
+  position: absolute;
+  left: 400px;
+  top: 190.7px;
+  width: 36.2%;
+}
+</style>
 
 ---
 
