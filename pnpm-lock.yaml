@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/mdi': 1.0.11
+  '@iconify-json/mdi': 1.0.12
   '@slidev/cli': 0.27.18
   '@slidev/theme-default': '*'
 
@@ -10,7 +10,7 @@ dependencies:
   '@slidev/theme-default': 0.21.1
 
 devDependencies:
-  '@iconify-json/mdi': 1.0.11
+  '@iconify-json/mdi': 1.0.12
 
 packages:
 
@@ -49,8 +49,8 @@ packages:
       '@iconify/types': 1.0.12
     dev: false
 
-  /@iconify-json/mdi/1.0.11:
-    resolution: {integrity: sha512-Pw1C2ucxdfrijj/GqrT1sEvLgM+/PAlK/rQUp6enVtkvhiyFBeQmfHEYr6igL58TumQxM1q83xfZ4obFVCD59w==}
+  /@iconify-json/mdi/1.0.12:
+    resolution: {integrity: sha512-smYQpxDqSCUdySFSYZpH0BAEVbgFnU4IE/Hb36zavseOl3zFlKDvGOEFPC7djkEabrIWi9KDAUdbtIREcgVE8A==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: true
@@ -142,7 +142,7 @@ packages:
       js-base64: 3.7.2
       katex: 0.13.24
       kolorist: 1.5.0
-      markdown-it: 12.2.0
+      markdown-it: 12.3.0
       markdown-it-footnote: 3.0.3
       markdown-it-link-attributes: 3.0.0
       monaco-editor: 0.29.1
@@ -155,8 +155,8 @@ packages:
       resolve: 1.20.0
       resolve-from: 5.0.0
       resolve-global: 1.0.0
-      shiki: 0.9.14
-      unplugin-icons: 0.12.22_a6229ccc81e9fcdd34e6873f3e06b01a
+      shiki: 0.9.15
+      unplugin-icons: 0.12.23_a6229ccc81e9fcdd34e6873f3e06b01a
       unplugin-vue-components: 0.16.0_vite@2.7.1+vue@3.2.24
       vite: 2.7.1
       vite-plugin-md: 0.11.4_vite@2.7.1
@@ -797,8 +797,8 @@ packages:
     resolution: {integrity: sha512-j8tPxlqh1srJHAtxfvOUwKNYJkQuBFdM1+JAUfq6xqH5eAqf93L7oG1NVqDa4CpFZNvnNKtCYEUC8KY9yEn9lQ==}
     dev: false
 
-  /d3-hierarchy/3.1.0:
-    resolution: {integrity: sha512-RZWnhsvcrf81F+khYxu2IOfoSwfCGla9je0JQaRIEuPOgJd+3cKdvAYyMXvTt0MDbluiHThYBQzIb0xxXfnqmA==}
+  /d3-hierarchy/3.1.1:
+    resolution: {integrity: sha512-LtAIu54UctRmhGKllleflmHalttH3zkfSi4NlKrTAoFKjC+AFBJohsCAdgCBYQwH0F8hIOGY89X1pPqAchlMkA==}
     engines: {node: '>=12'}
     dev: false
 
@@ -1029,8 +1029,8 @@ packages:
       d3-zoom: 1.8.3
     dev: false
 
-  /d3/7.2.0:
-    resolution: {integrity: sha512-0bh5lPzD6R/I/SjkcgyQlMaIsrZDgh40yMkdJaiZ/58YEbh4zz5EvtjaudzmI6ruwQNvxGm00trYUyPa992NSQ==}
+  /d3/7.2.1:
+    resolution: {integrity: sha512-E/5sP0aeK6YPXI/+4QlefvBFgmcyR2jYftId0PrYWv4Y/gW3c3thp1XG4rQzF0eUwV9tR1x05X5eWuJ6rQXvew==}
     engines: {node: '>=12'}
     dependencies:
       d3-array: 3.1.1
@@ -1048,7 +1048,7 @@ packages:
       d3-force: 3.0.0
       d3-format: 3.1.0
       d3-geo: 3.0.1
-      d3-hierarchy: 3.1.0
+      d3-hierarchy: 3.1.1
       d3-interpolate: 3.0.1
       d3-path: 3.0.1
       d3-polygon: 3.0.1
@@ -1729,8 +1729,8 @@ packages:
     resolution: {integrity: sha512-B34ySxVeo6MuEGSPCWyIYryuXINOvngNZL87Mp7YYfKIf6DcD837+lXA8mo6EBbauKsnGz22ZH0zsbOiQRWTNg==}
     dev: false
 
-  /markdown-it/12.2.0:
-    resolution: {integrity: sha512-Wjws+uCrVQRqOoJvze4HCqkKl1AsSh95iFAeQDwnyfxM09divCBSXlDR1uTvyUP3Grzpn4Ru8GeCxYPM8vkCQg==}
+  /markdown-it/12.3.0:
+    resolution: {integrity: sha512-T345UZZ6ejQWTjG6PSEHplzNy5m4kF6zvUpHVDv8Snl/pEU0OxIK0jGg8YLVNwJvT8E0YJC7/2UvssJDk/wQCQ==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
@@ -1757,14 +1757,14 @@ packages:
     resolution: {integrity: sha512-/b8tCqyGhb+yiCQQ5cwpGcaesAfZV057kRBaUx+g6LHctebWaMvo5WmIPN+/jMHfLtAgCJIaQDZ1EsECz7FJIQ==}
     dependencies:
       '@braintree/sanitize-url': 3.1.0
-      d3: 7.2.0
+      d3: 7.2.1
       dagre: 0.8.5
       dagre-d3: 0.6.4
       dompurify: 2.3.1
       graphlib: 2.1.8
       khroma: 1.4.1
       moment-mini: 2.24.0
-      stylis: 4.0.10
+      stylis: 4.0.12
     dev: false
 
   /micromatch/4.0.4:
@@ -2000,8 +2000,8 @@ packages:
     resolution: {integrity: sha512-ndEIpszUHiG4HtDsQLeIuMvRsDnn8c8rYStabochtUeCvfuvNptb5TUbVD68LRAILPX7p9nqQGh4xJgn3EHS/g==}
     dev: false
 
-  /rollup/2.60.2:
-    resolution: {integrity: sha512-1Bgjpq61sPjgoZzuiDSGvbI1tD91giZABgjCQBKM5aYLnzjq52GoDuWVwT/cm/MCxCMPU8gqQvkj8doQ5C8Oqw==}
+  /rollup/2.61.1:
+    resolution: {integrity: sha512-BbTXlEvB8d+XFbK/7E5doIcRtxWPRiqr0eb5vQ0+2paMM04Ye4PZY5nHOQef2ix24l/L0SpLd5hwcH15QHPdvA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2050,8 +2050,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /shiki/0.9.14:
-    resolution: {integrity: sha512-uLHjjyJdNsMzF9GOF8vlOuZ8BwigiYPraMN5yjC826k8K7Xu90JQcC5GUNrzRibLgT2EOk9597I1IX+jRdA8nw==}
+  /shiki/0.9.15:
+    resolution: {integrity: sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==}
     dependencies:
       jsonc-parser: 3.0.0
       vscode-oniguruma: 1.6.1
@@ -2122,8 +2122,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /stylis/4.0.10:
-    resolution: {integrity: sha512-m3k+dk7QeJw660eIKRRn3xPF6uuvHs/FFzjX3HQ5ove0qYsiygoAhwn5a3IYKaZPo5LrYD0rfVmtv1gNY1uYwg==}
+  /stylis/4.0.12:
+    resolution: {integrity: sha512-eVXQEZqRRFRvl8Aor1kNWN7ViNss9tYhphVBFNxyCJWKdK+FO5sOVKEHk7Dg/vLAr1xYQBpUb+7weU4AlDUm8g==}
     dev: false
 
   /theme-vitesse/0.1.14:
@@ -2164,8 +2164,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin-icons/0.12.22_a6229ccc81e9fcdd34e6873f3e06b01a:
-    resolution: {integrity: sha512-GG6WAK1jqc50NXqoc3dYW9ui9k2UK0eOvilwr0MQ79iGvBtATbHoDyLTgSRsuous7Qfq8n+odL8TJgELaqvNCA==}
+  /unplugin-icons/0.12.23_a6229ccc81e9fcdd34e6873f3e06b01a:
+    resolution: {integrity: sha512-jhCogt+/3WEdPrfHkUGwiLnNJAOrE469J/Zlsh57KAaeEDxrw+PMqXDXRFA/fZjtal/btGPFcDOeQPPHGW6JHg==}
     peerDependencies:
       '@svgr/core': ^5.5.0
       '@vue/compiler-sfc': ^3.0.2
@@ -2251,7 +2251,7 @@ packages:
       '@rollup/pluginutils': 4.1.1
       '@types/markdown-it': 12.2.3
       gray-matter: 4.0.3
-      markdown-it: 12.2.0
+      markdown-it: 12.3.0
       vite: 2.7.1
     dev: false
 
@@ -2316,7 +2316,7 @@ packages:
       esbuild: 0.13.15
       postcss: 8.4.4
       resolve: 1.20.0
-      rollup: 2.60.2
+      rollup: 2.61.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
