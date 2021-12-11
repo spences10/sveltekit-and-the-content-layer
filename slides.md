@@ -55,8 +55,10 @@ But it's mainly about Svelte and SvelteKit
 - Svelte LDN meetup organiser
 - <span>Svelte Sirens
   <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Jamstack Conf workshop <highlight>"</highlight>Building with
-  Svelte<highlight>"</highlight>
+- Workshop <highlight>"</highlight>Building with
+  Svelte and GraphQL<highlight>"</highlight>
+  - Jamstack Conf
+  - GraphQL Galaxy
 - Jamstack Explorers
 - Cat dad 😻
 
@@ -266,9 +268,33 @@ But while I’m talking about naming things
 
 ---
 
-<dots />
+<div v-click-hide><dots /></div>
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
 # Headless<highlight>.</highlight>
+
+<v-clicks>
+
+- No calls to servers
+- Calling an API
+- Abstracts away the server
+- Guaranteeing uptime and reliability
+
+</v-clicks>
+
+</div>
+
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
+  }
+</style>
 
 <!--
 Slight tangent here, I’m sure the majority of you have heard the term serverless...
@@ -561,76 +587,6 @@ The @next will go away
 This will be the way to start a new Svelte project
 
 I'm sure everyone is familiar with Svelte here, here's the layout of a typical Svelte file
--->
-
----
-
-## `src/routes/index.svelte`
-
-<br>
-
-```js {all|1,3|2|5|7-11|all}
-<script>
-  let name = 'world';
-</script>
-
-<h1>Hello {name}!</h1>
-
-<style>
-  h1 {
-    font-size: 3rem;
-  }
-</style>
-```
-
-<style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  h2 {
-    margin-top: -25px;
-  }
-</style>
-
-<!--
-Superset of html
--->
-
----
-
-## `src/routes/index.svelte`
-
-<br>
-
-```js
-<script context="module">
-  export const load = async ({ fetch }) => {
-    return {
-      props: incomingProps,
-    }
-  }
-</script>
-
-<script>
-  export let incomingProps
-</script>
-
-<h1>{incomingProps.title}</h1>
-```
-
-<style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  h2 {
-    margin-top: -25px;
-  }
-</style>
-
-<!--
-This is a a way to get data from an API endpoint to return to the page
 -->
 
 ---
@@ -1127,7 +1083,10 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a href={`/posts/${post.slug}`}>
+      <a 
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}
+      >
         {post.title}
       </a>
     </li>
@@ -1179,7 +1138,7 @@ layout: two-cols-code
 layout: two-cols-code
 ---
 
-```js {14-22}
+```js {14-25}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1196,7 +1155,10 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a href={`/posts/${post.slug}`}>
+      <a 
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}
+      >
         {post.title}
       </a>
     </li>
@@ -1208,11 +1170,14 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-9}
+```js {1-12}
 <ul>
   {#each posts as post}
     <li>
-      <a href={`/posts/${post.slug}`}>
+      <a 
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}
+      >
         {post.title}
       </a>
     </li>
