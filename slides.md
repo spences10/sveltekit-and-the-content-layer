@@ -656,7 +656,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 
 <br>
 
-```js {all|1,6|2|3-5|8,10|9|all}
+```js {all|1,6|2|3-5|8-10|all}
 <script>
   import { initClient } from '@urql/svelte'
   initClient({
@@ -1225,6 +1225,14 @@ preload: false
 <!--
 And it's a big butt!
 -->
+
+---
+preload: false
+---
+
+<video autoplay>
+  <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
+</video>
 
 ---
 
