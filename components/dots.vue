@@ -7,7 +7,7 @@ export default {
   props: {
     width: {
       type: String,
-      default: '6.7vw',
+      default: '10vw', // try 6.7vw if current too wide
     },
     rgColor: {
       type: String,
