@@ -1437,11 +1437,60 @@ Let's take a look at how that works
 
 ---
 
-## `src/index.svelte`
+# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
 
-<br>
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
 
-```js {all|1,11|2,10|3|4-9|all}
+---
+layout: two-cols-code
+---
+
+```js {1-11}
+<script context="module">
+  export const load = async ({ fetch }) => {
+    const res = await fetch('/posts.json')
+    if (res.ok) {
+      const posts = await res.json()
+      return {
+        props: posts,
+      }
+    }
+  }
+</script>
+
+<script>
+  export let posts
+</script>
+
+<ul>
+  {#each posts as post}
+    <li>
+      <a 
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}
+      >
+        {post.title}
+      </a>
+    </li>
+  {/each}
+</ul>
+```
+
+::right::
+
+<v-clicks>
+
+<div class="right">
+
+```js {1-11}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1455,74 +1504,105 @@ Let's take a look at how that works
 </script>
 ```
 
+</div>
+
+</v-clicks>
+
 <style>
+  .right pre * span {
+    font-size: 1.1rem;
+    line-height: normal;
+  }
   span {
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
-<!--
-Context module means it runs before the page loads
--->
-
+---
+layout: two-cols-code
 ---
 
-## `src/index.svelte`
+```js {13-28}
+<script context="module">
+  export const load = async ({ fetch }) => {
+    const res = await fetch('/posts.json')
+    if (res.ok) {
+      const posts = await res.json()
+      return {
+        props: posts,
+      }
+    }
+  }
+</script>
 
-<br>
-
-```js {all|2|all}
 <script>
   export let posts
 </script>
-```
 
-<style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-</style>
-
-<!--
-The props from the load function are passed to the page with export let
-
-Then you can work with it much the same as with the URQL example
--->
-
----
-
-## `src/index.svelte`
-
-<br>
-
-```js {all|2,11|4-9|7|all}
 <ul>
   {#each posts as post}
     <li>
-      <h2>{post.title}</h2>
-      <p>{post.excerpt}</p>
-      <a
+      <a 
         sveltekit:prefetch
-        href={`/posts/${post.slug}`}>Read the Post</a
+        href={`/posts/${post.slug}`}
       >
+        {post.title}
+      </a>
     </li>
   {/each}
 </ul>
 ```
 
+::right::
+
+<div class="right">
+
+```js {all|1-3|5-16}
+<script>
+  export let posts
+</script>
+
+<ul>
+  {#each posts as post}
+    <li>
+      <a 
+        sveltekit:prefetch
+        href={`/posts/${post.slug}`}
+      >
+        {post.title}
+      </a>
+    </li>
+  {/each}
+</ul>
+```
+
+</div>
+
 <style>
-  span {
-    font-size: 1.25rem;
-    line-height: 1.5;
+  .right pre * span {
+    font-size: 1.1rem;
+    line-height: normal;
   }
-  h2 {
-    margin-top: -25px;
+  span {
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
 <!--
+Context module means it runs before the page loads
+
+The props from the load function are passed to the page with export let
+
+Then you can work with it much the same as with the URQL example
+
 Take note of the prefetch here, this will call the load function of the route
 -->
 
