@@ -14,11 +14,11 @@ lineNumbers: true
 
 <div class='max-w-screen-sm'>
 
-# SvelteKit and the Content Layer<highlight>.</highlight>
+# SvelteKit and the Content Layer<hl>.</hl>
 
-## <highlight>Scott Spence</highlight>
+## <hl>Scott Spence</hl>
 
-Svelte London Meetup <highlight>-</highlight> Dec 2021
+Svelte London Meetup <hl>-</hl> Dec 2021
 
 </div>
 
@@ -49,14 +49,14 @@ But it's mainly about Svelte and SvelteKit
 
 <div>
 
-# Scott Spence<highlight>.</highlight>
+# Scott Spence<hl>.</hl>
 
-- Developer Advocate <highlight>@</highlight>GraphCMS
+- Developer Advocate <hl>@</hl>GraphCMS
 - Svelte LDN meetup organiser
 - <span>Svelte Sirens
   <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Workshop <highlight>"</highlight>Building with Svelte and
-  GraphQL<highlight>"</highlight>
+- Workshop <hl>"</hl>Building with Svelte and
+  GraphQL<hl>"</hl>
   - Jamstack Conf
   - GraphQL Galaxy
 - Jamstack Explorers
@@ -102,7 +102,7 @@ I'm a cat dad
 
 <dots />
 
-# Histroy Lesson<highlight>.</highlight>
+# Histroy Lesson<hl>.</hl>
 
 <!--
 So with a talk like this,
@@ -116,7 +116,7 @@ First, a bit of history lesson
 
 <dots />
 
-# The past<highlight>.</highlight>
+# The past<hl>.</hl>
 
 <!--
 Let's take a look at how things used to be
@@ -156,7 +156,7 @@ It all started with the need to edit content online in a managed way without the
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Traditional CMS<highlight>.</highlight>
+Traditional CMS<hl>.</hl>
 
 <v-clicks>
 
@@ -222,7 +222,7 @@ Although I do acknowledge these tools are still used across a lot of the web now
 
 <dots />
 
-# The present<highlight>.</highlight>
+# The present<hl>.</hl>
 
 <!--
 That bring us to the present
@@ -234,7 +234,7 @@ So let’s talk about the present and where we are now
 
 <dots />
 
-# Terminology<highlight>.</highlight>
+# Terminology<hl>.</hl>
 
 <!--
 But first
@@ -246,7 +246,7 @@ Let’s talk terminology
 
 <dots />
 
-# Buzzwords<highlight>.</highlight>
+# Buzzwords<hl>.</hl>
 
 <!--
 About buzzwords
@@ -256,7 +256,7 @@ About buzzwords
 
 <dots />
 
-# Hype<highlight>.</highlight>
+# Hype<hl>.</hl>
 
 <!--
 And hype
@@ -268,24 +268,68 @@ But while I’m talking about naming things
 
 ---
 
+<dots/>
+
+# Tangent time<hl>!</hl>
+
+---
+
 <div v-click-hide><dots /></div>
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-# Headless<highlight>.</highlight>
+# Serverless<hl>.</hl>
 
 <v-clicks>
 
-- No calls to servers
-- Calling an API
-- Abstracts away the server
-- Guaranteeing uptime and reliability
+- Not making calls to specific servers
+- Making callins to an API
+- API abstracts away the server
+- Guaranteeing uptime and reliability + scalability + all that jazz
 
 </v-clicks>
 
 </div>
 
 <style>
+  li {
+    line-height: 1em !important;
+    padding-bottom: 1.5rem;
+  }
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
+  }
+</style>
+
+---
+
+<div v-click-hide><dots /></div>
+
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+# Headless<hl>.</hl>
+
+<v-clicks>
+
+- Not making calls to specific servers
+- Making callins to an API
+- API abstracts away the server
+- Guaranteeing uptime and reliability + scalability + all that jazz
+
+</v-clicks>
+
+</div>
+
+<style>
+  li {
+    line-height: 1em !important;
+    padding-bottom: 1.5rem;
+  }
   p {
     font-size: 3.25rem;
     font-weight: bold;
@@ -308,39 +352,9 @@ These abstract away the servers from you whilst guaranteeing uptime and reliabil
 
 ---
 
-<div v-click-hide><dots /></div>
-
-<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
-
-# Serverless<highlight>.</highlight>
-
-<v-clicks>
-
-- No calls to servers
-- Calling an API
-- Abstracts away the server
-- Guaranteeing uptime and reliability
-
-</v-clicks>
-
-</div>
-
-<style>
-  p {
-    font-size: 3.25rem;
-    font-weight: bold;
-    text-align: left;
-  }
-  .slidev-vclick-target {
-    transition: opacity 400ms ease;
-  }
-</style>
-
----
-
 <dots />
 
-# Headless <highlight> = </highlight> Serverless<highlight>.</highlight>
+# Headless <hl> = </hl> Serverless<hl>?</hl>
 
 <!--
 So, in the terms of headless no server === serverless right?
@@ -366,7 +380,7 @@ Anyway moving on
 
 <dots />
 
-# The Present<highlight>.</highlight>
+# The Present<hl>.</hl>
 
 <!--
 Back to the present!
@@ -404,7 +418,7 @@ Where a developer can request the data on any client
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-Headless CMS<highlight>.</highlight>
+Headless CMS<hl>.</hl>
 
 <v-clicks>
 
@@ -441,7 +455,7 @@ Gives developers a lot of flexibility to implement what why like
 
 <dots />
 
-# The Future<highlight>.</highlight>
+# The Future<hl>.</hl>
 
 <!--
 Let's talk about where we're going
@@ -455,7 +469,7 @@ Briefly
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-# GraphQL<highlight>.</highlight>
+# GraphQL<hl>.</hl>
 
 <v-clicks>
 
@@ -527,7 +541,7 @@ anyway I'm here to talk about Svelte and how that fits in here
 
 <dots rgColor="#f5487fff" />
 
-# Svelte<highlight>.</highlight>
+# Svelte<hl>.</hl>
 
 <!--
 Ok, so let's talk about Svelte and it's position here
@@ -537,7 +551,7 @@ Ok, so let's talk about Svelte and it's position here
 
 <dots rgColor="#f5487fff" />
 
-# SvelteKit<highlight>.</highlight>
+# SvelteKit<hl>.</hl>
 
 <!--
 When I say Svelte what I'm actually referring to is SvelteKit
@@ -593,13 +607,13 @@ I'm sure everyone is familiar with Svelte here, here's the layout of a typical S
 
 <dots />
 
-# SvelteKit and GraphQL<highlight>.</highlight>
+# SvelteKit and GraphQL<hl>.</hl>
 
 ---
 
 <dots />
 
-# Client Side<highlight>.</highlight>
+# Client Side<hl>.</hl>
 
 ---
 
@@ -617,7 +631,7 @@ I'm sure everyone is familiar with Svelte here, here's the layout of a typical S
 
 <dots />
 
-# URQL<highlight>.</highlight>
+# URQL<hl>.</hl>
 
 <img
   class="urql"
@@ -782,9 +796,7 @@ This is where this fetching property comes in handy
 
 ---
 
-<!-- # `src/routes/index.svelte` -->
-
-# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
+# src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
 
 <style>
   h1 {
@@ -954,7 +966,7 @@ URQL has the fetching state built into it so you can check before rendering
 
 <dots />
 
-# Houdini<highlight>.</highlight>
+# Houdini<hl>.</hl>
 
 <img class="houdini" src="/assets/houdini.png" alt="houdini logo" />
 
@@ -1048,9 +1060,7 @@ export default new Environment(async function ({
 
 ---
 
-<!-- # `src/routes/index.svelte` -->
-
-# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
+# src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
 
 <style>
   h1 {
@@ -1206,7 +1216,7 @@ layout: two-cols-code
 
 <dots />
 
-# But<highlight>.</highlight>
+# But<hl>.</hl>
 
 <!--
 But!
@@ -1218,7 +1228,7 @@ preload: false
 
 <dots />
 
-# Butt<highlight>.</highlight>
+# Butt<hl>.</hl>
 
 <butt />
 
@@ -1238,7 +1248,7 @@ preload: false
 
 <dots />
 
-# Leaking Credentials<highlight>.</highlight>
+# Leaking Credentials<hl>.</hl>
 
 <!--
 So that's great n' all but what about sensitive information?
@@ -1254,7 +1264,7 @@ Let's take a quick look at Svelte routing
 
 <dots />
 
-# SvelteKit routes<highlight>.</highlight>
+# SvelteKit routes<hl>.</hl>
 
 <!--
 SvelteKit uses a file-based routing system much like NextJS
@@ -1288,7 +1298,7 @@ new-svelte-project/
 
 <dots />
 
-# SvelteKit endpoints<highlight>.</highlight>
+# SvelteKit endpoints<hl>.</hl>
 
 <!--
 Let's take a look at how SvelteKit can be used to create endpoints
@@ -1437,7 +1447,7 @@ Let's take a look at how that works
 
 ---
 
-# src<highlight>/</highlight>routes<highlight>/</highlight>index<highlight>.</highlight>svelte
+# src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
 
 <style>
   h1 {
@@ -1583,13 +1593,13 @@ layout: two-cols-code
 </div>
 
 <style>
+  span {
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
   .right pre * span {
     font-size: 1.1rem;
     line-height: normal;
-  }
-  span {
-    font-size: 0.65rem;
-    line-height: 1;
   }
   div {
     margin-top: -15px;
@@ -1608,77 +1618,73 @@ Take note of the prefetch here, this will call the load function of the route
 
 ---
 
-# Bearer token<highlight>.</highlight>
+# Bearer token<hl>.</hl>
 
 <!--
 What about the credentials?
 -->
 
 ---
-
-## `src/lib/graphql-client.js`
-
-<br>
-
-```js {all|2-3,5|7-9|all}
-import { GraphQLClient } from 'graphql-request'
-const GRAPHQL_ENDPOINT = import.meta.env.VITE_GRAPHQL_API
-const POST_TOKEN = import.meta.env.VITE_POST_TOKEN
-
-export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
-
-export const postClient = new GraphQLClient(GRAPHQL_ENDPOINT, {
-  headers: { Authorization: `Bearer ${POST_TOKEN}` },
-})
-```
-
-<style>
-  span {
-    font-size: 0.8rem;
-    line-height: 1.25;
-  }
-</style>
-
+layout: two-cols-code
 ---
 
-## `src/routes/posts/add-post.js`
-
-<br>
-
 ```js {all|1|4|5|6-13|14-16|18|22|all}
-import { postClient } from '$lib/graphql-client'
+import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
 export const post = async req => {
-  const { title, content, etc } = req.body
-  const query = gql`
-    mutation AddPost(
-      # posts GraphQL mutation here
+  const { title, markdownContent } = req.body
+  try {
+    const query = gql`
+      mutation AddPost(
+        $title: String!
+        $markdownContent: String!
       ) {
-        id
+        createPost(
+          data: {
+            title: $title
+            markdownContent: $markdownContent
+          }
+        ) {
+          id
+        }
       }
+    `
+    const variables = {
+      title,
+      markdownContent,
     }
-  `
-  const variables = {
-    // variables
-  }
 
-  const id = await postClient.request(query, variables)
+    const id = await client.request(query, variables)
 
-  return {
-    status: 200,
-    body: id,
+    return {
+      status: 200,
+      body: id,
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
   }
 }
 ```
 
 <style>
-  span {
-    font-size: 0.8rem;
-    line-height: 1.25;
+  pre {
+    zoom: 59.9%;
   }
-  h2 {
-    margin-top: -25px;
+  span {
+    font-size: 1rem;
+    display: inline-block !important;
+    line-height: 1.35;
+  }
+  .right pre * span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
@@ -1692,13 +1698,13 @@ That's it.
 
 <dots />
 
-# Closing Comments<highlight>.</highlight>
+# Closing Comments<hl>.</hl>
 
 ---
 
 <div grid="~ cols-2" m="-t-2" class='place-items-center'>
 
-# Closing Comments<highlight>.</highlight>
+# Closing Comments<hl>.</hl>
 
 <v-clicks>
 
@@ -1730,7 +1736,7 @@ That's it.
 
 <div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
 
-# SvelteKit<highlight>.</highlight>
+# SvelteKit<hl>.</hl>
 
 🏆
 
@@ -1746,26 +1752,26 @@ That's it.
 
 <dots />
 
-# <highlight color="#253889ff">graphcms.com/blog</highlight>
+# <hl color="#253889ff">graphcms.com/blog</hl>
 
-# <highlight color="#253889ff">graphcms.com/docs</highlight>
-
----
-
-<dots />
-
-# <highlight>@</highlight>spences10 <highlight color="#253889ff"><mdi-github /> <mdi-twitter-circle /></highlight>
-
-# scottspence<highlight>.</highlight>com <highlight color="#253889ff"><mdi-web /></highlight>
+# <hl color="#253889ff">graphcms.com/docs</hl>
 
 ---
 
 <dots />
 
-# <highlight color="#253889ff">sveltekit-and-the-content-layer.vercel.app</highlight>
+# <hl>@</hl>spences10 <hl color="#253889ff"><mdi-github /> <mdi-twitter-circle /></hl>
+
+# scottspence<hl>.</hl>com <hl color="#253889ff"><mdi-web /></hl>
 
 ---
 
 <dots />
 
-# Thank you<highlight>.</highlight>
+# <hl color="#253889ff">sveltekit-and-the-content-layer.vercel.app</hl>
+
+---
+
+<dots />
+
+# Thank you<hl>.</hl>
