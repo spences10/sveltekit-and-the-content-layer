@@ -55,8 +55,8 @@ But it's mainly about Svelte and SvelteKit
 - Svelte LDN meetup organiser
 - <span>Svelte Sirens
   <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Workshop <highlight>"</highlight>Building with
-  Svelte and GraphQL<highlight>"</highlight>
+- Workshop <highlight>"</highlight>Building with Svelte and
+  GraphQL<highlight>"</highlight>
   - Jamstack Conf
   - GraphQL Galaxy
 - Jamstack Explorers
@@ -1083,7 +1083,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
@@ -1155,7 +1155,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
@@ -1174,7 +1174,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
@@ -1473,7 +1473,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
@@ -1546,7 +1546,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
@@ -1569,7 +1569,7 @@ layout: two-cols-code
 <ul>
   {#each posts as post}
     <li>
-      <a 
+      <a
         sveltekit:prefetch
         href={`/posts/${post.slug}`}
       >
