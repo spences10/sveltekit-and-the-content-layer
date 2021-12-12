@@ -1360,11 +1360,14 @@ Looks a little something like this
 
 <br>
 
-```js {all|1|2|4|all}
+```js {all|1|2|3|5-7|6|all}
 import { GraphQLClient } from 'graphql-request'
 const GRAPHQL_ENDPOINT = import.meta.env.VITE_GRAPHQL_API
+const SECRET_TOKEN = import.meta.env.VITE_SECRET_TOKEN
 
-export const client = new GraphQLClient(GRAPHQL_ENDPOINT)
+export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
+  headers: { Authorization: `Bearer ${SECRET_TOKEN}` },
+})
 ```
 
 <style>
