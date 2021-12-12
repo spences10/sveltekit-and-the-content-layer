@@ -1690,7 +1690,41 @@ That's it.
 
 ---
 
+<dots />
+
 # Closing Comments<highlight>.</highlight>
+
+---
+
+<div grid="~ cols-2" m="-t-2" class='place-items-center'>
+
+# Closing Comments<highlight>.</highlight>
+
+<v-clicks>
+
+- Great client side tools to use
+- Secure credentials on server
+- Don't feel bad about using server side to secure dem creds
+
+</v-clicks>
+
+</div>
+
+<style>
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  li {
+    line-height: 1em !important;
+    margin-left: 0.1em !important;
+    padding-bottom: 1.5rem;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
+  }
+</style>
 
 ---
 
