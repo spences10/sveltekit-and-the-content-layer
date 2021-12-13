@@ -283,7 +283,7 @@ But while I’m talking about naming things
 <v-clicks>
 
 - Not making calls to specific servers
-- Making callins to an API
+- Making calls to an API
 - API abstracts away the server
 - Guaranteeing uptime and reliability + scalability + all that jazz
 
@@ -317,7 +317,7 @@ But while I’m talking about naming things
 <v-clicks>
 
 - Not making calls to specific servers
-- Making callins to an API
+- Making calls to an API
 - API abstracts away the server
 - Guaranteeing uptime and reliability + scalability + all that jazz
 
@@ -474,7 +474,7 @@ Briefly
 <v-clicks>
 
 - Simple to understand
-- You get what you see
+- You get what you ask for
 - Client or Server Side
 
 </v-clicks>
