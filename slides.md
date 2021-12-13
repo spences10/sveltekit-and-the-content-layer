@@ -1617,6 +1617,14 @@ Take note of the prefetch here, this will call the load function of the route
 -->
 
 ---
+preload: false
+---
+
+<video autoplay>
+  <source src="/assets/bearer-token-in-sveltekit-with-endpoints.mp4" type="video/mp4">
+</video>
+
+---
 
 # Bearer token<hl>.</hl>
 
