@@ -55,8 +55,7 @@ But it's mainly about Svelte and SvelteKit
 - Svelte LDN meetup organiser
 - <span>Svelte Sirens
   <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Workshop <hl>"</hl>Building with Svelte and
-  GraphQL<hl>"</hl>
+- Workshop <hl>"</hl>Building with Svelte and GraphQL<hl>"</hl>
   - Jamstack Conf
   - GraphQL Galaxy
 - Jamstack Explorers
@@ -1405,7 +1404,6 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
     border-radius: 0.25em;
 }
 </style>
-
 
 ---
 layout: two-cols-code
