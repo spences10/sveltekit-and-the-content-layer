@@ -29,8 +29,9 @@
 
 .slidev-layout {
 
-  pre {
-    box-shadow: 0 0 10px #253889ff;
+  pre.shiki-container {
+    box-shadow: 0 0 20px #253889ff;
+    background: #011627;
   }
 
   ul {

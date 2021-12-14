@@ -1,12 +1,12 @@
 ---
 theme: ./theme
 class: text-left
-highlighter: prism
+highlighter: shiki
 title: SvelteKit and the Content Layer
 fonts:
   sans: Inter
   serif: Inter
-  mono: Fira Code
+  mono: 'Victor Mono'
 lineNumbers: true
 ---
 
@@ -31,16 +31,6 @@ Svelte London Meetup <hl>-</hl> Dec 2021
 
 <!--
 Hi my name is Scott, and I'm here to talk about Svelte and how I have been using it with GraphQL
-
-GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
-
-We’re one of the first, if not the first headless GraphQL based CMS’
-
-We're completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide to access content
-
-This will be a brief history of content on the web, where we are now and where we’re going
-
-But it's mainly about Svelte and SvelteKit
 -->
 
 ---
@@ -84,9 +74,13 @@ But it's mainly about Svelte and SvelteKit
 <!--
 My name is Scott, I'm a developer advocate for GraphCMS
 
+GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
+
+We’re one of the first, if not the first headless GraphQL based CMS’
+
 I'm a massive Jamstack enthusiast
 
-I'm helping out with organising the Svelte LDN meetup, next one is Dec 13th if you're interested
+I'm helping out with organising the Svelte LDN meetup
 
 Currently helping out with the Svelte Sirens project GraphCMS integration with Brittany Postma
 
@@ -104,11 +98,15 @@ I'm a cat dad
 # Histroy Lesson<hl>.</hl>
 
 <!--
+This will be a brief history of content on the web, where we are now and where we’re going
+
 So with a talk like this,
 
-I’m going to need to bring up the past, to justify the present, to the future
+I’m going to need to bring up the past, to justify the present, and where we are now
 
 First, a bit of history lesson
+
+But it's mainly about Svelte and SvelteKit
 -->
 
 ---
@@ -134,7 +132,7 @@ Initially.
 
 Using FTP to upload files to live instances.
 
-There then became a requirement for authoring content without the need for a developer.
+Any time the content needed changing a developer needed to get involved.
 -->
 
 ---
@@ -146,7 +144,7 @@ There then became a requirement for authoring content without the need for a dev
 <!--
 The Content Management System is born
 
-It all started with the need to edit content online in a managed way without the need for developer intervention.
+Giving content editors the ability to edit content online in a managed way without the need for developer intervention.
 -->
 
 ---
@@ -271,6 +269,10 @@ But while I’m talking about naming things
 
 # Tangent time<hl>!</hl>
 
+<!--
+But I am going to go on a little tangent here
+-->
+
 ---
 
 <div v-click-hide><dots /></div>
@@ -304,6 +306,10 @@ But while I’m talking about naming things
     transition: opacity 400ms ease;
   }
 </style>
+
+<!--
+So, lets take a look at serverless
+-->
 
 ---
 
@@ -340,13 +346,7 @@ But while I’m talking about naming things
 </style>
 
 <!--
-Slight tangent here, I’m sure the majority of you have heard the term serverless...
-
-Serverless because you’re not making call to specific servers, you’re making calls to APIs
-
-You’re making call to specific APIs
-
-These abstract away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
+Now, let's take a look at headless
 -->
 
 ---
@@ -384,9 +384,7 @@ Anyway moving on
 <!--
 Back to the present!
 
-So, let’s talk about JavaScript and how much it has really matured over the recent years
-
-It’s now like a runtime for the web in the browser
+Although this talk is primarily about the use of 
 
 And we, as developers can do a lot more in the browser
 -->
@@ -400,15 +398,13 @@ Headless is decoupled from the monolith.
 
 This means as a developer all you need to worry about on the client is how to present the data
 
-This is where content is outgrowing the internet
-
 Destinations for content are growing every day.
 
 Destinations like, Websites, Apps, In-store displays, cars, fridges, etc.
 
-The headless CMS solved the problem of omni-channel content distribution
+The headless CMS helps solve the problem of omni-channel content distribution
 
-Where a developer can request the data on any client
+Where a developer can request the data on any clients
 -->
 
 ---
@@ -529,11 +525,11 @@ query {
 </style>
 
 <!--
-Here's a GraphQL query, and an example of how content federation will work in GraphCMS
+Here's a GraphQL query, and an example of how content federation works in GraphCMS
 
 content federation is a fancy term for bringing together data from various sources
 
-anyway I'm here to talk about Svelte and how that fits in here
+anyway I'm here to talk about Svelte and how it can use GraphQL
 -->
 
 ---
@@ -598,8 +594,6 @@ This
 The @next will go away
 
 This will be the way to start a new Svelte project
-
-I'm sure everyone is familiar with Svelte here, here's the layout of a typical Svelte file
 -->
 
 ---
@@ -613,6 +607,10 @@ I'm sure everyone is familiar with Svelte here, here's the layout of a typical S
 <dots />
 
 # Client Side<hl>.</hl>
+
+<!--
+Let's take a look at some clients we have available to us now
+-->
 
 ---
 
@@ -669,7 +667,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 
 <br>
 
-```js {all|1,6|2|3-5|8-10|all}
+```svelte {all|1,6|2|3-5|8-10|all}
 <script>
   import { initClient } from '@urql/svelte'
   initClient({
@@ -705,7 +703,7 @@ I'm not going to be making comparisons between React and Svelte
 
 <br>
 
-```js
+```svelte
 <pre>{JSON.stringify($posts, null, 2)}</pre>
 ```
 
@@ -734,7 +732,7 @@ That gives some output like this
 
 <br>
 
-```js {all|12|all}
+```svelte {all|12|all}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -813,7 +811,7 @@ This is where this fetching property comes in handy
 layout: two-cols-code
 ---
 
-```js {1-10}
+```svelte {1-10}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -848,7 +846,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-13}
+```svelte {1-13}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -891,7 +889,7 @@ URQL has the fetching state built into it so you can check before rendering
 layout: two-cols-code
 ---
 
-```js {12-26}
+```svelte {12-26}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -924,7 +922,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {all|1,15|2|3-4|5|6-14|all}
+```svelte {all|1,15|2|3-4|5|6-14|all}
 {#if $posts.fetching}
   <p>Loading...</p>
 {:else if $posts.error}
@@ -1037,7 +1035,7 @@ export default new Environment(async function ({
 
 <br>
 
-```js {all|2-3|5|8-10|all}
+```svelte {all|2-3|5|8-10|all}
 <script context="module">
   import { setEnvironment } from '$houdini'
   import env from '../environment'
@@ -1075,7 +1073,7 @@ export default new Environment(async function ({
 layout: two-cols-code
 ---
 
-```js {1-12}
+```svelte {1-12}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1109,7 +1107,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-12}
+```svelte {1-12}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1147,7 +1145,7 @@ layout: two-cols-code
 layout: two-cols-code
 ---
 
-```js {14-25}
+```svelte {14-25}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1179,7 +1177,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-12}
+```svelte {1-12}
 <ul>
   {#each posts as post}
     <li>
@@ -1275,7 +1273,7 @@ Let's take a quick look at a project file structure using file-based routing
 
 ---
 
-```text {all|7|6|4|5|all}
+```js {all|7|6|4|5|all}
 new-svelte-project/
 ├─ src/
 │ ├─ routes/
@@ -1305,7 +1303,7 @@ Let's take a look at how SvelteKit can be used to create endpoints
 
 ---
 
-```text {all|6|all}
+```js {all|6|all}
 new-svelte-project/
 ├─ src/
 │ ├─ routes/
@@ -1334,7 +1332,7 @@ We'll also pop a GraphQL client in a lib folder here
 
 ---
 
-```text {all|3-4|all}
+```js {all|3-4|all}
 new-svelte-project/
 ├─ src/
 │ ├─ lib/
@@ -1461,15 +1459,19 @@ return {
 
 <style>
   pre {
-    zoom: 70%;
+    zoom: 90%;
   }
   span {
     font-size: 0.85rem;
     display: inline-block !important;
+    line-height: normal;
   }
   .right pre * span {
     font-size: 1.5rem;
     line-height: normal;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
@@ -1541,15 +1543,19 @@ return {
 
 <style>
   pre {
-    zoom: 70%;
+    zoom: 90%;
   }
   span {
     font-size: 0.85rem;
     display: inline-block !important;
+    line-height: normal;
   }
   .right pre * span {
     font-size: 1.5rem;
     line-height: normal;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
@@ -1575,7 +1581,7 @@ return {
 layout: two-cols-code
 ---
 
-```js {1-11}
+```svelte {1-11}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1612,7 +1618,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-11}
+```svelte {1-11}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1648,7 +1654,7 @@ layout: two-cols-code
 layout: two-cols-code
 ---
 
-```js {13-28}
+```svelte {13-28}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1683,7 +1689,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {all|1-3|5-16}
+```svelte {all|1-3|5-16}
 <script>
   export let posts
 </script>
@@ -1813,19 +1819,20 @@ export const post = async req => {
 
 <style>
   pre {
-    zoom: 59.9%;
+    zoom: 65%;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
     display: inline-block !important;
-    line-height: 1.35;
+    line-height: 2;
   }
   .right pre * span {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 1.5;
   }
   div {
-    margin-top: -15px;
+    margin-top: -10px;
   }
 </style>
 
@@ -1907,19 +1914,20 @@ const id = await client.request(query, variables)
 
 <style>
   pre {
-    zoom: 59.9%;
+    zoom: 65%;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
     display: inline-block !important;
-    line-height: 1.35;
+    line-height: 2;
   }
   .right pre * span {
     font-size: 1.5rem;
     line-height: 1.5;
   }
   div {
-    margin-top: -15px;
+    margin-top: -10px;
   }
 </style>
 
@@ -1992,19 +2000,19 @@ return {
 
 <style>
   pre {
-    zoom: 59.9%;
+    zoom: 65%;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.95rem;
     display: inline-block !important;
-    line-height: 1.35;
+    line-height: 2;
   }
   .right pre * span {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 1.5;
   }
   div {
-    margin-top: -15px;
+    margin-top: -10px;
   }
 </style>
 
