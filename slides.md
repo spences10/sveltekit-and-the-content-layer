@@ -2184,7 +2184,7 @@ Some closing comments
 
 <dots />
 
-# <hl color="#253889ff">sveltekit-and-the-content-layer.vercel.app</hl>
+# <hl color="#253889ff">http://ss10.dev/skatcl</hl>
 
 <style>
   h1 {
