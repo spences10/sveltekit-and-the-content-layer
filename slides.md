@@ -72,7 +72,7 @@ Hi my name is Scott, and I'm here to talk about Svelte and how I have been using
 </style>
 
 <!--
-My name is Scott, I'm a developer advocate for GraphCMS
+I'm a developer advocate for GraphCMS
 
 GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
 
@@ -102,11 +102,11 @@ This will be a brief history of content on the web, where we are now and where w
 
 So with a talk like this,
 
-I’m going to need to bring up the past, to justify the present, and where we are now
+I’m going to need to bring up the past, to justify the present, and where we're going
+
+But it's mainly about using GraphQL Svelte and SvelteKit
 
 First, a bit of history lesson
-
-But it's mainly about Svelte and SvelteKit
 -->
 
 ---
@@ -144,7 +144,7 @@ Any time the content needed changing a developer needed to get involved.
 <!--
 The Content Management System is born
 
-Giving content editors the ability to edit content online in a managed way without the need for developer intervention.
+Giving content editors the ability to edit content in a managed way without the need for developer intervention.
 -->
 
 ---
@@ -222,7 +222,7 @@ Although I do acknowledge these tools are still used across a lot of the web now
 # The present<hl>.</hl>
 
 <!--
-That bring us to the present
+That brings us to the present
 
 So let’s talk about the present and where we are now
 -->
@@ -270,7 +270,9 @@ But while I’m talking about naming things
 # Tangent time<hl>!</hl>
 
 <!--
-But I am going to go on a little tangent here
+Slight tangent here
+
+But
 -->
 
 ---
@@ -283,9 +285,9 @@ But I am going to go on a little tangent here
 
 <v-clicks>
 
-- Not making calls to specific servers
-- Making calls to an API
-- API abstracts away the server
+- You're not making calls to specific servers
+- You're making calls to an API
+- The The API abstracts away the server
 - Guaranteeing uptime and reliability + scalability + all that jazz
 
 </v-clicks>
@@ -308,7 +310,7 @@ But I am going to go on a little tangent here
 </style>
 
 <!--
-So, lets take a look at serverless
+What do you get with serverless
 -->
 
 ---
@@ -321,9 +323,9 @@ So, lets take a look at serverless
 
 <v-clicks>
 
-- Not making calls to specific servers
-- Making calls to an API
-- API abstracts away the server
+- You're not making calls to specific servers
+- You're You're making calls to an API
+- The API abstracts away the server
 - Guaranteeing uptime and reliability + scalability + all that jazz
 
 </v-clicks>
@@ -384,9 +386,9 @@ Anyway moving on
 <!--
 Back to the present!
 
-Although this talk is primarily about the use of 
+Although this talk is about the using browser technologies, content is needed in many more places
 
-And we, as developers can do a lot more in the browser
+As developers can do a lot more in the browser
 -->
 
 ---
@@ -394,6 +396,8 @@ And we, as developers can do a lot more in the browser
 <how-its-going />
 
 <!--
+With headless we're not constrained by the browser
+
 Headless is decoupled from the monolith.
 
 This means as a developer all you need to worry about on the client is how to present the data
@@ -404,7 +408,7 @@ Destinations like, Websites, Apps, In-store displays, cars, fridges, etc.
 
 The headless CMS helps solve the problem of omni-channel content distribution
 
-Where a developer can request the data on any clients
+Where a developer can request the data on any client
 -->
 
 ---
@@ -602,6 +606,10 @@ This will be the way to start a new Svelte project
 
 # SvelteKit and GraphQL<hl>.</hl>
 
+<!--
+Let's take a look at a couple of ways to use GraphQL with SvelteKit
+-->
+
 ---
 
 <dots />
@@ -623,6 +631,10 @@ Let's take a look at some clients we have available to us now
     background-color: #fff;
   }
 </style>
+
+<!--
+These are what I have been using
+-->
 
 ---
 
@@ -715,15 +727,13 @@ I'm not going to be making comparisons between React and Svelte
 </style>
 
 <!--
-One of my favourite ways to visualise data coming into a svelte component
+One of my favourite ways to visualise data coming into a svelte page
 
 After the script tag in the body of the page
 
 I can add this to see what the data looks like from URQL
 
 The $ on posts there is subscribing to any changes in the data from the URQL operation store
-
-That gives some output like this
 -->
 
 ---
@@ -759,6 +769,8 @@ That gives some output like this
 
 <!--
 You can then write your queries into the URQL operation store to create a subscription to the data
+
+That gives some output like this
 -->
 
 ---
@@ -809,6 +821,10 @@ This is where this fetching property comes in handy
     /* font-weight: 300; */
 }
 </style>
+
+<!--
+Let's take a look at how we'd use that
+-->
 
 ---
 layout: two-cols-code
@@ -880,13 +896,6 @@ layout: two-cols-code
   }
 </style>
 
-<!--
-You can then write your queries into the URQL operation store to create a subscription to the data
-
-Here we can use some of the Svelte expressions to work through the URQL response
-
-URQL has the fetching state built into it so you can check before rendering
--->
 
 ---
 layout: two-cols-code
@@ -979,6 +988,10 @@ URQL has the fetching state built into it so you can check before rendering
 }
 </style>
 
+<!--
+Let's see how we'd do the same with Houdini!
+-->
+
 ---
 layout: two-cols-code
 ---
@@ -1032,6 +1045,10 @@ export default new Environment(async function ({
   }
 </style>
 
+<!--
+Houdini has a great bootstrap for generating the environment
+-->
+
 ---
 
 ## `src/routes/__layout.svelte`
@@ -1058,6 +1075,12 @@ export default new Environment(async function ({
   }
 </style>
 
+<!--
+We'd go about implementing the client the same way
+
+In the __layout.svelte file
+-->
+
 ---
 
 # src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
@@ -1071,6 +1094,10 @@ export default new Environment(async function ({
     border-radius: 0.25em;
 }
 </style>
+
+<!--
+Let's see how we'd implement that in our index.svelte file
+-->
 
 ---
 layout: two-cols-code
@@ -1246,10 +1273,6 @@ And it's a big butt!
 So that's great n' all but what about sensitive information?
 
 I'm talking about authentication tokens, etc
-
-Before I get into that, did I tell you that Svelte has file-based routing?
-
-Let's take a quick look at Svelte routing
 -->
 
 ---
@@ -1260,6 +1283,10 @@ preload: false
   <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
 </video>
 
+<!--
+Let's take a look at the network request using Houdini with a authorisation token in the header
+-->
+
 ---
 
 <dots />
@@ -1267,6 +1294,10 @@ preload: false
 # SvelteKit routes<hl>.</hl>
 
 <!--
+Before we go any further, did I tell you that Svelte has file-based routing?
+
+Let's take a quick look at Svelte routing
+
 SvelteKit uses a file-based routing system much like NextJS
 
 These routes can also be turned into endpoints
@@ -1294,6 +1325,29 @@ new-svelte-project/
   }
 </style>
 
+<!--
+So that would give a URL comething like this
+-->
+
+---
+
+# new-svelte-project<hl>.</hl>com<hl>/</hl>posts<hl>/</hl>post-slug
+
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+    font-size: 2.5rem !important;
+}
+</style>
+
+<!--
+Let's take a look at how SvelteKit can be used to create endpoints
+-->
+
 ---
 
 <dots />
@@ -1302,6 +1356,16 @@ new-svelte-project/
 
 <!--
 Let's take a look at how SvelteKit can be used to create endpoints
+-->
+
+---
+
+<dots />
+
+# Server Side<hl>.</hl>
+
+<!--
+We can use SvelteKit to create HTTP methods, get, post, put, delete, etc
 -->
 
 ---
@@ -1388,7 +1452,7 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
 </style>
 
 <!--
-
+In our lib folder we can define a client with a secret token which Vite can use
 -->
 
 ---
@@ -1405,6 +1469,10 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
     border-radius: 0.25em;
 }
 </style>
+
+<!--
+Let's take a look at how we'd define that endpoint
+-->
 
 ---
 layout: two-cols-code
@@ -1563,7 +1631,7 @@ return {
 </style>
 
 <!--
-
+Returning an OK status then returning the GraphQL client query result
 -->
 
 ---
@@ -1579,6 +1647,10 @@ return {
     border-radius: 0.25em;
 }
 </style>
+
+<!--
+And we'd implement that in our Svelte component like this
+-->
 
 ---
 layout: two-cols-code
@@ -1653,6 +1725,10 @@ layout: two-cols-code
   }
 </style>
 
+<!--
+use the SvelteKit load function to fetch the data from the posts.json endpoint
+-->
+
 ---
 layout: two-cols-code
 ---
@@ -1692,7 +1768,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```svelte {all|1-3|5-16}
+```svelte {all|1-3|5-16|9}
 <script>
   export let posts
 </script>
@@ -1728,11 +1804,11 @@ layout: two-cols-code
 </style>
 
 <!--
-Context module means it runs before the page loads
+Using the load function we can get the GraphQL data before the page loads
 
 The props from the load function are passed to the page with export let
 
-Then you can work with it much the same as with the URQL example
+Then we can work with it much the same as with the URQL example
 
 Take note of the prefetch here, this will call the load function of the route
 -->
@@ -1745,12 +1821,18 @@ preload: false
   <source src="/assets/bearer-token-in-sveltekit-with-endpoints.mp4" type="video/mp4">
 </video>
 
+<!--
+Here's an example using a SvelteKit endpoint
+-->
+
 ---
 
 # Bearer token<hl>.</hl>
 
 <!--
 What about the credentials?
+
+Let's take a look at how we'd use that in a GraphQL mutation
 -->
 
 ---
@@ -1767,6 +1849,10 @@ What about the credentials?
     border-radius: 0.25em;
 }
 </style>
+
+<!--
+Here we're going to add a post endpoint for a mutation on our GraphQL server
+-->
 
 ---
 layout: two-cols-code
@@ -1934,11 +2020,6 @@ const id = await client.request(query, variables)
   }
 </style>
 
-<!--
-This should all be in a try catch, but I want to get all the code on the screen
-
-That's it.
--->
 
 ---
 layout: two-cols-code
@@ -2020,9 +2101,9 @@ return {
 </style>
 
 <!--
-This should all be in a try catch, but I want to get all the code on the screen
+Here' we can use the resulting id from the mutation to confirm that action on the client
 
-That's it.
+Ok, so, that's it, so
 -->
 
 ---
@@ -2030,6 +2111,10 @@ That's it.
 <dots />
 
 # Closing Comments<hl>.</hl>
+
+<!--
+Some closing comments
+-->
 
 ---
 
