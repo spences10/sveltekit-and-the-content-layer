@@ -2168,9 +2168,9 @@ Some closing comments
 
 <dots />
 
-# <hl color="#253889ff">graphcms.com/blog</hl>
+# <hl color="#253889ff">graphcms<hl>.</hl>com<hl>/</hl>blog</hl>
 
-# <hl color="#253889ff">graphcms.com/docs</hl>
+# <hl color="#253889ff">graphcms<hl>.</hl>com<hl>/</hl>docs</hl>
 
 ---
 
