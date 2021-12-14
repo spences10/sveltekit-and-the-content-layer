@@ -30,7 +30,7 @@ Svelte London Meetup <hl>-</hl> Dec 2021
 </style>
 
 <!--
-Hi my name is Scott, I’m a developer advocate at GraphCMS
+Hi my name is Scott, and I'm here to talk about Svelte and how I have been using it with GraphQL
 
 GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
 
@@ -1236,7 +1236,7 @@ preload: false
 And it's a big butt!
 -->
 
---- 
+---
 
 <dots />
 
@@ -1411,6 +1411,86 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
 layout: two-cols-code
 ---
 
+```js {all}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const get = async (req, res) => {
+  try {
+    const query = gql`
+      query AllPosts {
+        posts {
+          title
+          slug
+          date
+          excerpt
+          tags
+          coverImage {
+            url
+          }
+        }
+      }
+    `
+    const { posts } = await client.request(query)
+
+    return {
+      status: 200,
+      body: { posts },
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js
+const { posts } = await client.request(query)
+
+return {
+  status: 200,
+  body: { posts },
+}
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 70%;
+  }
+  span {
+    font-size: 0.85rem;
+    display: inline-block !important;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+</style>
+
+<!--
+So with endpoints you can create REST methods
+
+get, put, del etc
+
+del because delete is a reserved word in JavaScript
+
+This endpoint can then be accessed from the client via a browser fetch call
+
+Let's take a look at how that works
+-->
+
+---
+layout: two-cols-code
+---
+
 ```js {20-25}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
@@ -1463,33 +1543,20 @@ return {
 
 <style>
   pre {
-    zoom: 59.9%;
+    zoom: 70%;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.85rem;
     display: inline-block !important;
-    line-height: 1.35;
   }
   .right pre * span {
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: normal;
   }
-  div {
-    margin-top: -15px;
-  }
-
 </style>
 
 <!--
-So with endpoints you can create REST methods
 
-get, put, del etc
-
-del because delete is a reserved word in JavaScript
-
-This endpoint can then be accessed from the client via a browser fetch call
-
-Let's take a look at how that works
 -->
 
 ---
@@ -1836,6 +1903,91 @@ const variables = {
 }
 
 const id = await client.request(query, variables)
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 59.9%;
+  }
+  span {
+    font-size: 1rem;
+    display: inline-block !important;
+    line-height: 1.35;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  div {
+    margin-top: -15px;
+  }
+</style>
+
+<!--
+This should all be in a try catch, but I want to get all the code on the screen
+
+That's it.
+-->
+
+---
+layout: two-cols-code
+---
+
+```js {18,29-32}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const post = async req => {
+  const { title, markdownContent } = req.body
+  try {
+    const query = gql`
+      mutation AddPost(
+        $title: String!
+        $markdownContent: String!
+      ) {
+        createPost(
+          data: {
+            title: $title
+            markdownContent: $markdownContent
+          }
+        ) {
+          id
+        }
+      }
+    `
+    const variables = {
+      title,
+      markdownContent,
+    }
+
+    const id = await client.request(query, variables)
+
+    return {
+      status: 200,
+      body: id,
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js {all}
+const id = await client.request(query, variables)
+
+return {
+  status: 200,
+  body: id,
+}
 ```
 
 </div>
