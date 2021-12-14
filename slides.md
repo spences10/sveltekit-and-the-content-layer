@@ -1130,13 +1130,13 @@ layout: two-cols-code
 </v-clicks>
 
 <style>
-  .right pre * span {
-    font-size: 0.8rem;
-    line-height: normal;
-  }
   span {
     font-size: 0.65rem;
     line-height: 1;
+  }
+  .right pre * span {
+    font-size: 0.8rem;
+    line-height: normal;
   }
 </style>
 
@@ -1236,15 +1236,7 @@ preload: false
 And it's a big butt!
 -->
 
----
-preload: false
----
-
-<video autoplay>
-  <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
-</video>
-
----
+--- 
 
 <dots />
 
@@ -1259,6 +1251,14 @@ Before I get into that, did I tell you that Svelte has file-based routing?
 
 Let's take a quick look at Svelte routing
 -->
+
+---
+preload: false
+---
+
+<video autoplay>
+  <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
+</video>
 
 ---
 
@@ -1393,11 +1393,25 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
 
 ---
 
-## `src/routes/posts/index.json.js`
+# src<hl>/</hl>routes<hl>/</hl>posts<hl>/</hl>index<hl>.</hl>json<hl>.</hl>js
 
-<br>
+<style>
+  h1 {
+    padding: 0 1rem;
+    font-size: 3rem !important;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
 
-```js {all|1-2|4,23|5,17,22|6-10|11|13-16|all}
+
+---
+layout: two-cols-code
+---
+
+```js {20-25}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
@@ -1405,7 +1419,16 @@ export const get = async (req, res) => {
   try {
     const query = gql`
       query AllPosts {
-        # posts GraphQL query here 
+        posts {
+          title
+          slug
+          date
+          excerpt
+          tags
+          coverImage {
+            url
+          }
+        }
       }
     `
     const { posts } = await client.request(query)
@@ -1423,14 +1446,38 @@ export const get = async (req, res) => {
 }
 ```
 
+::right::
+
+<div class="right">
+
+```js
+const { posts } = await client.request(query)
+
+return {
+  status: 200,
+  body: { posts },
+}
+```
+
+</div>
+
 <style>
+  pre {
+    zoom: 59.9%;
+  }
   span {
-    font-size: 0.95rem;
-    line-height: 1.25;
+    font-size: 1rem;
+    display: inline-block !important;
+    line-height: 1.35;
   }
-  h2 {
-    margin-top: -25px;
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
+  div {
+    margin-top: -15px;
+  }
+
 </style>
 
 <!--
@@ -1633,10 +1680,25 @@ What about the credentials?
 -->
 
 ---
+
+# src<hl>/</hl>routes<hl>/</hl>posts<hl>/</hl>add-post<hl>.</hl>json<hl>.</hl>js
+
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    font-size: 2.85rem !important;
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
+
+---
 layout: two-cols-code
 ---
 
-```js {all|1|4|5|6-13|14-16|18|22|all}
+```js {all}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
@@ -1678,6 +1740,12 @@ export const post = async req => {
 }
 ```
 
+::right::
+
+<div class="right">
+
+</div>
+
 <style>
   pre {
     zoom: 59.9%;
@@ -1688,7 +1756,101 @@ export const post = async req => {
     line-height: 1.35;
   }
   .right pre * span {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  div {
+    margin-top: -15px;
+  }
+</style>
+
+---
+layout: two-cols-code
+---
+
+```js {5,7-27}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const post = async req => {
+  const { title, markdownContent } = req.body
+  try {
+    const query = gql`
+      mutation AddPost(
+        $title: String!
+        $markdownContent: String!
+      ) {
+        createPost(
+          data: {
+            title: $title
+            markdownContent: $markdownContent
+          }
+        ) {
+          id
+        }
+      }
+    `
+    const variables = {
+      title,
+      markdownContent,
+    }
+
+    const id = await client.request(query, variables)
+
+    return {
+      status: 200,
+      body: id,
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js {all|2-14|16-19|21}
+const query = gql`
+  mutation AddPost(
+    $title: String!
+    $markdownContent: String!
+  ) {
+    createPost(
+      data: {
+        title: $title
+        markdownContent: $markdownContent
+      }
+    ) {
+      id
+    }
+  }
+`
+const variables = {
+  title,
+  markdownContent,
+}
+
+const id = await client.request(query, variables)
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 59.9%;
+  }
+  span {
+    font-size: 1rem;
+    display: inline-block !important;
+    line-height: 1.35;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
     line-height: 1.5;
   }
   div {
@@ -1777,6 +1939,12 @@ That's it.
 <dots />
 
 # <hl color="#253889ff">sveltekit-and-the-content-layer.vercel.app</hl>
+
+<style>
+  h1 {
+    font-size: 3.5rem !important;
+  }
+</style>
 
 ---
 
