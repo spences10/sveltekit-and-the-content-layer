@@ -683,7 +683,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 <style>
   span {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 </style>
 
@@ -750,7 +750,10 @@ That gives some output like this
 <style>
   span {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.7;
+  }
+  h2 {
+    margin-top: -20px;
   }
 </style>
 
@@ -1021,7 +1024,7 @@ export default new Environment(async function ({
 <style>
   .right pre * span {
     font-size: 0.8rem;
-    line-height: 1;
+    line-height: 1.5;
   }
   span {
     font-size: 1rem;
@@ -1132,7 +1135,7 @@ layout: two-cols-code
     line-height: 1;
   }
   .right pre * span {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: normal;
   }
 </style>
@@ -1196,7 +1199,7 @@ layout: two-cols-code
 
 <style>
   .right pre * span {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: normal;
   }
   span {
@@ -1380,7 +1383,7 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
 <style>
   span {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.6;
   }
 </style>
 
