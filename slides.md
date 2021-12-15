@@ -1,12 +1,12 @@
 ---
 theme: ./theme
 class: text-left
-highlighter: prism
+highlighter: shiki
 title: SvelteKit and the Content Layer
 fonts:
   sans: Inter
   serif: Inter
-  mono: Fira Code
+  mono: 'Victor Mono'
 lineNumbers: true
 ---
 
@@ -30,17 +30,7 @@ Svelte London Meetup <hl>-</hl> Dec 2021
 </style>
 
 <!--
-Hi my name is Scott, I’m a developer advocate at GraphCMS
-
-GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
-
-We’re one of the first, if not the first headless GraphQL based CMS’
-
-We're completely GraphQL native to this day, we’re all in on GraphQL and that’s all we provide to access content
-
-This will be a brief history of content on the web, where we are now and where we’re going
-
-But it's mainly about Svelte and SvelteKit
+Hi my name is Scott, and I'm here to talk about Svelte and how I have been using it with GraphQL
 -->
 
 ---
@@ -55,8 +45,7 @@ But it's mainly about Svelte and SvelteKit
 - Svelte LDN meetup organiser
 - <span>Svelte Sirens
   <img class='sirens-logo' src='/assets/svelte-sirens-logo.png'/></span>
-- Workshop <hl>"</hl>Building with Svelte and
-  GraphQL<hl>"</hl>
+- Workshop <hl>"</hl>Building with Svelte and GraphQL<hl>"</hl>
   - Jamstack Conf
   - GraphQL Galaxy
 - Jamstack Explorers
@@ -83,11 +72,15 @@ But it's mainly about Svelte and SvelteKit
 </style>
 
 <!--
-My name is Scott, I'm a developer advocate for GraphCMS
+I'm a developer advocate for GraphCMS
+
+GraphCMS is a headless API content management system and, we really pride ourselves on delivering structured content at scale
+
+We’re one of the first, if not the first headless GraphQL based CMS’
 
 I'm a massive Jamstack enthusiast
 
-I'm helping out with organising the Svelte LDN meetup, next one is Dec 13th if you're interested
+I'm helping out with organising the Svelte LDN meetup
 
 Currently helping out with the Svelte Sirens project GraphCMS integration with Brittany Postma
 
@@ -105,9 +98,13 @@ I'm a cat dad
 # Histroy Lesson<hl>.</hl>
 
 <!--
+This will be a brief history of content on the web, where we are now and where we’re going
+
 So with a talk like this,
 
-I’m going to need to bring up the past, to justify the present, to the future
+I’m going to need to bring up the past, to justify the present, and where we're going
+
+But it's mainly about using GraphQL Svelte and SvelteKit
 
 First, a bit of history lesson
 -->
@@ -135,7 +132,7 @@ Initially.
 
 Using FTP to upload files to live instances.
 
-There then became a requirement for authoring content without the need for a developer.
+Any time the content needed changing a developer needed to get involved.
 -->
 
 ---
@@ -147,7 +144,7 @@ There then became a requirement for authoring content without the need for a dev
 <!--
 The Content Management System is born
 
-It all started with the need to edit content online in a managed way without the need for developer intervention.
+Giving content editors the ability to edit content in a managed way without the need for developer intervention.
 -->
 
 ---
@@ -225,7 +222,7 @@ Although I do acknowledge these tools are still used across a lot of the web now
 # The present<hl>.</hl>
 
 <!--
-That bring us to the present
+That brings us to the present
 
 So let’s talk about the present and where we are now
 -->
@@ -272,6 +269,12 @@ But while I’m talking about naming things
 
 # Tangent time<hl>!</hl>
 
+<!--
+Slight tangent here
+
+But
+-->
+
 ---
 
 <div v-click-hide><dots /></div>
@@ -282,43 +285,9 @@ But while I’m talking about naming things
 
 <v-clicks>
 
-- Not making calls to specific servers
-- Making calls to an API
-- API abstracts away the server
-- Guaranteeing uptime and reliability + scalability + all that jazz
-
-</v-clicks>
-
-</div>
-
-<style>
-  li {
-    line-height: 1em !important;
-    padding-bottom: 1.5rem;
-  }
-  p {
-    font-size: 3.25rem;
-    font-weight: bold;
-    text-align: left;
-  }
-  .slidev-vclick-target {
-    transition: opacity 400ms ease;
-  }
-</style>
-
----
-
-<div v-click-hide><dots /></div>
-
-<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
-
-# Headless<hl>.</hl>
-
-<v-clicks>
-
-- Not making calls to specific servers
-- Making calls to an API
-- API abstracts away the server
+- You're not making calls to specific servers
+- You're making calls to an API
+- The The API abstracts away the server
 - Guaranteeing uptime and reliability + scalability + all that jazz
 
 </v-clicks>
@@ -341,13 +310,45 @@ But while I’m talking about naming things
 </style>
 
 <!--
-Slight tangent here, I’m sure the majority of you have heard the term serverless...
+What do you get with serverless
+-->
 
-Serverless because you’re not making call to specific servers, you’re making calls to APIs
+---
 
-You’re making call to specific APIs
+<div v-click-hide><dots /></div>
 
-These abstract away the servers from you whilst guaranteeing uptime and reliability + scalability, etc
+<div grid="~ cols-2 gap-2" m="-t-2" class='place-items-center'>
+
+# Headless<hl>.</hl>
+
+<v-clicks>
+
+- You're not making calls to specific servers
+- You're You're making calls to an API
+- The API abstracts away the server
+- Guaranteeing uptime and reliability + scalability + all that jazz
+
+</v-clicks>
+
+</div>
+
+<style>
+  li {
+    line-height: 1em !important;
+    padding-bottom: 1.5rem;
+  }
+  p {
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  .slidev-vclick-target {
+    transition: opacity 400ms ease;
+  }
+</style>
+
+<!--
+Now, let's take a look at headless
 -->
 
 ---
@@ -385,11 +386,9 @@ Anyway moving on
 <!--
 Back to the present!
 
-So, let’s talk about JavaScript and how much it has really matured over the recent years
+Although this talk is about the using browser technologies, content is needed in many more places
 
-It’s now like a runtime for the web in the browser
-
-And we, as developers can do a lot more in the browser
+As developers can do a lot more in the browser
 -->
 
 ---
@@ -397,17 +396,17 @@ And we, as developers can do a lot more in the browser
 <how-its-going />
 
 <!--
+With headless we're not constrained by the browser
+
 Headless is decoupled from the monolith.
 
 This means as a developer all you need to worry about on the client is how to present the data
-
-This is where content is outgrowing the internet
 
 Destinations for content are growing every day.
 
 Destinations like, Websites, Apps, In-store displays, cars, fridges, etc.
 
-The headless CMS solved the problem of omni-channel content distribution
+The headless CMS helps solve the problem of omni-channel content distribution
 
 Where a developer can request the data on any client
 -->
@@ -530,11 +529,11 @@ query {
 </style>
 
 <!--
-Here's a GraphQL query, and an example of how content federation will work in GraphCMS
+Here's a GraphQL query, and an example of how content federation works in GraphCMS
 
 content federation is a fancy term for bringing together data from various sources
 
-anyway I'm here to talk about Svelte and how that fits in here
+anyway I'm here to talk about Svelte and how it can use GraphQL
 -->
 
 ---
@@ -599,8 +598,6 @@ This
 The @next will go away
 
 This will be the way to start a new Svelte project
-
-I'm sure everyone is familiar with Svelte here, here's the layout of a typical Svelte file
 -->
 
 ---
@@ -609,11 +606,19 @@ I'm sure everyone is familiar with Svelte here, here's the layout of a typical S
 
 # SvelteKit and GraphQL<hl>.</hl>
 
+<!--
+Let's take a look at a couple of ways to use GraphQL with SvelteKit
+-->
+
 ---
 
 <dots />
 
 # Client Side<hl>.</hl>
+
+<!--
+Let's take a look at some clients we have available to us now
+-->
 
 ---
 
@@ -626,6 +631,10 @@ I'm sure everyone is familiar with Svelte here, here's the layout of a typical S
     background-color: #fff;
   }
 </style>
+
+<!--
+These are what I have been using
+-->
 
 ---
 
@@ -670,7 +679,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 
 <br>
 
-```js {all|1,6|2|3-5|8-10|all}
+```svelte {all|1,6|2|3-5|8-10|all}
 <script>
   import { initClient } from '@urql/svelte'
   initClient({
@@ -686,7 +695,7 @@ Kind of like how you would do a content provider in React but with a lot less bo
 <style>
   span {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 </style>
 
@@ -706,7 +715,7 @@ I'm not going to be making comparisons between React and Svelte
 
 <br>
 
-```js
+```svelte
 <pre>{JSON.stringify($posts, null, 2)}</pre>
 ```
 
@@ -718,15 +727,13 @@ I'm not going to be making comparisons between React and Svelte
 </style>
 
 <!--
-One of my favourite ways to visualise data coming into a svelte component
+One of my favourite ways to visualise data coming into a svelte page
 
 After the script tag in the body of the page
 
 I can add this to see what the data looks like from URQL
 
 The $ on posts there is subscribing to any changes in the data from the URQL operation store
-
-That gives some output like this
 -->
 
 ---
@@ -735,7 +742,7 @@ That gives some output like this
 
 <br>
 
-```js {all|12|all}
+```svelte {all|12|all}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -753,12 +760,17 @@ That gives some output like this
 <style>
   span {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.7;
+  }
+  h2 {
+    margin-top: -20px;
   }
 </style>
 
 <!--
 You can then write your queries into the URQL operation store to create a subscription to the data
+
+That gives some output like this
 -->
 
 ---
@@ -810,11 +822,15 @@ This is where this fetching property comes in handy
 }
 </style>
 
+<!--
+Let's take a look at how we'd use that
+-->
+
 ---
 layout: two-cols-code
 ---
 
-```js {1-10}
+```svelte {1-10}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -849,7 +865,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-13}
+```svelte {1-13}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -880,19 +896,12 @@ layout: two-cols-code
   }
 </style>
 
-<!--
-You can then write your queries into the URQL operation store to create a subscription to the data
-
-Here we can use some of the Svelte expressions to work through the URQL response
-
-URQL has the fetching state built into it so you can check before rendering
--->
 
 ---
 layout: two-cols-code
 ---
 
-```js {12-26}
+```svelte {12-26}
 <script>
   import { gql, operationStore, query } from '@urql/svelte'
   const postsQuery = gql`
@@ -925,7 +934,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {all|1,15|2|3-4|5|6-14|all}
+```svelte {all|1,15|2|3-4|5|6-14|all}
 {#if $posts.fetching}
   <p>Loading...</p>
 {:else if $posts.error}
@@ -979,6 +988,10 @@ URQL has the fetching state built into it so you can check before rendering
 }
 </style>
 
+<!--
+Let's see how we'd do the same with Houdini!
+-->
+
 ---
 layout: two-cols-code
 ---
@@ -1024,7 +1037,7 @@ export default new Environment(async function ({
 <style>
   .right pre * span {
     font-size: 0.8rem;
-    line-height: 1;
+    line-height: 1.5;
   }
   span {
     font-size: 1rem;
@@ -1032,13 +1045,17 @@ export default new Environment(async function ({
   }
 </style>
 
+<!--
+Houdini has a great bootstrap for generating the environment
+-->
+
 ---
 
 ## `src/routes/__layout.svelte`
 
 <br>
 
-```js {all|2-3|5|8-10|all}
+```svelte {all|2-3|5|8-10|all}
 <script context="module">
   import { setEnvironment } from '$houdini'
   import env from '../environment'
@@ -1058,6 +1075,12 @@ export default new Environment(async function ({
   }
 </style>
 
+<!--
+We'd go about implementing the client the same way
+
+In the __layout.svelte file
+-->
+
 ---
 
 # src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
@@ -1072,11 +1095,15 @@ export default new Environment(async function ({
 }
 </style>
 
+<!--
+Let's see how we'd implement that in our index.svelte file
+-->
+
 ---
 layout: two-cols-code
 ---
 
-```js {1-12}
+```svelte {1-12}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1110,7 +1137,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-12}
+```svelte {1-12}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1130,13 +1157,13 @@ layout: two-cols-code
 </v-clicks>
 
 <style>
-  .right pre * span {
-    font-size: 0.8rem;
-    line-height: normal;
-  }
   span {
     font-size: 0.65rem;
     line-height: 1;
+  }
+  .right pre * span {
+    font-size: 1rem;
+    line-height: normal;
   }
 </style>
 
@@ -1148,7 +1175,7 @@ layout: two-cols-code
 layout: two-cols-code
 ---
 
-```js {14-25}
+```svelte {14-25}
 <script>
   import { graphql, query } from '$houdini'
   const { data } = query(graphql`
@@ -1180,7 +1207,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-12}
+```svelte {1-12}
 <ul>
   {#each posts as post}
     <li>
@@ -1199,7 +1226,7 @@ layout: two-cols-code
 
 <style>
   .right pre * span {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: normal;
   }
   span {
@@ -1237,14 +1264,6 @@ And it's a big butt!
 -->
 
 ---
-preload: false
----
-
-<video autoplay>
-  <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
-</video>
-
----
 
 <dots />
 
@@ -1254,10 +1273,18 @@ preload: false
 So that's great n' all but what about sensitive information?
 
 I'm talking about authentication tokens, etc
+-->
 
-Before I get into that, did I tell you that Svelte has file-based routing?
+---
+preload: false
+---
 
-Let's take a quick look at Svelte routing
+<video autoplay>
+  <source src="/assets/bearer-token-in-sveltekit.mp4" type="video/mp4">
+</video>
+
+<!--
+Let's take a look at the network request using Houdini with a authorisation token in the header
 -->
 
 ---
@@ -1267,6 +1294,10 @@ Let's take a quick look at Svelte routing
 # SvelteKit routes<hl>.</hl>
 
 <!--
+Before we go any further, did I tell you that Svelte has file-based routing?
+
+Let's take a quick look at Svelte routing
+
 SvelteKit uses a file-based routing system much like NextJS
 
 These routes can also be turned into endpoints
@@ -1276,7 +1307,7 @@ Let's take a quick look at a project file structure using file-based routing
 
 ---
 
-```text {all|7|6|4|5|all}
+```js {all|7|6|4|5|all}
 new-svelte-project/
 ├─ src/
 │ ├─ routes/
@@ -1294,6 +1325,29 @@ new-svelte-project/
   }
 </style>
 
+<!--
+So that would give a URL comething like this
+-->
+
+---
+
+# new-svelte-project<hl>.</hl>com<hl>/</hl>posts<hl>/</hl>post-slug
+
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+    font-size: 2.5rem !important;
+}
+</style>
+
+<!--
+Let's take a look at how SvelteKit can be used to create endpoints
+-->
+
 ---
 
 <dots />
@@ -1306,7 +1360,17 @@ Let's take a look at how SvelteKit can be used to create endpoints
 
 ---
 
-```text {all|6|all}
+<dots />
+
+# Server Side<hl>.</hl>
+
+<!--
+We can use SvelteKit to create HTTP methods, get, post, put, delete, etc
+-->
+
+---
+
+```js {all|6|all}
 new-svelte-project/
 ├─ src/
 │ ├─ routes/
@@ -1335,7 +1399,7 @@ We'll also pop a GraphQL client in a lib folder here
 
 ---
 
-```text {all|3-4|all}
+```js {all|3-4|all}
 new-svelte-project/
 ├─ src/
 │ ├─ lib/
@@ -1383,21 +1447,38 @@ export const client = new GraphQLClient(GRAPHQL_ENDPOINT, {
 <style>
   span {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.6;
   }
 </style>
 
 <!--
-
+In our lib folder we can define a client with a secret token which Vite can use
 -->
 
 ---
 
-## `src/routes/posts/index.json.js`
+# src<hl>/</hl>routes<hl>/</hl>posts<hl>/</hl>index<hl>.</hl>json<hl>.</hl>js
 
-<br>
+<style>
+  h1 {
+    padding: 0 1rem;
+    font-size: 3rem !important;
+    text-align: center;
+    font-family: "Victor Mono";
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
 
-```js {all|1-2|4,23|5,17,22|6-10|11|13-16|all}
+<!--
+Let's take a look at how we'd define that endpoint
+-->
+
+---
+layout: two-cols-code
+---
+
+```js {all}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
@@ -1405,7 +1486,16 @@ export const get = async (req, res) => {
   try {
     const query = gql`
       query AllPosts {
-        # posts GraphQL query here 
+        posts {
+          title
+          slug
+          date
+          excerpt
+          tags
+          coverImage {
+            url
+          }
+        }
       }
     `
     const { posts } = await client.request(query)
@@ -1423,13 +1513,36 @@ export const get = async (req, res) => {
 }
 ```
 
+::right::
+
+<div class="right">
+
+```js
+const { posts } = await client.request(query)
+
+return {
+  status: 200,
+  body: { posts },
+}
+```
+
+</div>
+
 <style>
-  span {
-    font-size: 0.95rem;
-    line-height: 1.25;
+  pre {
+    zoom: 90%;
   }
-  h2 {
-    margin-top: -25px;
+  span {
+    font-size: 0.85rem;
+    display: inline-block !important;
+    line-height: normal;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  div {
+    margin-top: -15px;
   }
 </style>
 
@@ -1446,6 +1559,82 @@ Let's take a look at how that works
 -->
 
 ---
+layout: two-cols-code
+---
+
+```js {20-25}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const get = async (req, res) => {
+  try {
+    const query = gql`
+      query AllPosts {
+        posts {
+          title
+          slug
+          date
+          excerpt
+          tags
+          coverImage {
+            url
+          }
+        }
+      }
+    `
+    const { posts } = await client.request(query)
+
+    return {
+      status: 200,
+      body: { posts },
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js
+const { posts } = await client.request(query)
+
+return {
+  status: 200,
+  body: { posts },
+}
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 90%;
+  }
+  span {
+    font-size: 0.85rem;
+    display: inline-block !important;
+    line-height: normal;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  div {
+    margin-top: -15px;
+  }
+</style>
+
+<!--
+Returning an OK status then returning the GraphQL client query result
+-->
+
+---
 
 # src<hl>/</hl>routes<hl>/</hl>index<hl>.</hl>svelte
 
@@ -1459,11 +1648,15 @@ Let's take a look at how that works
 }
 </style>
 
+<!--
+And we'd implement that in our Svelte component like this
+-->
+
 ---
 layout: two-cols-code
 ---
 
-```js {1-11}
+```svelte {1-11}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1500,7 +1693,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {1-11}
+```svelte {1-11}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1532,11 +1725,15 @@ layout: two-cols-code
   }
 </style>
 
+<!--
+use the SvelteKit load function to fetch the data from the posts.json endpoint
+-->
+
 ---
 layout: two-cols-code
 ---
 
-```js {13-28}
+```svelte {13-28}
 <script context="module">
   export const load = async ({ fetch }) => {
     const res = await fetch('/posts.json')
@@ -1571,7 +1768,7 @@ layout: two-cols-code
 
 <div class="right">
 
-```js {all|1-3|5-16}
+```svelte {all|1-3|5-16|9}
 <script>
   export let posts
 </script>
@@ -1607,11 +1804,11 @@ layout: two-cols-code
 </style>
 
 <!--
-Context module means it runs before the page loads
+Using the load function we can get the GraphQL data before the page loads
 
 The props from the load function are passed to the page with export let
 
-Then you can work with it much the same as with the URQL example
+Then we can work with it much the same as with the URQL example
 
 Take note of the prefetch here, this will call the load function of the route
 -->
@@ -1624,19 +1821,44 @@ preload: false
   <source src="/assets/bearer-token-in-sveltekit-with-endpoints.mp4" type="video/mp4">
 </video>
 
+<!--
+Here's an example using a SvelteKit endpoint
+-->
+
 ---
 
 # Bearer token<hl>.</hl>
 
 <!--
 What about the credentials?
+
+Let's take a look at how we'd use that in a GraphQL mutation
+-->
+
+---
+
+# src<hl>/</hl>routes<hl>/</hl>posts<hl>/</hl>add-post<hl>.</hl>json<hl>.</hl>js
+
+<style>
+  h1 {
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Victor Mono";
+    font-size: 2.85rem !important;
+    background-color: #1d3a52;
+    border-radius: 0.25em;
+}
+</style>
+
+<!--
+Here we're going to add a post endpoint for a mutation on our GraphQL server
 -->
 
 ---
 layout: two-cols-code
 ---
 
-```js {all|1|4|5|6-13|14-16|18|22|all}
+```js {all}
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
@@ -1678,28 +1900,210 @@ export const post = async req => {
 }
 ```
 
+::right::
+
+<div class="right">
+
+</div>
+
 <style>
   pre {
-    zoom: 59.9%;
+    zoom: 65%;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
     display: inline-block !important;
-    line-height: 1.35;
+    line-height: 2;
   }
   .right pre * span {
-    font-size: 0.9rem;
+    font-size: 2.5rem;
     line-height: 1.5;
   }
   div {
-    margin-top: -15px;
+    margin-top: -10px;
+  }
+</style>
+
+---
+layout: two-cols-code
+---
+
+```js {5,7-27}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const post = async req => {
+  const { title, markdownContent } = req.body
+  try {
+    const query = gql`
+      mutation AddPost(
+        $title: String!
+        $markdownContent: String!
+      ) {
+        createPost(
+          data: {
+            title: $title
+            markdownContent: $markdownContent
+          }
+        ) {
+          id
+        }
+      }
+    `
+    const variables = {
+      title,
+      markdownContent,
+    }
+
+    const id = await client.request(query, variables)
+
+    return {
+      status: 200,
+      body: id,
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js {all|2-14|16-19|21}
+const query = gql`
+  mutation AddPost(
+    $title: String!
+    $markdownContent: String!
+  ) {
+    createPost(
+      data: {
+        title: $title
+        markdownContent: $markdownContent
+      }
+    ) {
+      id
+    }
+  }
+`
+const variables = {
+  title,
+  markdownContent,
+}
+
+const id = await client.request(query, variables)
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 65%;
+  }
+  span {
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
+    display: inline-block !important;
+    line-height: 2;
+  }
+  .right pre * span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  div {
+    margin-top: -10px;
+  }
+</style>
+
+
+---
+layout: two-cols-code
+---
+
+```js {18,29-32}
+import { client } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
+
+export const post = async req => {
+  const { title, markdownContent } = req.body
+  try {
+    const query = gql`
+      mutation AddPost(
+        $title: String!
+        $markdownContent: String!
+      ) {
+        createPost(
+          data: {
+            title: $title
+            markdownContent: $markdownContent
+          }
+        ) {
+          id
+        }
+      }
+    `
+    const variables = {
+      title,
+      markdownContent,
+    }
+
+    const id = await client.request(query, variables)
+
+    return {
+      status: 200,
+      body: id,
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error: error.message },
+    }
+  }
+}
+```
+
+::right::
+
+<div class="right">
+
+```js {all}
+const id = await client.request(query, variables)
+
+return {
+  status: 200,
+  body: id,
+}
+```
+
+</div>
+
+<style>
+  pre {
+    zoom: 65%;
+  }
+  span {
+    font-size: 0.95rem;
+    display: inline-block !important;
+    line-height: 2;
+  }
+  .right pre * span {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  div {
+    margin-top: -10px;
   }
 </style>
 
 <!--
-This should all be in a try catch, but I want to get all the code on the screen
+Here' we can use the resulting id from the mutation to confirm that action on the client
 
-That's it.
+Ok, so, that's it, so
 -->
 
 ---
@@ -1707,6 +2111,10 @@ That's it.
 <dots />
 
 # Closing Comments<hl>.</hl>
+
+<!--
+Some closing comments
+-->
 
 ---
 
@@ -1760,9 +2168,9 @@ That's it.
 
 <dots />
 
-# <hl color="#253889ff">graphcms.com/blog</hl>
+# <hl color="#253889ff">graphcms<hl>.</hl>com<hl>/</hl>blog</hl>
 
-# <hl color="#253889ff">graphcms.com/docs</hl>
+# <hl color="#253889ff">graphcms<hl>.</hl>com<hl>/</hl>docs</hl>
 
 ---
 
@@ -1776,7 +2184,13 @@ That's it.
 
 <dots />
 
-# <hl color="#253889ff">sveltekit-and-the-content-layer.vercel.app</hl>
+# <hl color="#253889ff">http://ss10.dev/skatcl</hl>
+
+<style>
+  h1 {
+    font-size: 3.5rem !important;
+  }
+</style>
 
 ---
 
