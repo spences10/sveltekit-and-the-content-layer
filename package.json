@@ -8,7 +8,7 @@
     "eject": "slidev theme eject"
   },
   "dependencies": {
-    "@slidev/cli": "0.28.10",
+    "@slidev/cli": "0.29.0",
     "@slidev/theme-default": "*"
   },
   "devDependencies": {
