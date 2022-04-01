@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/mdi': 1.1.5
+  '@iconify-json/mdi': 1.1.7
   '@slidev/cli': 0.29.2
   '@slidev/theme-default': '*'
 
@@ -10,7 +10,7 @@ dependencies:
   '@slidev/theme-default': 0.21.1
 
 devDependencies:
-  '@iconify-json/mdi': 1.1.5
+  '@iconify-json/mdi': 1.1.7
 
 packages:
 
@@ -54,8 +54,8 @@ packages:
       '@iconify/types': 1.1.0
     dev: false
 
-  /@iconify-json/mdi/1.1.5:
-    resolution: {integrity: sha512-KaZnM51bM6b0hooW1+J7Tx3pWzMy8qWrcomauhOj61c8+dMIPqtkmuKU3ceEe6P9z/TEX5TxKJCDfD/Vw8BSng==}
+  /@iconify-json/mdi/1.1.7:
+    resolution: {integrity: sha512-4aua5uZDVT92ODIzddSzaZkf8r5Tx+ikM1iOMu08qvosZRpeoVe96Zs94WbXZ/S5aY0w1aL/0gD5jvE5eXPVhw==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
