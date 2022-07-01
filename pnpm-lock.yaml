@@ -2,11 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   '@iconify-json/mdi': 1.1.24
-  '@slidev/cli': 0.34.1
+  '@slidev/cli': 0.34.2
   '@slidev/theme-default': '*'
 
 dependencies:
-  '@slidev/cli': 0.34.1
+  '@slidev/cli': 0.34.2
   '@slidev/theme-default': 0.21.1
 
 devDependencies:
@@ -130,8 +130,8 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /@slidev/cli/0.34.1:
-    resolution: {integrity: sha512-ssh3QwyzRKwJoijlvl7GQ8b7tSUnt8L4YydA4ocq4eaIihLVPkIJmBl8qMyC/66ZUfoW8FAYdLlN/3I6XPkmCA==}
+  /@slidev/cli/0.34.2:
+    resolution: {integrity: sha512-9Bg7ut1TUwVlH1CikWGKHdUFFC2khPb9s9ZsnH5CDg1p6u5H+YfOhtCVd1UDFEN/JF4PJ8J3iH5Gc9GUjXXztw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
@@ -143,9 +143,9 @@ packages:
       '@antfu/utils': 0.5.2
       '@iconify-json/carbon': 1.1.6
       '@iconify-json/ph': 1.1.2
-      '@slidev/client': 0.34.1_vite@2.9.13
-      '@slidev/parser': 0.34.1
-      '@slidev/types': 0.34.1
+      '@slidev/client': 0.34.2_vite@2.9.13
+      '@slidev/parser': 0.34.2
+      '@slidev/types': 0.34.2
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
       cli-progress: 3.11.2
@@ -204,13 +204,13 @@ packages:
       - webpack
     dev: false
 
-  /@slidev/client/0.34.1_vite@2.9.13:
-    resolution: {integrity: sha512-2RlzJz+HeAbHPLJ9TMcAxoaRD3r6eDyPReD2xyPtYZr6gBhRvg0siQBOcDzxgF1mossDTjIl9BX989CahsjVcg==}
+  /@slidev/client/0.34.2_vite@2.9.13:
+    resolution: {integrity: sha512-tNcFOFne6vykcI57m98C0Bdo0b45m33SOX7w0r4iM3AaympynD/Gtj/xZPMlJfPH/xNTCRndV1BsihasMinQJQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@antfu/utils': 0.5.2
-      '@slidev/parser': 0.34.1
-      '@slidev/types': 0.34.1
+      '@slidev/parser': 0.34.2
+      '@slidev/types': 0.34.2
       '@unocss/reset': 0.42.0
       '@vueuse/core': 8.7.5_vue@3.2.37
       '@vueuse/head': 0.7.6_vue@3.2.37
@@ -242,11 +242,11 @@ packages:
       - vite
     dev: false
 
-  /@slidev/parser/0.34.1:
-    resolution: {integrity: sha512-L0/vd1kU8Kt/WPxRIMeeGAJ9u9l8phYNtR1C254kL4BrC1/zGvo6uvaweKkMXzrwyj9+JKpdF3nfHoTI2y+R/g==}
+  /@slidev/parser/0.34.2:
+    resolution: {integrity: sha512-bF80dK+X0Aolc+/tr8T11HuNAORUDibiqzWHppEHWgsOdSCmd9+lSs74bpKw6WIFoxvgV6Ir2dQNm/cAzk5b0Q==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@slidev/types': 0.34.1
+      '@slidev/types': 0.34.2
       js-yaml: 4.1.0
     dev: false
 
@@ -265,8 +265,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: false
 
-  /@slidev/types/0.34.1:
-    resolution: {integrity: sha512-l6NqWDYlVHFJBR6RWBAJ2dAtcU/iwFTe5ndhfpNQ+CW5JpMcqL8kPlQ1ceXa8qVDgsMd2esy62aJti1/hPDiGg==}
+  /@slidev/types/0.34.2:
+    resolution: {integrity: sha512-TCoSWRaK6HgLEBHpKPpcIplKhKdvgYuc0s1N1nKPj1sUz7XdRfIfjckBtewPIguakUgewlKcEkjxY9MM18p7jg==}
     engines: {node: '>=14.0.0'}
     dev: false
 
@@ -562,26 +562,11 @@ packages:
         optional: true
     dependencies:
       '@vueuse/core': 8.7.5_vue@3.2.37
-      '@vueuse/shared': 8.7.4_vue@3.2.37
+      '@vueuse/shared': 8.7.5_vue@3.2.37
       csstype: 3.0.11
       framesync: 6.1.0
       popmotion: 11.0.3
       style-value-types: 5.1.0
-      vue: 3.2.37
-      vue-demi: 0.12.1_vue@3.2.37
-    dev: false
-
-  /@vueuse/shared/8.7.4_vue@3.2.37:
-    resolution: {integrity: sha512-QhwTEd2Gr/8ZliWVEM8sbMUkXtVVV1Mt1mOkCnIbIN33D/V28FwGKUKqEPGZZCXuJchARnun/J1TAiT/UmZd1w==}
-    peerDependencies:
-      '@vue/composition-api': ^1.1.0
-      vue: ^2.6.0 || ^3.2.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      vue:
-        optional: true
-    dependencies:
       vue: 3.2.37
       vue-demi: 0.12.1_vue@3.2.37
     dev: false
