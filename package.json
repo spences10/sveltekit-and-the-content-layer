@@ -12,7 +12,7 @@
     "@slidev/theme-default": "*"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "1.1.43"
+    "@iconify-json/mdi": "1.1.44"
   },
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
   "slidev": {
